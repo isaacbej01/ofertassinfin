@@ -23,7 +23,7 @@ from ..config import Secrets
 
 log = logging.getLogger(__name__)
 
-ENDPOINT = "https://api.buffer.com/graphql"
+ENDPOINT = "https://api.buffer.com"   # verificado en developers.buffer.com
 
 
 class BufferError(RuntimeError):
@@ -59,15 +59,53 @@ class Buffer:
         return data.get("data", {})
 
     # ------------------------------------------------------------- canales
+    # Buffer documenta dos formas del árbol de cuenta según la versión del
+    # esquema. Se prueban las dos en vez de apostarle a una: si la primera
+    # falla, la segunda responde, y así el doctor no miente sobre el estado.
+    _Q_CANALES = (
+        """query { account { currentOrganization {
+             channels { id service serviceUsername } } } }""",
+        """query { account { organizations {
+             id channels { id service serviceUsername } } } }""",
+    )
+
     def channels(self) -> list[dict]:
-        q = """
-        query { account { currentOrganization { channels {
-            id service serviceUsername
-        } } } }
+        ultimo_error = None
+        for q in self._Q_CANALES:
+            try:
+                data = self._gql(q, {})
+            except BufferError as e:
+                ultimo_error = e
+                continue
+            cuenta = data.get("account") or {}
+            org = cuenta.get("currentOrganization")
+            if org:
+                return org.get("channels") or []
+            orgs = cuenta.get("organizations") or []
+            canales = []
+            for o in orgs:
+                canales += o.get("channels") or []
+            if canales:
+                return canales
+        if ultimo_error:
+            raise ultimo_error
+        return []
+
+    def esquema_createPost(self) -> str:
+        """Introspección de la mutación de publicación.
+
+        La forma exacta de PostCreateInput no está documentada públicamente y
+        Buffer la ha cambiado. Esto pregunta al servidor en vez de adivinar:
+        si create_post falla, corre esto y ajusta el payload a lo que diga.
         """
+        q = """query { __type(name: "PostCreateInput") {
+                 inputFields { name type { name kind ofType { name kind } } } } }"""
         data = self._gql(q, {})
-        return (((data.get("account") or {}).get("currentOrganization") or {})
-                .get("channels") or [])
+        campos = ((data.get("__type") or {}).get("inputFields") or [])
+        return "\n".join(
+            f"  {c['name']}: {(c['type'].get('name') or (c['type'].get('ofType') or {}).get('name') or c['type']['kind'])}"
+            for c in campos
+        ) or "(el servidor no expuso el tipo)"
 
     # ------------------------------------------------------------ publicar
     def create_post(self, channel_ids: Iterable[str], text: str,

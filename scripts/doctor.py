@@ -87,7 +87,7 @@ def c_buffer():
     canales = Buffer().channels()
     if not canales:
         return FAIL, "la API responde pero no hay canales conectados"
-    detalle = ", ".join(f"{c['service']}:{c['id'][:8]}…" for c in canales)
+    detalle = " · ".join(f"{c.get('service')} → {c.get('id')}" for c in canales)
     ids = {c["id"] for c in canales}
     faltan = [n for n, v in (("IG", Secrets.BUFFER_CHANNEL_IG()),
                              ("TikTok", Secrets.BUFFER_CHANNEL_TIKTOK()))

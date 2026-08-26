@@ -1,0 +1,30 @@
+# Ofertas de Amazon curadas a mano.
+#
+# Este archivo existe porque la Creators API de Amazon exige >= 10 ventas
+# calificadas en los últimos 30 días. Mientras no llegues ahí, esta es la
+# forma legítima de meter ofertas de Amazon al sistema: las eliges tú (o
+# Claude), y el sistema se encarga del resto — link de afiliado, tarjeta,
+# copy, programación y link-in-bio.
+#
+# Para llenar cada entrada: abre el producto en Amazon MX y copia el ASIN
+# de la URL (.../dp/B0XXXXXXXX), el título, la URL de la imagen principal
+# (clic derecho → copiar dirección de imagen) y los precios.
+#
+# El sistema borra automáticamente las entradas ya publicadas del feed
+# interno, pero este archivo lo mantienes tú.
+
+ofertas: []
+
+# Ejemplo (descoméntalo y edítalo):
+#
+# ofertas:
+#   - asin: B08XYZ1234
+#     title: "Freidora de Aire 5.5L Digital con 8 Programas"
+#     image_url: "https://m.media-amazon.com/images/I/71xxxxxxxxL._AC_SL1500_.jpg"
+#     price: 1299
+#     original_price: 2499
+#     category: cocina
+#     brand: "Ninja"
+#     rating: 4.6
+#     reviews: 3120
+#     prime: true

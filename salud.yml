@@ -1,0 +1,58 @@
+name: Chequeo de salud
+
+# Corre el diagnóstico cada lunes y crea un issue si algo está roto.
+# Es la red de seguridad: sin esto, el sistema puede llevar tres semanas
+# caído sin que nadie se entere.
+
+on:
+  schedule:
+    - cron: "0 15 * * 1"       # lunes 09:00 hora del centro de México
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  doctor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: Diagnóstico
+        id: doc
+        continue-on-error: true
+        env:
+          ML_CLIENT_ID:        ${{ secrets.ML_CLIENT_ID }}
+          ML_CLIENT_SECRET:    ${{ secrets.ML_CLIENT_SECRET }}
+          ML_REFRESH_TOKEN:    ${{ secrets.ML_REFRESH_TOKEN }}
+          ML_AFFILIATE_TAG:    ${{ secrets.ML_AFFILIATE_TAG }}
+          AMZ_PARTNER_TAG:     ${{ secrets.AMZ_PARTNER_TAG }}
+          AMZ_CREDENTIAL_ID:   ${{ secrets.AMZ_CREDENTIAL_ID }}
+          AMZ_CREDENTIAL_SECRET: ${{ secrets.AMZ_CREDENTIAL_SECRET }}
+          BUFFER_ACCESS_TOKEN: ${{ secrets.BUFFER_ACCESS_TOKEN }}
+          BUFFER_CHANNEL_IG:   ${{ secrets.BUFFER_CHANNEL_IG }}
+          BUFFER_CHANNEL_TIKTOK: ${{ secrets.BUFFER_CHANNEL_TIKTOK }}
+          MEDIA_BASE_URL:      ${{ secrets.MEDIA_BASE_URL }}
+        run: python scripts/doctor.py | tee salud.txt
+
+      - name: Abrir issue si hay algo roto
+        if: steps.doc.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const body = fs.readFileSync('salud.txt', 'utf8');
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `🚨 Ofertas Sin Fin: algo está roto (${new Date().toISOString().slice(0,10)})`,
+              body: "```\n" + body + "\n```",
+              labels: ['salud']
+            });

@@ -1,0 +1,232 @@
+# =============================================================
+# Ofertas Sin Fin — configuración de negocio
+# Todo lo que quieras ajustar sin tocar código vive aquí.
+# =============================================================
+
+marca:
+  nombre: "Ofertas Sin Fin"
+  handle_tiktok: "@ofertassinfin"
+  handle_instagram: "@ofertassinfin"
+  bio: "Las mejores (realmente mejores) ofertas y promociones de Amazon y MercadoLibre"
+  # Colores muestreados del logo real de la cuenta
+  naranja: "#F96D0F"
+  crema: "#FCF7F1"
+  tinta: "#101010"
+
+# -------------------------------------------------------------
+# Reglas de selección de ofertas
+# -------------------------------------------------------------
+filtros:
+  descuento_minimo_pct: 25        # no publicamos nada por debajo de esto
+  precio_minimo_mxn: 149          # evita basura de bajo ticket
+  precio_maximo_mxn: 25000        # evita productos imposibles de vender en frío
+  rating_minimo: 4.0              # cuando la fuente lo expone
+  reviews_minimas: 10
+  requiere_envio_gratis: false
+  excluir_palabras:               # filtro anti-basura y anti-categorías prohibidas
+    - "reacondicionado"
+    - "usado"
+    - "réplica"
+    - "replica"
+    - "genérico sin marca"
+    - "vapeador"
+    - "cigarro"
+    - "alcohol"
+    - "tequila"
+    - "whisky"
+    - "cerveza"
+    - "pistola"
+    - "arma"
+    - "suplemento para bajar de peso"
+    - "adelgazante"
+    - "préstamo"
+    - "casino"
+    - "apuesta"
+
+# -------------------------------------------------------------
+# Scoring: cómo se rankean las ofertas candidatas (suma ponderada)
+# -------------------------------------------------------------
+scoring:
+  peso_descuento: 0.45            # % de descuento normalizado
+  peso_comision: 0.25             # comisión estimada en MXN normalizada
+  peso_popularidad: 0.20          # reviews / ventas / posición en best-sellers
+  peso_rating: 0.10
+  # Bonus por categorías con mejor comisión
+  bonus_categoria:
+    belleza: 0.10
+    moda: 0.10
+    hogar: 0.05
+    cocina: 0.05
+
+# -------------------------------------------------------------
+# Cadencia de publicación (hora local America/Mexico_City)
+# El sistema aplica jitter aleatorio para no verse robótico.
+# -------------------------------------------------------------
+cadencia:
+  posts_por_dia: 4
+  horarios:                       # horas base; se les suma jitter
+    - "09:15"
+    - "13:30"
+    - "18:45"
+    - "21:20"
+  jitter_minutos: 25              # ± minutos aleatorios sobre el horario base
+  max_por_fuente_por_dia:
+    mercadolibre: 3
+    amazon: 3
+  dias_bloqueo_reposteo: 45       # no repetir el mismo producto en N días
+  max_misma_categoria_seguidos: 2
+
+# -------------------------------------------------------------
+# Fuentes
+# -------------------------------------------------------------
+fuentes:
+  mercadolibre:
+    activa: true
+    site_id: "MLM"
+    # Semillas de búsqueda: el sistema abanica estas queries + categorías
+    queries:
+      - "audifonos bluetooth"
+      - "licuadora"
+      - "freidora de aire"
+      - "aspiradora"
+      - "smartwatch"
+      - "cafetera"
+      - "organizador closet"
+      - "sarten antiadherente"
+      - "silla gamer"
+      - "perfume"
+      - "crema facial"
+      - "tenis deportivos"
+      - "mochila"
+      - "lampara led"
+      - "bocina bluetooth"
+    categorias:                   # IDs de categoría de MLM para best-sellers
+      - "MLM1000"                 # Electrónica, Audio y Video
+      - "MLM1574"                 # Hogar, Muebles y Jardín
+      - "MLM1276"                 # Deportes y Fitness
+      - "MLM1246"                 # Belleza y Cuidado Personal
+      - "MLM1648"                 # Computación
+      - "MLM1039"                 # Cámaras y Accesorios
+      - "MLM1051"                 # Celulares y Telefonía
+    resultados_por_query: 50
+
+  amazon:
+    activa: false                 # se activa al obtener acceso a Creators API
+    marketplace: "www.amazon.com.mx"
+    idioma: "es_MX"
+    # min_saving_percent se toma de filtros.descuento_minimo_pct
+    search_indexes:
+      - "All"
+      - "HomeAndKitchen"
+      - "Beauty"
+      - "Electronics"
+      - "SportsAndOutdoors"
+      - "ToysAndGames"
+    # Rate limit inicial de Creators API: 1 TPS / 8,640 TPD
+    tps: 1
+    max_llamadas_por_corrida: 60
+
+# -------------------------------------------------------------
+# Comisiones estimadas (para el scoring y para reportar ingresos)
+# Amazon MX: fuente oficial Associates. ML: VERIFICAR en tu panel.
+# -------------------------------------------------------------
+comisiones:
+  amazon:
+    default: 0.08
+    tope_mxn_default: 500
+    tope_mxn_electronica: 800
+    por_categoria:
+      moda: 0.10
+      belleza: 0.10
+      cuidado_personal: 0.10
+      bebe: 0.10
+      libros: 0.10
+      zapatos: 0.10
+      relojes: 0.09
+      hogar: 0.08
+      cocina: 0.08
+      juguetes: 0.08
+      deportes: 0.08
+      celulares: 0.07
+      audio: 0.07
+      computo: 0.05
+      videojuegos: 0.05
+      camaras: 0.05
+  mercadolibre:
+    # PENDIENTE DE VERIFICAR en el panel de afiliados de ML MX.
+    # Se usa un estimado conservador: en Chile ML bajó a 8% directa / 4% indirecta.
+    default: 0.08
+    por_categoria:
+      tecnologia: 0.04
+      alimentos: 0.0
+
+# -------------------------------------------------------------
+# Creatividad (tarjetas)
+# -------------------------------------------------------------
+creativo:
+  formatos:
+    instagram: [1080, 1350]
+    tiktok: [1080, 1920]
+    story: [1080, 1920]
+
+  # Tres plantillas construidas sobre el logo. Rotan para que la parrilla
+  # no se vea como un bot publicando la misma imagen cuatro veces al día.
+  plantillas:
+    crema:
+      fondo: "#FCF7F1"
+      fondo2: "#F3E8DA"
+      tinta: "#101010"
+      apagado: "#7A7168"
+      acento: "#F96D0F"
+      badge_tinta: "#FFFFFF"
+      oscuro: false
+    negro:
+      fondo: "#121110"
+      fondo2: "#221E1A"
+      tinta: "#FCF7F1"
+      apagado: "#8E8478"
+      acento: "#F96D0F"
+      badge_tinta: "#FFFFFF"
+      oscuro: true
+    naranja:
+      fondo: "#F96D0F"
+      fondo2: "#D24F07"
+      tinta: "#FFFFFF"
+      apagado: "#FFDCC1"
+      acento: "#101010"
+      badge_tinta: "#FCF7F1"
+      oscuro: true
+
+  rotacion: ["crema", "negro", "naranja"]
+  mostrar_precio: true
+  mostrar_timestamp: true
+
+# -------------------------------------------------------------
+# Copy
+# -------------------------------------------------------------
+copy:
+  disclosure_amazon: "Como Afiliado de Amazon, percibo dinero con las compras elegibles."
+  disclosure_general: "#PublicidadPagada"
+  cta:
+    - "Link en la bio 🔗"
+    - "Te dejo el link en la bio 👆"
+    - "Corre, que vuelan 🏃"
+    - "Link en bio antes de que suba 🔗"
+  hashtags_base:
+    - "#ofertas"
+    - "#ofertasmexico"
+    - "#descuentos"
+    - "#comprasinteligentes"
+  hashtags_por_fuente:
+    amazon: ["#amazonmexico", "#amazonfinds"]
+    mercadolibre: ["#mercadolibre", "#mercadolibremexico"]
+  max_hashtags: 10
+
+# -------------------------------------------------------------
+# Publicación
+# -------------------------------------------------------------
+publicacion:
+  proveedor: "buffer"             # buffer | manual
+  modo: "programar"               # programar | borrador
+  # Si algo falla, en vez de tronar deja el post en data/queue/ para revisión
+  fallback_a_cola: true

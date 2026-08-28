@@ -36,6 +36,15 @@
       "price": 6781.0,
       "discount_pct": 28.0,
       "category_id": "MLM1055"
+    },
+    "mercadolibre:MLM53824452": {
+      "published_at": "2026-08-28T23:45:43.222185+00:00",
+      "scheduled_at": "2026-08-28T23:57:38Z",
+      "source": "mercadolibre",
+      "title": "Xiaomi Pocophone Poco M7 Dual Sim 6.9\" 256 Gb Azul 8 Gb RAM Snapdragon 685 7000 mAh",
+      "price": 3491.44,
+      "discount_pct": 30.0,
+      "category_id": "MLM1055"
     }
   },
   "runs": [
@@ -82,6 +91,12 @@
       "candidatos": 146,
       "publicados": 0,
       "dry_run": false
+    },
+    {
+      "at": "2026-08-28T23:45:43.222211+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
     }
   ]
 }

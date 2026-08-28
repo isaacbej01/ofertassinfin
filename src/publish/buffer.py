@@ -1,21 +1,27 @@
-"""Cliente de la API de Buffer (GraphQL).
+"""Cliente de la API GraphQL de Buffer.
 
-Por qué Buffer y no la API oficial de TikTok: TikTok exige una auditoría
-de tu app y, sin ella, TODO lo que publiques queda en modo privado
-(SELF_ONLY). Buffer ya está auditado. Eso es lo que estás comprando por
-~10 USD/mes.
+Por qué Buffer y no las APIs oficiales: TikTok exige auditar cada aplicación
+antes de dejarla publicar en público, y sin esa auditoría todo sale en modo
+privado. Buffer ya está auditado. Eso es lo que se está comprando.
 
-Límites por API key (plan Essentials): 100 req/15min, 250/24h, 7,500/30d.
-Con 4 posts/día x 2 redes vamos sobradísimos.
+ESQUEMA VERIFICADO CONTRA EL SERVIDOR el 27/08/2026 por introspección, no
+copiado de la documentación — que en varios puntos no coincide con lo que el
+servidor realmente acepta. Lo que se corrigió respecto a la primera versión:
 
-IMPORTANTE: Buffer NO sube archivos. Descarga la imagen desde la URL
-pública EN EL MOMENTO DE PUBLICAR, no al programar. La URL tiene que
-seguir viva hasta entonces — por eso las imágenes viven en GitHub Pages.
+  * el endpoint es https://api.buffer.com, sin /graphql
+  * los canales NO cuelgan de account: hay una consulta `channels(input:)`
+    de primer nivel, y `account.currentOrganization` responde FORBIDDEN
+  * el input se llama CreatePostInput, no PostCreateInput
+  * es channelId (uno solo), no channelIds (lista): un post por canal
+  * schedulingType y needsApproval son obligatorios y no estaban
+  * el campo de usuario del canal es `name`, no `serviceUsername`
+
+Límites del plan gratuito: 100 llamadas/15 min, 250/24 h, 3.000/30 días.
+Cuatro ofertas al día por dos canales son ~20 llamadas. Sobra.
 """
 from __future__ import annotations
 
 import logging
-from typing import Iterable
 
 import requests
 
@@ -23,7 +29,11 @@ from ..config import Secrets
 
 log = logging.getLogger(__name__)
 
-ENDPOINT = "https://api.buffer.com"   # verificado en developers.buffer.com
+ENDPOINT = "https://api.buffer.com"
+
+# Valores verificados por introspección del esquema
+MODOS = ("addToQueue", "customScheduled", "shareNext", "shareNow")
+TIPOS_INSTAGRAM = ("post", "carousel", "reel", "story")
 
 
 class BufferError(RuntimeError):
@@ -35,107 +45,136 @@ class Buffer:
         self.token = token or Secrets.BUFFER_ACCESS_TOKEN()
         if not self.token:
             raise BufferError(
-                "Falta BUFFER_ACCESS_TOKEN. Se genera en Buffer → Settings → "
-                "Developers → Create API key."
+                "Falta BUFFER_ACCESS_TOKEN. Se genera en Buffer → Settings → API."
             )
+        self._org_id: str | None = None
 
-    def _gql(self, query: str, variables: dict) -> dict:
+    # ---------------------------------------------------------------- núcleo
+    def _gql(self, query: str, variables: dict | None = None) -> dict:
         r = requests.post(
             ENDPOINT,
-            headers={
-                "Authorization": f"Bearer {self.token}",
-                "Content-Type": "application/json",
-            },
-            json={"query": query, "variables": variables},
+            headers={"Authorization": f"Bearer {self.token}",
+                     "Content-Type": "application/json"},
+            json={"query": query, "variables": variables or {}},
             timeout=40,
         )
         if r.status_code == 429:
-            raise BufferError("Rate limit de Buffer (429).")
+            raise BufferError("Rate limit de Buffer (429). Baja la frecuencia.")
         if r.status_code != 200:
-            raise BufferError(f"Buffer {r.status_code}: {r.text[:400]}")
+            raise BufferError(f"Buffer HTTP {r.status_code}: {r.text[:400]}")
         data = r.json()
         if data.get("errors"):
-            raise BufferError(f"Buffer GraphQL error: {data['errors']}")
-        return data.get("data", {})
+            msgs = "; ".join(e.get("message", "?") for e in data["errors"])
+            raise BufferError(f"Buffer GraphQL: {msgs}")
+        return data.get("data") or {}
 
-    # ------------------------------------------------------------- canales
-    # Buffer documenta dos formas del árbol de cuenta según la versión del
-    # esquema. Se prueban las dos en vez de apostarle a una: si la primera
-    # falla, la segunda responde, y así el doctor no miente sobre el estado.
-    _Q_CANALES = (
-        """query { account { currentOrganization {
-             channels { id service serviceUsername } } } }""",
-        """query { account { organizations {
-             id channels { id service serviceUsername } } } }""",
-    )
+    # ------------------------------------------------------------ organización
+    def organization_id(self) -> str:
+        """El id de organización es obligatorio para listar canales."""
+        if self._org_id:
+            return self._org_id
+        data = self._gql("query { account { organizations { id name } } }")
+        orgs = ((data.get("account") or {}).get("organizations") or [])
+        if not orgs:
+            raise BufferError("La cuenta de Buffer no tiene organizaciones.")
+        self._org_id = orgs[0]["id"]
+        return self._org_id
 
+    # ----------------------------------------------------------------- canales
     def channels(self) -> list[dict]:
-        ultimo_error = None
-        for q in self._Q_CANALES:
-            try:
-                data = self._gql(q, {})
-            except BufferError as e:
-                ultimo_error = e
-                continue
-            cuenta = data.get("account") or {}
-            org = cuenta.get("currentOrganization")
-            if org:
-                return org.get("channels") or []
-            orgs = cuenta.get("organizations") or []
-            canales = []
-            for o in orgs:
-                canales += o.get("channels") or []
-            if canales:
-                return canales
-        if ultimo_error:
-            raise ultimo_error
-        return []
+        data = self._gql(
+            """query C($input: ChannelsInput!) {
+                 channels(input: $input) {
+                   id service name displayName isDisconnected isLocked type
+                 }
+               }""",
+            {"input": {"organizationId": self.organization_id()}},
+        )
+        return data.get("channels") or []
 
-    def esquema_createPost(self) -> str:
-        """Introspección de la mutación de publicación.
+    # --------------------------------------------------------------- publicar
+    def create_post(self, channel_id: str, text: str, image_url: str,
+                    due_at: str | None = None, servicio: str = "",
+                    titulo_tiktok: str = "", tipo_instagram: str = "post",
+                    borrador: bool = False) -> dict:
+        """Programa UN post en UN canal.
 
-        La forma exacta de PostCreateInput no está documentada públicamente y
-        Buffer la ha cambiado. Esto pregunta al servidor en vez de adivinar:
-        si create_post falla, corre esto y ajusta el payload a lo que diga.
+        Buffer acepta un solo channelId por llamada, así que publicar la misma
+        oferta en Instagram y TikTok son dos llamadas — y está bien, porque
+        cada red lleva su propio creativo con su propia geometría.
+
+        due_at: ISO 8601 UTC, ej. 2026-08-28T15:30:00Z. Sin él, va a la cola.
         """
-        q = """query { __type(name: "PostCreateInput") {
-                 inputFields { name type { name kind ofType { name kind } } } } }"""
-        data = self._gql(q, {})
+        entrada = {
+            "channelId": channel_id,
+            "text": text,
+            "assets": [{"image": {"url": image_url}}],
+            "mode": "customScheduled" if due_at else "addToQueue",
+            "schedulingType": "automatic",   # 'notification' avisaría al celular
+            "needsApproval": False,
+            "source": "ofertas-sin-fin",
+        }
+        if due_at:
+            entrada["dueAt"] = due_at
+        if borrador:
+            entrada["saveToDraft"] = True
+
+        # Cada red exige su propio bloque de metadata.
+        if servicio == "instagram":
+            entrada["metadata"] = {"instagram": {
+                "type": tipo_instagram,        # post | carousel | reel | story
+                "shouldShareToFeed": True,
+            }}
+        elif servicio == "tiktok":
+            meta = {"isAiGenerated": False}
+            if titulo_tiktok:
+                meta["title"] = titulo_tiktok  # solo aplica a photo posts
+            entrada["metadata"] = {"tiktok": meta}
+
+        data = self._gql(
+            """mutation Crear($input: CreatePostInput!) {
+                 createPost(input: $input) {
+                   __typename
+                   ... on PostActionSuccess { post { id status dueAt } }
+                   ... on InvalidInputError  { message }
+                   ... on UnauthorizedError  { message }
+                   ... on LimitReachedError  { message }
+                   ... on NotFoundError      { message }
+                   ... on UnexpectedError    { message }
+                   ... on RestProxyError     { code message link }
+                 }
+               }""",
+            {"input": entrada},
+        )
+        res = data.get("createPost") or {}
+        tipo = res.get("__typename")
+        if tipo != "PostActionSuccess":
+            raise BufferError(
+                f"Buffer rechazó el post ({tipo}): {res.get('message') or res}"
+            )
+        return res["post"]
+
+    # ------------------------------------------------------------ diagnóstico
+    def esquema_createPost(self) -> str:
+        """Vuelve a preguntarle al servidor qué campos espera.
+
+        Buffer ha cambiado este contrato antes y no lo documenta del todo.
+        Si create_post empieza a fallar, esto dice qué cambió.
+        """
+        data = self._gql(
+            """query { __type(name: "CreatePostInput") {
+                 inputFields { name type { kind name ofType { kind name ofType { name } } } }
+               } }"""
+        )
+
+        def desnudo(t):
+            while t and not t.get("name"):
+                t = t.get("ofType")
+            return (t or {}).get("name", "?")
+
         campos = ((data.get("__type") or {}).get("inputFields") or [])
         return "\n".join(
-            f"  {c['name']}: {(c['type'].get('name') or (c['type'].get('ofType') or {}).get('name') or c['type']['kind'])}"
+            f"  {c['name']}: {desnudo(c['type'])}"
+            f"{'  (obligatorio)' if c['type'].get('kind') == 'NON_NULL' else ''}"
             for c in campos
         ) or "(el servidor no expuso el tipo)"
-
-    # ------------------------------------------------------------ publicar
-    def create_post(self, channel_ids: Iterable[str], text: str,
-                    image_urls: Iterable[str], due_at: str | None = None,
-                    draft: bool = False) -> dict:
-        """due_at: ISO 8601 UTC, ej. 2026-08-27T15:30:00Z"""
-        q = """
-        mutation CreatePost($input: PostCreateInput!) {
-          createPost(input: $input) {
-            __typename
-            ... on PostCreateSuccess { post { id status dueAt } }
-            ... on ValidationError { message }
-            ... on UnauthorizedError { message }
-          }
-        }
-        """
-        assets = [{"image": {"url": u}} for u in image_urls if u]
-        variables = {
-            "input": {
-                "channelIds": list(channel_ids),
-                "text": text,
-                "assets": assets,
-                "mode": "draft" if draft else ("customScheduled" if due_at else "addToQueue"),
-            }
-        }
-        if due_at and not draft:
-            variables["input"]["dueAt"] = due_at
-
-        data = self._gql(q, variables)
-        res = data.get("createPost") or {}
-        if res.get("__typename") not in ("PostCreateSuccess",):
-            raise BufferError(f"Buffer rechazó el post: {res}")
-        return res["post"]

@@ -172,8 +172,14 @@ def publish(posts: list[Post], dry_run: bool = False) -> list[Post]:
                 log.error("Sin creativo de %s para %s", red, p.deal.key)
                 continue
             try:
-                bf.create_post([channel_id], p.caption, [url],
-                               due_at=p.scheduled_at, draft=draft)
+                # Buffer acepta un canal por llamada, no una lista.
+                bf.create_post(
+                    channel_id, p.caption, url,
+                    due_at=p.scheduled_at, servicio=red, borrador=draft,
+                    # En TikTok el título es lo que se lee bajo el video;
+                    # el caption largo con hashtags va aparte.
+                    titulo_tiktok=(p.deal.title[:90] if red == "tiktok" else ""),
+                )
                 p.status = "scheduled"
                 log.info("Programado en %s: %s", red, p.deal.title[:60])
             except BufferError as e:

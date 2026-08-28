@@ -1,0 +1,58 @@
+name: Diagnóstico
+
+# Corre el chequeo completo del sistema desde GitHub, con un botón.
+# Actions → Diagnóstico → Run workflow.
+#
+# No hace falta tener Python instalado en tu computadora: esto corre en los
+# servidores de GitHub, gratis, y te deja el resultado en el log.
+#
+# OJO: este repo es público, así que su log también lo es. GitHub enmascara
+# automáticamente cualquier valor guardado como secret (sale como ***), y el
+# diagnóstico está escrito para no imprimir credenciales completas.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  revisar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Revisar cada pieza
+        id: doc
+        continue-on-error: true
+        env:
+          ML_CLIENT_ID:          ${{ secrets.ML_CLIENT_ID }}
+          ML_CLIENT_SECRET:      ${{ secrets.ML_CLIENT_SECRET }}
+          ML_REFRESH_TOKEN:      ${{ secrets.ML_REFRESH_TOKEN }}
+          ML_AFFILIATE_TAG:      ${{ secrets.ML_AFFILIATE_TAG }}
+          AMZ_PARTNER_TAG:       ${{ secrets.AMZ_PARTNER_TAG }}
+          AMZ_CREDENTIAL_ID:     ${{ secrets.AMZ_CREDENTIAL_ID }}
+          AMZ_CREDENTIAL_SECRET: ${{ secrets.AMZ_CREDENTIAL_SECRET }}
+          BUFFER_ACCESS_TOKEN:   ${{ secrets.BUFFER_ACCESS_TOKEN }}
+          BUFFER_CHANNEL_IG:     ${{ secrets.BUFFER_CHANNEL_IG }}
+          BUFFER_CHANNEL_TIKTOK: ${{ secrets.BUFFER_CHANNEL_TIKTOK }}
+          MEDIA_BASE_URL:        ${{ secrets.MEDIA_BASE_URL }}
+        run: python scripts/doctor.py | tee salud.txt
+
+      - name: Dejar el resultado a la vista
+        if: always()
+        run: |
+          {
+            echo "## Diagnóstico — $(TZ=America/Mexico_City date '+%d/%m/%Y %H:%M')"
+            echo ""
+            echo '```'
+            cat salud.txt 2>/dev/null || echo "el diagnóstico no llegó a correr"
+            echo '```'
+            echo ""
+            echo "Los valores guardados como secret aparecen como \`***\`: GitHub los oculta solo."
+          } >> "$GITHUB_STEP_SUMMARY"

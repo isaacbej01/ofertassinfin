@@ -43,7 +43,9 @@ def c_secretos():
 def c_ml_token():
     from src.sources.mercadolibre import MLAuth
     t = MLAuth().token()
-    return OK, f"access token obtenido (…{t[-6:]})"
+    # Nunca se imprime el token, ni un fragmento: el log de un repo público
+    # también es público. Basta con saber que se obtuvo y cuánto mide.
+    return OK, f"access token obtenido ({len(t)} caracteres)"
 
 
 def c_ml_search():
@@ -64,8 +66,9 @@ def c_ml_afiliado():
     u = affiliate_url(d)
     if "matt_" not in u and u == d.url:
         return FAIL, "no se generó link de afiliado (revisa ML_AFFILIATE_TAG)"
-    return WARN, (f"link generado: {u[:90]}… — VALIDA LA ATRIBUCIÓN con una "
-                  "compra de prueba antes de confiar en esto")
+    tiene_tag = "matt_" in u
+    return WARN, (f"link con parámetros de afiliado: {'sí' if tiene_tag else 'no'} — "
+                  "VALIDA LA ATRIBUCIÓN con una compra de prueba antes de confiar")
 
 
 def c_amazon():
@@ -87,7 +90,11 @@ def c_buffer():
     canales = Buffer().channels()
     if not canales:
         return FAIL, "la API responde pero no hay canales conectados"
-    detalle = " · ".join(f"{c.get('service')} → {c.get('id')}" for c in canales)
+    rotos = [c for c in canales if c.get("isDisconnected")]
+    detalle = " · ".join(f"{c.get('service')}:@{c.get('name')} → {c.get('id')}"
+                         for c in canales)
+    if rotos:
+        return WARN, f"{detalle} — DESCONECTADO: {', '.join(c['service'] for c in rotos)}"
     ids = {c["id"] for c in canales}
     faltan = [n for n, v in (("IG", Secrets.BUFFER_CHANNEL_IG()),
                              ("TikTok", Secrets.BUFFER_CHANNEL_TIKTOK()))

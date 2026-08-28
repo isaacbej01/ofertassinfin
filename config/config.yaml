@@ -63,8 +63,23 @@ scoring:
 # El sistema aplica jitter aleatorio para no verse robótico.
 # -------------------------------------------------------------
 cadencia:
-  posts_por_dia: 4
-  horarios:                       # horas base; se les suma jitter
+  # El sistema corre cada 3 horas (09:00 a 21:00 de México) y publica UNA
+  # oferta por corrida. Cinco posts al día, separados de verdad: cuatro posts
+  # seguidos compiten entre ellos y el último casi no se ve.
+  posts_por_corrida: 1
+  posts_por_dia: 5                # solo informativo; el tope real es el de abajo
+  # "inmediato": todo sale en cuanto corre el sistema, con 1-2 min entre post.
+  #   Es lo correcto para ofertas relámpago de ML, que mueren en ~6 horas:
+  #   una oferta programada para la noche puede estar muerta al publicarse.
+  # "horarios": reparte en las horas de abajo (mejor para alcance, peor para
+  #   ofertas que caducan). Se cambia solo esta palabra.
+  modo: "inmediato"
+  # Colchón antes del primer post. NO lo bajes de 10: el sistema programa en
+  # Buffer ANTES de que las imágenes se suban a GitHub Pages, y Buffer las
+  # descarga al publicar. Sin colchón, publica sin imagen.
+  minutos_para_arrancar: 12
+  separacion_minutos: [1, 2]      # hueco aleatorio entre publicaciones
+  horarios:                       # solo se usan en modo "horarios"
     - "09:15"
     - "13:30"
     - "18:45"
@@ -73,7 +88,7 @@ cadencia:
   # Mientras Amazon esté apagado, ML es la única fuente: si su tope fuera
   # menor que posts_por_dia, pedir 4 devolvería 3 y parecería una falla.
   max_por_fuente_por_dia:
-    mercadolibre: 4
+    mercadolibre: 5               # una por corrida × 5 corridas
     amazon: 3
   dias_bloqueo_reposteo: 45       # no repetir el mismo producto en N días
   max_misma_categoria_seguidos: 2
@@ -229,15 +244,30 @@ copy:
     - "Comenta LINK 👇 y te lo mando directo"
   cta_creativo_tiktok: "COMENTA 'LINK'"
 
+  # Se toman SIEMPRE los fijos y luego se rellena al azar con los de alcance,
+  # para que dos posts del mismo día no lleven la misma lista (los sistemas
+  # antispam leen la repetición exacta como bot).
   hashtags_base:
     - "#ofertas"
     - "#ofertasmexico"
     - "#descuentos"
+  hashtags_alcance:
+    - "#promociones"
+    - "#ofertasdeldia"
+    - "#gangas"
+    - "#ahorro"
+    - "#comprasonline"
     - "#comprasinteligentes"
+    - "#mexico"
+    - "#tiktokmehizocomprarlo"
+    - "#lohevistoentiktok"
+    - "#findsmexico"
+    - "#quecomprar"
+    - "#recomendaciones"
   hashtags_por_fuente:
     amazon: ["#amazonmexico", "#amazonfinds"]
     mercadolibre: ["#mercadolibre", "#mercadolibremexico"]
-  max_hashtags: 10
+  max_hashtags: 12
 
 # -------------------------------------------------------------
 # Publicación

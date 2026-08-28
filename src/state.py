@@ -22,8 +22,22 @@ _EMPTY = {
 }
 
 
+# México no cambia de horario desde 2022, así que -6 fijo es correcto.
+MX_TZ = timezone(timedelta(hours=-6))
+
+
 def _now() -> datetime:
     return datetime.now(timezone.utc)
+
+
+def _hoy_mx() -> "datetime.date":
+    """El día del negocio es el de México.
+
+    Con publicaciones repartidas de 09:00 a 21:00 locales, las de la tarde
+    caen en el día UTC siguiente. Contar por UTC partiría el día en dos y el
+    tope diario bloquearía posts que sí tocaban.
+    """
+    return datetime.now(MX_TZ).date()
 
 
 class State:
@@ -75,11 +89,14 @@ class State:
 
     # ------------------------------------------------------------- cadencia
     def published_today(self, source: str | None = None) -> int:
-        hoy = _now().date()
+        hoy = _hoy_mx()
         n = 0
         for e in self.data["published"].values():
             try:
-                when = datetime.fromisoformat(e["published_at"]).date()
+                cuando = datetime.fromisoformat(e["published_at"])
+                if cuando.tzinfo is None:
+                    cuando = cuando.replace(tzinfo=timezone.utc)
+                when = cuando.astimezone(MX_TZ).date()
             except (ValueError, KeyError):
                 continue
             if when == hoy and (source is None or e.get("source") == source):

@@ -69,7 +69,26 @@ def build_affiliate_links(deals: list[Deal]):
 
 
 def schedule_times(n: int) -> list[str]:
-    """Horarios de hoy/mañana con jitter, devueltos en ISO 8601 UTC."""
+    """Cuándo sale cada post, en ISO 8601 UTC.
+
+    Modo "inmediato": todo en cuanto corre el sistema, separado por 1-2 min.
+    Las ofertas relámpago de ML duran unas 6 horas; programar para la noche
+    una oferta encontrada en la mañana es mandar gente a un precio muerto.
+
+    El colchón de arranque no es capricho: los creativos se suben a GitHub
+    Pages DESPUÉS de programarse en Buffer, y Buffer descarga la imagen al
+    publicar, no al programar. Sin ese margen, el primer post sale sin foto.
+    """
+    if get("cadencia.modo", "horarios") == "inmediato":
+        arranque = int(get("cadencia.minutos_para_arrancar", 12))
+        sep = list(get("cadencia.separacion_minutos", [1, 2])) or [1, 2]
+        t = datetime.now(timezone.utc) + timedelta(minutes=arranque)
+        salida = []
+        for _ in range(n):
+            salida.append(t.strftime("%Y-%m-%dT%H:%M:%SZ"))
+            t += timedelta(minutes=random.randint(int(min(sep)), int(max(sep))))
+        return salida
+
     base = get("cadencia.horarios", ["09:15", "13:30", "18:45", "21:20"])
     jitter = int(get("cadencia.jitter_minutos", 25))
     ahora = datetime.now(MX_TZ)
@@ -206,7 +225,10 @@ def save_queue(posts: list[Post]):
 # ---------------------------------------------------------------------------
 def run(n: int | None = None, dry_run: bool = False) -> dict:
     st = State()
-    n = n or int(get("cadencia.posts_por_dia", 4))
+    # Una oferta por corrida: el sistema corre varias veces al día para
+    # que los posts no se canibalicen entre ellos.
+    n = n or int(get("cadencia.posts_por_corrida",
+                     get("cadencia.posts_por_dia", 1)))
 
     crudos = discover()
     nuevos = st.filter_new(crudos)

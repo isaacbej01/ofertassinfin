@@ -2,17 +2,17 @@ name: Publicar ofertas
 
 on:
   schedule:
-    # 08:00 hora del centro de México (UTC-6) = 14:00 UTC.
-    # Una sola corrida diaria que descubre y PROGRAMA los posts del día
-    # en Buffer con sus horarios. Menos corridas = menos minutos de Actions
-    # y menos riesgo de duplicados.
-    - cron: "0 14 * * *"
+    # Cada 3 horas dentro de la franja despierta de México (UTC-6):
+    #   15 UTC = 09:00 · 18 = 12:00 · 21 = 15:00 · 00 = 18:00 · 03 = 21:00
+    # Una oferta por corrida. Así siempre hay algo reciente en el perfil, las
+    # ofertas relámpago no se publican muertas, y los posts no se estorban.
+    - cron: "0 0,3,15,18,21 * * *"
   workflow_dispatch:
     inputs:
       n:
         description: "Cuántos posts generar"
         required: false
-        default: "4"
+        default: "1"
       dry_run:
         description: "Generar sin publicar en Buffer"
         type: boolean
@@ -60,7 +60,7 @@ jobs:
           ML_TOKEN_FILE:       ${{ runner.temp }}/ml_refresh.txt
         run: |
           python -m src.pipeline \
-            -n "${{ github.event.inputs.n || 4 }}" \
+            -n "${{ github.event.inputs.n || 1 }}" \
             ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }} \
             | tee corrida.log
 

@@ -75,6 +75,13 @@
       "candidatos": 150,
       "publicados": 4,
       "dry_run": false
+    },
+    {
+      "at": "2026-08-28T22:27:07.280460+00:00",
+      "encontrados": 150,
+      "candidatos": 146,
+      "publicados": 0,
+      "dry_run": false
     }
   ]
 }

@@ -83,7 +83,11 @@ fuentes:
   mercadolibre:
     activa: true
     site_id: "MLM"
-    # Semillas de búsqueda: el sistema abanica estas queries + categorías
+    # Desde 2026 ML responde 403 en /sites/MLM/search aun con OAuth válido.
+    # El descubrimiento va por best-sellers de categoría + multiget de items.
+    descubrir_categorias: true    # barre TODAS las categorías del sitio
+    max_categorias: 40            # tope de llamadas por corrida
+    # Semillas de búsqueda: SIN USO mientras /search siga cerrado.
     queries:
       - "audifonos bluetooth"
       - "licuadora"

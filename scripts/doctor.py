@@ -53,6 +53,7 @@ def c_ml_token():
 # /sites/{site}/search (403 Forbidden aun con OAuth válido) sin documentarlo.
 # Saber cuáles siguen abiertos es lo que decide cómo se descubren las ofertas.
 SONDAS = (
+    ("categorias del sitio",   "/sites/{site}/categories", {}),
     ("busqueda por texto",     "/sites/{site}/search",
      {"q": "audifonos bluetooth", "limit": 5}),
     ("busqueda por categoria", "/sites/{site}/search",
@@ -108,6 +109,48 @@ def c_ml_endpoints():
         return FAIL, ("ningún endpoint de descubrimiento devolvió datos — "
                       "hay que cambiar la fuente de ofertas")
     return OK, f"sirven: {', '.join(vivos)}"
+
+
+def c_ml_cosecha():
+    """Corre el descubrimiento de verdad y cuenta cuántas ofertas publicables
+    salen. Es la única pregunta que importa: que los endpoints respondan 200
+    no sirve de nada si al final del embudo no quedan ofertas con descuento.
+    """
+    from src.sources.mercadolibre import MercadoLibre
+
+    ml = MercadoLibre()
+    cats = ml.categorias()
+    ids: list[str] = []
+    vistos: set[str] = set()
+    for cat in cats[:12]:                    # muestra: 12 categorías bastan
+        for iid in ml.highlights(cat):
+            if iid not in vistos:
+                vistos.add(iid)
+                ids.append(iid)
+
+    if not ids:
+        return FAIL, "ninguna categoría devolvió best-sellers"
+
+    crudos = ml.items(ids[:200])
+    deals = [d for d in (ml.to_deal(r) for r in crudos) if d]
+    minimo = get("filtros.descuento_minimo_pct", 25)
+    con_desc = [d for d in deals if d.discount_pct > 0]
+    publicables = [d for d in con_desc if d.discount_pct >= minimo]
+
+    print(f"      · {len(cats[:12])} categorías → {len(ids)} items → "
+          f"{len(deals)} normalizados")
+    print(f"      · {len(con_desc)} con descuento → {len(publicables)} "
+          f"sobre el mínimo de {minimo}%")
+    for d in sorted(publicables, key=lambda x: -x.discount_pct)[:3]:
+        print(f"      · -{d.discount_pct:.0f}%  ${d.price:,.0f}  {d.title[:52]}")
+
+    if not publicables:
+        return WARN, ("hay catálogo pero nada pasa el descuento mínimo — "
+                      "hay que bajar el filtro o buscar otra fuente")
+    if len(publicables) < 8:
+        return WARN, (f"solo {len(publicables)} ofertas publicables: alcanza "
+                      "para hoy pero no para sostener 4 posts diarios")
+    return OK, f"{len(publicables)} ofertas publicables de {len(deals)} items"
 
 
 def c_ml_afiliado():
@@ -189,6 +232,7 @@ if __name__ == "__main__":
     if get("fuentes.mercadolibre.activa"):
         check("ML · token OAuth", c_ml_token)
         check("ML · endpoints", c_ml_endpoints)
+        check("ML · cosecha real", c_ml_cosecha)
         check("ML · link de afiliado", c_ml_afiliado)
     check("Amazon", c_amazon)
     check("Buffer", c_buffer)

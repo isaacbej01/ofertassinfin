@@ -165,7 +165,38 @@ class MercadoLibre:
         raise MercadoLibreError(f"ML no respondió tras 3 intentos en {path}")
 
     # ------------------------------------------------------------- discovery
+    def categorias(self) -> list[str]:
+        """IDs de categoría a barrer.
+
+        Las de config van primero (son las de mejor comisión); después se
+        agregan todas las del sitio. Desde que /search murió, las categorías
+        son la única puerta de entrada al catálogo, así que conviene tenerlas
+        completas y no depender de una lista escrita a mano que envejece.
+        """
+        conf = get("fuentes.mercadolibre", {})
+        fijas = [c for c in (conf.get("categorias") or []) if c]
+        tope = int(conf.get("max_categorias", 40))
+
+        if not conf.get("descubrir_categorias", True):
+            return fijas[:tope]
+
+        try:
+            data = self._get(f"/sites/{self.site}/categories")
+        except MercadoLibreError as e:
+            log.warning("no se pudo listar las categorías del sitio: %s", e)
+            return fijas[:tope]
+
+        del_sitio = [c["id"] for c in (data if isinstance(data, list) else [])
+                     if isinstance(c, dict) and c.get("id")]
+        return list(dict.fromkeys(fijas + del_sitio))[:tope]
+
     def search(self, q: str = "", category: str = "", limit: int = 50) -> list[dict]:
+        """⚠️ MUERTO. ML devuelve 403 forbidden en /sites/{site}/search desde
+        2026, aun con OAuth válido y la app bien configurada — confirmado por
+        el diagnóstico del 28/08/2026 y por decenas de reportes públicos de
+        otros desarrolladores. No lo llama nadie; se conserva por si ML
+        reabre el acceso.
+        """
         params = {"limit": min(limit, 50), "offset": 0}
         if q:
             params["q"] = q
@@ -255,33 +286,38 @@ class MercadoLibre:
         )
 
     def discover(self) -> Iterator[Deal]:
+        """Descubre ofertas vía best-sellers por categoría + multiget.
+
+        Este era el camino secundario hasta que ML cerró /search con 403.
+        Ahora es el único, y resulta que no es mal negocio: los highlights ya
+        vienen filtrados por lo que la gente realmente compra, así que el
+        sesgo de calidad viene incluido. Lo que hay que aportar es cobertura
+        de categorías, que es justo lo que da `categorias()`.
+        """
         # Falla temprano y una sola vez: sin token no tiene caso intentar
-        # 30 búsquedas y llenar el log con el mismo error.
+        # 30 llamadas y llenar el log con el mismo error.
         self.auth.token()
 
-        conf = get("fuentes.mercadolibre", {})
-        limit = conf.get("resultados_por_query", 50)
+        cats = self.categorias()
+        ids: list[str] = []
         vistos: set[str] = set()
+        for cat in cats:
+            for iid in self.highlights(cat):
+                if iid not in vistos:
+                    vistos.add(iid)
+                    ids.append(iid)
 
-        for q in conf.get("queries", []):
-            for raw in self.search(q=q, limit=limit):
-                d = self.to_deal(raw)
-                if d and d.source_id not in vistos:
-                    vistos.add(d.source_id)
-                    yield d
+        log.info("descubrimiento: %d categorías → %d items únicos",
+                 len(cats), len(ids))
+        if not ids:
+            log.error("ninguna categoría devolvió best-sellers. Corre el "
+                      "diagnóstico: puede que ML haya cerrado otro endpoint.")
+            return
 
-        for cat in conf.get("categorias", []):
-            ids = [i for i in self.highlights(cat) if i not in vistos]
-            for raw in self.items(ids):
-                d = self.to_deal(raw)
-                if d and d.source_id not in vistos:
-                    vistos.add(d.source_id)
-                    yield d
-            for raw in self.search(category=cat, limit=limit):
-                d = self.to_deal(raw)
-                if d and d.source_id not in vistos:
-                    vistos.add(d.source_id)
-                    yield d
+        for raw in self.items(ids):
+            d = self.to_deal(raw)
+            if d:
+                yield d
 
 
 # ---------------------------------------------------------------------------

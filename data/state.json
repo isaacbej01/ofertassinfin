@@ -18,6 +18,19 @@
     {
       "at": "2026-08-28T22:00:00+00:00",
       "nota": "ensayo revertido a mano: los 3 productos nunca se publicaron"
+    },
+    {
+      "at": "2026-08-28T22:04:38.592246+00:00",
+      "encontrados": 150,
+      "candidatos": 150,
+      "publicados": 0,
+      "dry_run": true,
+      "ensayo": [
+        "mercadolibre:MLM72390922",
+        "mercadolibre:MLM58978915",
+        "mercadolibre:MLM47807630",
+        "mercadolibre:MLM66149468"
+      ]
     }
   ]
 }

@@ -42,7 +42,8 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Ejecutar pipeline
+      # FASE 1: descubre, elige y dibuja. No toca Buffer.
+      - name: Generar creativos
         id: pipeline
         env:
           ML_CLIENT_ID:        ${{ secrets.ML_CLIENT_ID }}
@@ -59,10 +60,10 @@ jobs:
           MEDIA_BASE_URL:      ${{ secrets.MEDIA_BASE_URL }}
           ML_TOKEN_FILE:       ${{ runner.temp }}/ml_refresh.txt
         run: |
-          python -m src.pipeline \
+          python -m src.pipeline --fase generar \
             -n "${{ github.event.inputs.n || 1 }}" \
             ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }} \
-            | tee corrida.log
+            2>&1 | tee corrida.log
 
       # Va inmediatamente después del pipeline y con `always()` a propósito:
       # si el token rotó y algo posterior falla, perder este paso significa
@@ -90,12 +91,59 @@ jobs:
           # Guardamos 10 días para cubrir cualquier post en cola.
           find docs/media -name '*.png' -mtime +10 -delete 2>/dev/null || true
 
-      - name: Commit de estado, imágenes y link-in-bio
+      - name: Subir creativos a GitHub Pages
         run: |
           git config user.name  "ofertas-sin-fin-bot"
           git config user.email "actions@github.com"
           git add data/ docs/ || true
-          git diff --staged --quiet || git commit -m "🤖 corrida $(date -u +%Y-%m-%d)"
+          git diff --staged --quiet || git commit -m "🤖 creativos $(date -u +%Y-%m-%dT%H:%M)"
+          git push
+
+      # Buffer valida la imagen al CREAR el post, no al publicarlo: si la URL
+      # todavía no responde, rechaza con "Image could not be read from its
+      # URL". Pages tarda entre 20 s y 2 min en servir lo recién commiteado,
+      # así que aquí se espera a que la imagen exista de verdad.
+      - name: Esperar a que Pages sirva las imágenes
+        if: github.event.inputs.dry_run != 'true'
+        env:
+          MEDIA_BASE_URL: ${{ secrets.MEDIA_BASE_URL }}
+        run: |
+          archivo=$(ls -t docs/media/*.png 2>/dev/null | head -1 | xargs -r basename)
+          if [ -z "$archivo" ]; then
+            echo "No se generaron creativos en esta corrida."; exit 0
+          fi
+          url="${MEDIA_BASE_URL%/}/$archivo"
+          echo "Esperando a $archivo"
+          for i in $(seq 1 40); do
+            codigo=$(curl -s -o /dev/null -w "%{http_code}" -L "$url")
+            if [ "$codigo" = "200" ]; then
+              echo "Pages responde 200 tras $((i*10)) s."
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "::error::Pages no sirvió la imagen tras 400 s. No se publica: "\
+               "Buffer la rechazaría y el post saldría sin foto."
+          exit 1
+
+      # FASE 2: recién ahora las URLs existen y Buffer las puede leer.
+      - name: Publicar en Buffer
+        if: github.event.inputs.dry_run != 'true'
+        env:
+          BUFFER_ACCESS_TOKEN: ${{ secrets.BUFFER_ACCESS_TOKEN }}
+          BUFFER_CHANNEL_IG:   ${{ secrets.BUFFER_CHANNEL_IG }}
+          BUFFER_CHANNEL_TIKTOK: ${{ secrets.BUFFER_CHANNEL_TIKTOK }}
+          MEDIA_BASE_URL:      ${{ secrets.MEDIA_BASE_URL }}
+        run: python -m src.pipeline --fase publicar 2>&1 | tee -a corrida.log
+
+      - name: Commit de estado y link-in-bio
+        if: always()
+        run: |
+          git config user.name  "ofertas-sin-fin-bot"
+          git config user.email "actions@github.com"
+          git pull --rebase -q || true
+          git add data/ docs/ || true
+          git diff --staged --quiet || git commit -m "🤖 publicado $(date -u +%Y-%m-%dT%H:%M)"
           git push
 
       - name: Resumen

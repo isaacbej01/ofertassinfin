@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import hashlib
 import math
-from dataclasses import dataclass, field, asdict
+from dataclasses import dataclass, field, asdict, fields
 from datetime import datetime
 from typing import Optional
 
@@ -72,6 +72,17 @@ class Deal:
         d = asdict(self)
         d.pop("raw", None)
         return d
+
+    @classmethod
+    def from_dict(cls, d: dict) -> "Deal":
+        """Revive una oferta guardada en la cola.
+
+        Existe porque generar y publicar ya no ocurren en el mismo proceso:
+        primero hay que subir los creativos a Pages, y hasta entonces se
+        puede llamar a Buffer.
+        """
+        campos = {f.name for f in fields(cls)}
+        return cls(**{k: v for k, v in d.items() if k in campos})
 
 
 @dataclass

@@ -213,17 +213,37 @@ def publish(posts: list[Post], dry_run: bool = False) -> list[Post]:
     return posts
 
 
-def save_queue(posts: list[Post]):
+PENDIENTES = QUEUE_DIR / "pendientes.json"
+
+
+def save_queue(posts: list[Post], pendientes: bool = False):
     QUEUE_DIR.mkdir(parents=True, exist_ok=True)
+    datos = json.dumps([p.to_dict() for p in posts], ensure_ascii=False, indent=2)
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-    (QUEUE_DIR / f"{stamp}.json").write_text(
-        json.dumps([p.to_dict() for p in posts], ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
+    (QUEUE_DIR / f"{stamp}.json").write_text(datos, encoding="utf-8")
+    if pendientes:
+        PENDIENTES.write_text(datos, encoding="utf-8")
+
+
+def cargar_pendientes() -> list[Post]:
+    if not PENDIENTES.exists():
+        return []
+    posts = []
+    for d in json.loads(PENDIENTES.read_text(encoding="utf-8")):
+        posts.append(Post(
+            deal=Deal.from_dict(d.get("deal") or {}),
+            image_paths=d.get("image_paths") or {},
+            image_urls=d.get("image_urls") or {},
+            caption=d.get("caption", ""),
+            caption_tiktok=d.get("caption_tiktok", ""),
+            scheduled_at=d.get("scheduled_at"),
+        ))
+    return posts
 
 
 # ---------------------------------------------------------------------------
-def run(n: int | None = None, dry_run: bool = False) -> dict:
+def run(n: int | None = None, dry_run: bool = False,
+        fase: str = "completa") -> dict:
     st = State()
     # Una oferta por corrida: el sistema corre varias veces al día para
     # que los posts no se canibalicen entre ellos.
@@ -250,6 +270,20 @@ def run(n: int | None = None, dry_run: bool = False) -> dict:
 
     build_affiliate_links(elegidos)
     posts = build_posts(elegidos)
+
+    if fase == "generar":
+        # Buffer valida la imagen EN EL MOMENTO de crear el post, no al
+        # publicarlo. Si se le pasa una URL que todavía no existe en Pages,
+        # rechaza con "Image could not be read from its URL". Por eso los
+        # creativos se suben primero y la publicación va en una segunda
+        # llamada, cuando las URLs ya responden.
+        # En ensayo no se deja cola pendiente: nadie debe publicarla después.
+        save_queue(posts, pendientes=not dry_run)
+        log.info("FASE 1: %d creativos listos y encolados. Falta subirlos a "
+                 "Pages y correr la fase de publicación.", len(posts))
+        return {"publicados": 0, "encontrados": len(crudos),
+                "generados": len(posts), "fase": "generar"}
+
     posts = publish(posts, dry_run=dry_run)
     save_queue(posts)
 
@@ -284,17 +318,63 @@ def run(n: int | None = None, dry_run: bool = False) -> dict:
             "fallidos": sum(1 for p in posts if p.status == "failed")}
 
 
+def publicar_pendientes(dry_run: bool = False) -> dict:
+    """FASE 2: publica en Buffer lo que la fase 1 dejó encolado.
+
+    Para entonces los creativos ya están servidos por GitHub Pages, que es la
+    única condición que Buffer exige y que la versión anterior no cumplía.
+    """
+    posts = cargar_pendientes()
+    if not posts:
+        log.info("No hay nada pendiente por publicar.")
+        return {"publicados": 0, "pendientes": 0}
+
+    st = State()
+    posts = publish(posts, dry_run=dry_run)
+    save_queue(posts)
+
+    listos = [p for p in posts if p.status in ("scheduled", "queued")]
+    if listos:
+        linkinbio.build(linkinbio.add([p.deal for p in listos]))
+
+    for p in listos:
+        st.mark_published(p.deal, scheduled_at=p.scheduled_at or "")
+    st.prune()
+    st.log_run({"publicados": len(listos), "fase": "publicar",
+                "fallidos": sum(1 for p in posts if p.status == "failed")})
+    st.save()
+
+    # La cola se vacía pase lo que pase: reintentar mañana una oferta de hoy
+    # es publicar un precio que ya cambió.
+    PENDIENTES.write_text("[]", encoding="utf-8")
+
+    for p in posts:
+        if p.status == "failed":
+            log.error("No se publicó %s: %s", p.deal.key, p.error)
+    return {"publicados": len(listos), "pendientes": len(posts)}
+
+
 def main():
     ap = argparse.ArgumentParser(description="Ofertas Sin Fin — pipeline")
     ap.add_argument("-n", type=int, help="cuántos posts generar")
     ap.add_argument("--dry-run", action="store_true",
                     help="genera todo pero no publica en Buffer")
+    ap.add_argument("--fase", choices=["completa", "generar", "publicar"],
+                    default="completa",
+                    help="generar: crea creativos y encola. "
+                         "publicar: manda a Buffer lo encolado.")
     ap.add_argument("-v", "--verbose", action="store_true")
     args = ap.parse_args()
 
     setup_logging(args.verbose)
-    res = run(n=args.n, dry_run=args.dry_run)
+    if args.fase == "publicar":
+        res = publicar_pendientes(dry_run=args.dry_run)
+    else:
+        res = run(n=args.n, dry_run=args.dry_run, fase=args.fase)
     log.info("Resultado: %s", res)
+    # La fase de generación no publica nada: salir en error sería mentir.
+    if args.fase == "generar" or args.dry_run:
+        return 0
     return 0 if res["publicados"] else 1
 
 

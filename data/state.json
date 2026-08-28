@@ -1,34 +1,6 @@
 {
   "version": 1,
-  "published": {
-    "mercadolibre:MLM72390922": {
-      "published_at": "2026-08-28T21:50:53.740447+00:00",
-      "scheduled_at": "2026-08-29T00:42:00Z",
-      "source": "mercadolibre",
-      "title": "Arrancador de Batería Portátil 8000A para Auto y Moto con Linterna LED y Pantalla LCD",
-      "price": 298.2,
-      "discount_pct": 78.0,
-      "category_id": "MLM22596"
-    },
-    "mercadolibre:MLM58978915": {
-      "published_at": "2026-08-28T21:50:53.740457+00:00",
-      "scheduled_at": "2026-08-29T03:05:00Z",
-      "source": "mercadolibre",
-      "title": "Asistente Virtual Amazon Echo Dot 5ta Gen Blanco Glacier White",
-      "price": 799.0,
-      "discount_pct": 60.0,
-      "category_id": "MLM187752"
-    },
-    "mercadolibre:MLM47807630": {
-      "published_at": "2026-08-28T21:50:53.740460+00:00",
-      "scheduled_at": "2026-08-29T15:06:00Z",
-      "source": "mercadolibre",
-      "title": "Audífonos Inalámbricos Sony Wh-ch520 Color Rosa",
-      "price": 699.0,
-      "discount_pct": 60.0,
-      "category_id": "MLM7533"
-    }
-  },
+  "published": {},
   "runs": [
     {
       "at": "2026-08-27T23:30:29.217295+00:00",
@@ -42,6 +14,10 @@
       "candidatos": 150,
       "publicados": 3,
       "dry_run": true
+    },
+    {
+      "at": "2026-08-28T22:00:00+00:00",
+      "nota": "ensayo revertido a mano: los 3 productos nunca se publicaron"
     }
   ]
 }

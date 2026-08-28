@@ -229,18 +229,46 @@ class MercadoLibre:
         ]
 
     def items(self, ids: list[str]) -> list[dict]:
-        """Multiget: hasta 20 IDs por llamada."""
-        out = []
+        """Trae publicaciones completas. Multiget de a 20, con plan B.
+
+        El multiget devuelve una lista de sobres {code, body}: un 200 global
+        puede traer 20 sobres con 403 adentro. Cuando un lote entero viene
+        vacío se cae a /items/{id} uno por uno, que es más caro pero es la
+        diferencia entre tener catálogo y no tenerlo.
+        """
+        out: list[dict] = []
+        codigos: dict = {}
         for i in range(0, len(ids), 20):
             chunk = ids[i:i + 20]
+            data = []
             try:
                 data = self._get("/items", {"ids": ",".join(chunk)})
             except MercadoLibreError as e:
                 log.warning("multiget falló: %s", e)
-                continue
+
+            obtenidos = 0
             for wrapper in data if isinstance(data, list) else []:
-                if wrapper.get("code") == 200 and wrapper.get("body"):
+                cod = wrapper.get("code")
+                codigos[cod] = codigos.get(cod, 0) + 1
+                if cod == 200 and wrapper.get("body"):
                     out.append(wrapper["body"])
+                    obtenidos += 1
+
+            if obtenidos:
+                continue
+
+            # Plan B: el lote vino vacío. Uno por uno.
+            for iid in chunk:
+                try:
+                    cuerpo = self._get(f"/items/{iid}")
+                except MercadoLibreError:
+                    continue
+                if isinstance(cuerpo, dict) and cuerpo.get("id"):
+                    out.append(cuerpo)
+
+        if codigos:
+            log.info("multiget: sobres por código %s", codigos)
+        log.info("items: %d pedidos → %d obtenidos", len(ids), len(out))
         return out
 
     @staticmethod

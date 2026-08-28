@@ -165,7 +165,24 @@ def c_ml_forma():
         if ri.status_code == 200:
             res = (ri.json() or {}).get("results") or []
             print(f"      · {len(res)} ofertas · "
-                  f"{json.dumps(res[0], ensure_ascii=False)[:420] if res else 'vacío'}")
+                  f"{json.dumps(res[0], ensure_ascii=False)[:260] if res else 'vacío'}")
+
+            # Con un item_id REAL en la mano: ¿por qué el multiget da 0?
+            real = (res[0].get("item_id") or res[0].get("id")) if res else ""
+            if real:
+                rm = s.get(f"{API}/items", params={"ids": real}, timeout=25)
+                sobres = rm.json() if rm.status_code == 200 else []
+                w = sobres[0] if isinstance(sobres, list) and sobres else {}
+                print(f"      · multiget {real} → HTTP {rm.status_code} · "
+                      f"sobre code={w.get('code')} "
+                      f"{json.dumps(w, ensure_ascii=False)[:200] if not w.get('body') else 'CON BODY'}")
+                rs1 = s.get(f"{API}/items/{real}", timeout=25)
+                print(f"      · /items/{real} → {rs1.status_code}")
+                if rs1.status_code == 200:
+                    it = rs1.json()
+                    print(f"      · precio={it.get('price')} "
+                          f"original={it.get('original_price')} "
+                          f"vendidos={it.get('sold_quantity')}")
 
     # 2. USER_PRODUCT: no es un item, /items le da 404. ¿Por dónde se resuelve?
     uid = next((c["id"] for c in contenido

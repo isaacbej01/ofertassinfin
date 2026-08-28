@@ -111,6 +111,58 @@ def c_ml_endpoints():
     return OK, f"sirven: {', '.join(vivos)}"
 
 
+def c_ml_forma():
+    """Imprime la forma REAL de las respuestas de ML.
+
+    Existe porque ML cambia el contrato sin avisar y el normalizador asume
+    campos que pueden haber dejado de existir. Cuando la cosecha salga en
+    cero, esto dice por qué en una sola corrida en vez de tres.
+    """
+    import json
+
+    from src.sources.mercadolibre import API, UA, auth
+
+    s = requests.Session()
+    s.headers.update({"User-Agent": UA, "Accept": "application/json",
+                      "Authorization": f"Bearer {auth().token()}"})
+    site = get("fuentes.mercadolibre.site_id", "MLM")
+
+    r = s.get(f"{API}/highlights/{site}/category/MLM1051", timeout=25)
+    contenido = (r.json() or {}).get("content") or []
+    tipos: dict = {}
+    for c in contenido:
+        tipos[c.get("type")] = tipos.get(c.get("type"), 0) + 1
+    print(f"      · highlights: {len(contenido)} posiciones, tipos {tipos}")
+    print(f"      · muestra: {json.dumps(contenido[:2], ensure_ascii=False)[:200]}")
+
+    def campos(d: dict, k: str = "") -> str:
+        return f"{k}{sorted(d.keys())}"[:320]
+
+    pid = next((c["id"] for c in contenido if c.get("type") == "PRODUCT"), "")
+    if pid:
+        rp = s.get(f"{API}/products/{pid}", timeout=25)
+        print(f"      · /products/{pid} → {rp.status_code}")
+        if rp.status_code == 200:
+            p = rp.json()
+            print(f"      · campos: {campos(p)}")
+            bbw = p.get("buy_box_winner") or {}
+            print(f"      · buy_box_winner: {campos(bbw) if bbw else 'AUSENTE'}")
+            print(f"      · precio={bbw.get('price')} "
+                  f"original={bbw.get('original_price')}")
+
+    iid = next((c["id"] for c in contenido if c.get("type") != "PRODUCT"), "")
+    if iid:
+        ri = s.get(f"{API}/items", params={"ids": iid}, timeout=25)
+        cuerpo = ri.json() if ri.status_code == 200 else []
+        w = cuerpo[0] if isinstance(cuerpo, list) and cuerpo else {}
+        print(f"      · /items?ids={iid} → {ri.status_code} · "
+              f"code={w.get('code')}")
+        if w.get("body"):
+            print(f"      · campos: {campos(w['body'])}")
+
+    return OK, "forma de las respuestas impresa arriba"
+
+
 def c_ml_cosecha():
     """Corre el descubrimiento de verdad y cuenta cuántas ofertas publicables
     salen. Es la única pregunta que importa: que los endpoints respondan 200
@@ -119,26 +171,30 @@ def c_ml_cosecha():
     from src.sources.mercadolibre import MercadoLibre
 
     ml = MercadoLibre()
-    cats = ml.categorias()
-    ids: list[str] = []
+    cats = ml.categorias()[:12]              # muestra: 12 categorías bastan
+    items: list[str] = []
+    productos: list[str] = []
     vistos: set[str] = set()
-    for cat in cats[:12]:                    # muestra: 12 categorías bastan
-        for iid in ml.highlights(cat):
-            if iid not in vistos:
-                vistos.add(iid)
-                ids.append(iid)
+    for cat in cats:
+        for pos in ml.highlights(cat):
+            if pos["id"] in vistos:
+                continue
+            vistos.add(pos["id"])
+            (productos if pos["type"] == "PRODUCT" else items).append(pos["id"])
 
-    if not ids:
+    if not (items or productos):
         return FAIL, "ninguna categoría devolvió best-sellers"
 
-    crudos = ml.items(ids[:200])
-    deals = [d for d in (ml.to_deal(r) for r in crudos) if d]
+    deals = [d for d in (ml.to_deal(r) for r in ml.items(items[:200])) if d]
+    deals += [d for d in (ml.producto_a_deal(r)
+                          for r in ml.productos(productos[:60])) if d]
+
     minimo = get("filtros.descuento_minimo_pct", 25)
     con_desc = [d for d in deals if d.discount_pct > 0]
     publicables = [d for d in con_desc if d.discount_pct >= minimo]
 
-    print(f"      · {len(cats[:12])} categorías → {len(ids)} items → "
-          f"{len(deals)} normalizados")
+    print(f"      · {len(cats)} categorías → {len(items)} items + "
+          f"{len(productos)} productos → {len(deals)} normalizados")
     print(f"      · {len(con_desc)} con descuento → {len(publicables)} "
           f"sobre el mínimo de {minimo}%")
     for d in sorted(publicables, key=lambda x: -x.discount_pct)[:3]:
@@ -232,6 +288,7 @@ if __name__ == "__main__":
     if get("fuentes.mercadolibre.activa"):
         check("ML · token OAuth", c_ml_token)
         check("ML · endpoints", c_ml_endpoints)
+        check("ML · forma de las respuestas", c_ml_forma)
         check("ML · cosecha real", c_ml_cosecha)
         check("ML · link de afiliado", c_ml_afiliado)
     check("Amazon", c_amazon)

@@ -209,16 +209,23 @@ class MercadoLibre:
             return []
         return data.get("results", [])
 
-    def highlights(self, category_id: str) -> list[str]:
-        """Top 20 más vendidos de una categoría. Devuelve IDs de item."""
+    def highlights(self, category_id: str) -> list[dict]:
+        """Top 20 más vendidos de una categoría.
+
+        Devuelve [{"id": ..., "type": "ITEM"|"PRODUCT"}]. La distinción importa:
+        México migró a catálogo, así que la mayoría de las posiciones ya no son
+        publicaciones sueltas (ITEM) sino productos de catálogo (PRODUCT), que
+        se resuelven por otro endpoint. La primera versión filtraba solo ITEM y
+        por eso 12 categorías rendían 8 items.
+        """
         try:
             data = self._get(f"/highlights/{self.site}/category/{category_id}")
         except MercadoLibreError as e:
             log.warning("highlights falló (%s): %s", category_id, e)
             return []
         return [
-            c["id"] for c in data.get("content", [])
-            if c.get("type") == "ITEM" and c.get("id")
+            {"id": c["id"], "type": c.get("type") or "ITEM"}
+            for c in data.get("content", []) if c.get("id")
         ]
 
     def items(self, ids: list[str]) -> list[dict]:
@@ -236,7 +243,65 @@ class MercadoLibre:
                     out.append(wrapper["body"])
         return out
 
+    def productos(self, ids: list[str]) -> list[dict]:
+        """Resuelve productos de catálogo. Uno por llamada: no hay multiget."""
+        out = []
+        for pid in ids:
+            try:
+                out.append(self._get(f"/products/{pid}"))
+            except MercadoLibreError as e:
+                log.warning("producto %s falló: %s", pid, e)
+        return out
+
     # -------------------------------------------------------------- normaliza
+    @staticmethod
+    def producto_a_deal(raw: dict) -> Deal | None:
+        """Normaliza un producto de catálogo.
+
+        El precio no vive en el producto sino en la oferta ganadora del buy box
+        (`buy_box_winner`), que es justo el precio que ve el comprador. Sin buy
+        box no hay nada que anunciar: el producto existe pero nadie lo vende.
+        """
+        pid = raw.get("id")
+        nombre = raw.get("name") or raw.get("title")
+        ganador = raw.get("buy_box_winner") or {}
+        precio = ganador.get("price")
+        if not (pid and nombre and precio):
+            return None
+
+        original = ganador.get("original_price")
+        pics = raw.get("pictures") or []
+        img = ""
+        for p in pics:
+            img = p.get("secure_url") or p.get("url") or ""
+            if img:
+                break
+
+        envio = ganador.get("shipping") or {}
+        attrs = {a.get("id"): a.get("value_name")
+                 for a in (raw.get("attributes") or [])}
+        rating = (raw.get("rating_average")
+                  or (raw.get("reviews") or {}).get("rating_average"))
+
+        return Deal(
+            source="mercadolibre",
+            source_id=pid,
+            url=(raw.get("permalink")
+                 or f"https://www.mercadolibre.com.mx/p/{pid}"),
+            title=nombre,
+            image_url=img.replace("http://", "https://"),
+            category_id=raw.get("domain_id", "") or "",
+            brand=attrs.get("BRAND", "") or "",
+            price=float(precio),
+            original_price=float(original) if original else None,
+            reviews=int((raw.get("reviews") or {}).get("total") or 0),
+            rating=rating,
+            sold=int(raw.get("sold_quantity") or 0),
+            free_shipping=bool(envio.get("free_shipping")),
+            is_full=bool(envio.get("logistic_type") == "fulfillment"),
+            raw=raw,
+        )
+
     @staticmethod
     def to_deal(raw: dict) -> Deal | None:
         item_id = raw.get("id")
@@ -299,23 +364,33 @@ class MercadoLibre:
         self.auth.token()
 
         cats = self.categorias()
-        ids: list[str] = []
+        items: list[str] = []
+        productos: list[str] = []
         vistos: set[str] = set()
         for cat in cats:
-            for iid in self.highlights(cat):
-                if iid not in vistos:
-                    vistos.add(iid)
-                    ids.append(iid)
+            for pos in self.highlights(cat):
+                if pos["id"] in vistos:
+                    continue
+                vistos.add(pos["id"])
+                (productos if pos["type"] == "PRODUCT" else items).append(pos["id"])
 
-        log.info("descubrimiento: %d categorías → %d items únicos",
-                 len(cats), len(ids))
-        if not ids:
+        log.info("descubrimiento: %d categorías → %d items + %d productos",
+                 len(cats), len(items), len(productos))
+        if not (items or productos):
             log.error("ninguna categoría devolvió best-sellers. Corre el "
                       "diagnóstico: puede que ML haya cerrado otro endpoint.")
             return
 
-        for raw in self.items(ids):
+        for raw in self.items(items):
             d = self.to_deal(raw)
+            if d:
+                yield d
+
+        # Los productos van de uno en uno, así que se topan: el rate limit de
+        # ML es finito y una corrida no necesita el catálogo entero.
+        tope = int(get("fuentes.mercadolibre.max_productos", 150))
+        for raw in self.productos(productos[:tope]):
+            d = self.producto_a_deal(raw)
             if d:
                 yield d
 

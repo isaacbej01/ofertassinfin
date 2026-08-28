@@ -41,34 +41,90 @@ def c_secretos():
 
 # --------------------------------------------------------------- fuentes
 def c_ml_token():
-    from src.sources.mercadolibre import MLAuth
-    t = MLAuth().token()
+    from src.sources.mercadolibre import auth
+    t = auth().token()
     # Nunca se imprime el token, ni un fragmento: el log de un repo público
     # también es público. Basta con saber que se obtuvo y cuánto mide.
     return OK, f"access token obtenido ({len(t)} caracteres)"
 
 
-def c_ml_search():
-    from src.sources.mercadolibre import MercadoLibre
-    res = MercadoLibre().search(q="audifonos bluetooth", limit=5)
-    if not res:
-        return FAIL, "la búsqueda devolvió 0 resultados"
-    con_desc = sum(1 for r in res if r.get("original_price"))
-    return OK, f"{len(res)} resultados, {con_desc} con precio original"
+# Endpoints candidatos para descubrir ofertas. Se prueban TODOS y se reporta qué
+# responde cada uno: a lo largo de 2026 ML fue cerrando el acceso público a
+# /sites/{site}/search (403 Forbidden aun con OAuth válido) sin documentarlo.
+# Saber cuáles siguen abiertos es lo que decide cómo se descubren las ofertas.
+SONDAS = (
+    ("busqueda por texto",     "/sites/{site}/search",
+     {"q": "audifonos bluetooth", "limit": 5}),
+    ("busqueda por categoria", "/sites/{site}/search",
+     {"category": "MLM1051", "limit": 5}),
+    ("mas vendidos",           "/highlights/{site}/category/MLM1051", {}),
+    ("catalogo de productos",  "/products/search",
+     {"site_id": "{site}", "status": "active", "q": "audifonos bluetooth"}),
+    ("tendencias",             "/trends/{site}", {}),
+    ("multiget de items",      "/items", {"ids": "MLM1234567890"}),
+)
+
+
+def c_ml_endpoints():
+    """Sonda cada endpoint y reporta el código HTTP tal cual lo devuelve ML."""
+    from src.sources.mercadolibre import API, UA, auth
+
+    sesion = requests.Session()
+    sesion.headers.update({"User-Agent": UA, "Accept": "application/json",
+                           "Authorization": f"Bearer {auth().token()}"})
+    site = get("fuentes.mercadolibre.site_id", "MLM")
+    print("   sondeando endpoints de descubrimiento:")
+
+    vivos, muertos = [], []
+    for nombre, ruta, params in SONDAS:
+        p = {k: (v.format(site=site) if isinstance(v, str) else v)
+             for k, v in params.items()}
+        try:
+            r = sesion.get(f"{API}{ruta.format(site=site)}", params=p, timeout=25)
+        except requests.RequestException as e:
+            print(f"      · {nombre:<24} red: {e}")
+            muertos.append(nombre)
+            continue
+
+        if r.status_code == 200:
+            try:
+                cuerpo = r.json()
+            except ValueError:
+                cuerpo = {}
+            if isinstance(cuerpo, list):
+                n = len(cuerpo)
+            elif isinstance(cuerpo, dict):
+                n = len(cuerpo.get("results") or cuerpo.get("content") or [])
+            else:
+                n = 0
+            print(f"      · {nombre:<24} 200 OK · {n} elementos")
+            (vivos if n else muertos).append(nombre)
+        else:
+            # El cuerpo del error de ML explica el motivo y no trae credenciales.
+            print(f"      · {nombre:<24} {r.status_code} · {r.text[:130]}")
+            muertos.append(nombre)
+
+    if not vivos:
+        return FAIL, ("ningún endpoint de descubrimiento devolvió datos — "
+                      "hay que cambiar la fuente de ofertas")
+    return OK, f"sirven: {', '.join(vivos)}"
 
 
 def c_ml_afiliado():
     from src.models import Deal
     from src.sources.mercadolibre import affiliate_url
+
+    if not Secrets.ML_AFFILIATE_TAG():
+        return WARN, ("todavía sin ML_AFFILIATE_TAG: los links saldrían sin "
+                      "afiliado (pendiente el alta del programa)")
+
     d = Deal(source="mercadolibre", source_id="MLM123",
              url="https://articulo.mercadolibre.com.mx/MLM-123-prueba",
              title="prueba", image_url="")
-    u = affiliate_url(d)
-    if "matt_" not in u and u == d.url:
-        return FAIL, "no se generó link de afiliado (revisa ML_AFFILIATE_TAG)"
-    tiene_tag = "matt_" in u
-    return WARN, (f"link con parámetros de afiliado: {'sí' if tiene_tag else 'no'} — "
-                  "VALIDA LA ATRIBUCIÓN con una compra de prueba antes de confiar")
+    if "matt_" not in affiliate_url(d):
+        return FAIL, "hay tag configurado pero no se inyectó en la URL"
+    return WARN, ("link con parámetros de afiliado — VALIDA LA ATRIBUCIÓN con "
+                  "una compra de prueba antes de confiar")
 
 
 def c_amazon():
@@ -132,7 +188,7 @@ if __name__ == "__main__":
     check("Creativo (Pillow)", c_creativo)
     if get("fuentes.mercadolibre.activa"):
         check("ML · token OAuth", c_ml_token)
-        check("ML · búsqueda", c_ml_search)
+        check("ML · endpoints", c_ml_endpoints)
         check("ML · link de afiliado", c_ml_afiliado)
     check("Amazon", c_amazon)
     check("Buffer", c_buffer)

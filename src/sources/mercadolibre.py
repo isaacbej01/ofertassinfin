@@ -44,12 +44,15 @@ class MLAuth:
     def __init__(self):
         self._token = None
         self._expires = 0.0
+        self._refresh_vigente: str | None = None
 
     def token(self) -> str:
         if self._token and time.time() < self._expires - 120:
             return self._token
 
-        refresh = Secrets.ML_REFRESH_TOKEN()
+        # Si ya refrescamos una vez en este proceso, el valor del secret quedó
+        # muerto: ML solo acepta el ÚLTIMO refresh token que emitió.
+        refresh = self._refresh_vigente or Secrets.ML_REFRESH_TOKEN()
         if not refresh:
             raise MercadoLibreError(
                 "No hay ML_REFRESH_TOKEN. Corre `python scripts/ml_oauth.py` una vez "
@@ -78,6 +81,7 @@ class MLAuth:
 
         nuevo_refresh = data.get("refresh_token")
         if nuevo_refresh and nuevo_refresh != refresh:
+            self._refresh_vigente = nuevo_refresh
             _persistir_refresh(nuevo_refresh)
 
         return self._token
@@ -116,12 +120,24 @@ def _persistir_refresh(token: str):
     log.warning("ML rotó el refresh token; escrito para persistirlo como secret.")
 
 
+# Una sola instancia por proceso. Cada MLAuth extra provocaría un refresh extra,
+# y cada refresh mata el token anterior: dos instancias son una carrera perdida.
+_auth_compartido: "MLAuth | None" = None
+
+
+def auth() -> "MLAuth":
+    global _auth_compartido
+    if _auth_compartido is None:
+        _auth_compartido = MLAuth()
+    return _auth_compartido
+
+
 # ---------------------------------------------------------------------------
 # Cliente
 # ---------------------------------------------------------------------------
 class MercadoLibre:
     def __init__(self):
-        self.auth = MLAuth()
+        self.auth = auth()
         self.site = get("fuentes.mercadolibre.site_id", "MLM")
         self.s = requests.Session()
         self.s.headers.update({"User-Agent": UA, "Accept": "application/json"})

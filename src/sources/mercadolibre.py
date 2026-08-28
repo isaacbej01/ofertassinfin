@@ -324,7 +324,11 @@ class MercadoLibre:
 
         return Deal(
             source="mercadolibre",
-            source_id=str(oferta.get("item_id") or pid),
+            # La identidad es el PRODUCTO, no la publicación: el ganador del
+            # buy box cambia solo, y con él el item_id. Si la identidad fuera
+            # el item, el bloqueo de reposteo no serviría de nada — el mismo
+            # Echo Dot volvería a salir la semana entrante con otro ID.
+            source_id=str(pid),
             # El link va a la ficha del producto, no a la publicación de un
             # vendedor: si ese vendedor se queda sin stock, la ficha sigue viva.
             url=(producto.get("permalink")

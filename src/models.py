@@ -82,6 +82,7 @@ class Post:
     image_paths: dict                # {"instagram": path, "tiktok": path}
     image_urls: dict = field(default_factory=dict)
     caption: str = ""
+    caption_tiktok: str = ""
     scheduled_at: Optional[str] = None   # ISO 8601 UTC
     template: str = "clasica"
     status: str = "pending"              # pending | scheduled | failed
@@ -93,6 +94,7 @@ class Post:
             "image_paths": self.image_paths,
             "image_urls": self.image_urls,
             "caption": self.caption,
+            "caption_tiktok": self.caption_tiktok,
             "scheduled_at": self.scheduled_at,
             "template": self.template,
             "status": self.status,

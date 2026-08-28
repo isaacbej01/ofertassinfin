@@ -64,7 +64,7 @@ def _hashtags(deal: Deal) -> str:
     return " ".join(base[: get("copy.max_hashtags", 10)])
 
 
-def caption(deal: Deal, incluir_link: bool = False) -> str:
+def caption(deal: Deal, incluir_link: bool = False, red: str = "") -> str:
     disclosure = (
         get("copy.disclosure_amazon")
         if deal.source == "amazon"
@@ -80,7 +80,11 @@ def caption(deal: Deal, incluir_link: bool = False) -> str:
     )
 
     titulo = deal.title if len(deal.title) <= 90 else deal.title[:87] + "…"
-    cta = random.choice(get("copy.cta", ["Link en la bio 🔗"]))
+    # Cada red tiene su propia verdad sobre dónde está el link. TikTok no
+    # da link en bio hasta los 1,000 seguidores: prometerlo ahí sería
+    # mandar a la gente a un lugar vacío.
+    opciones = get(f"copy.cta_{red}", None) if red else None
+    cta = random.choice(opciones or get("copy.cta", ["Link en la bio 🔗"]))
     tienda = "Amazon México" if deal.source == "amazon" else "Mercado Libre"
 
     partes = [

@@ -214,11 +214,21 @@ creativo:
 copy:
   disclosure_amazon: "Como Afiliado de Amazon, percibo dinero con las compras elegibles."
   disclosure_general: "#PublicidadPagada"
+  # CTA de Instagram: el link de la bio existe y funciona.
   cta:
     - "Link en la bio 🔗"
     - "Te dejo el link en la bio 👆"
     - "Corre, que vuelan 🏃"
     - "Link en bio antes de que suba 🔗"
+  # CTA de TikTok: NO hay link en bio hasta los 1,000 seguidores (vas en 845),
+  # así que prometerlo sería mandar a la gente a un perfil sin link. Mientras
+  # tanto, se pide comentario y el link se manda por DM a mano.
+  cta_tiktok:
+    - "Comenta LINK y te lo mando por mensaje 💬"
+    - "¿Lo quieres? Comenta LINK y te paso el enlace 💬"
+    - "Comenta LINK 👇 y te lo mando directo"
+  cta_creativo_tiktok: "COMENTA 'LINK'"
+
   hashtags_base:
     - "#ofertas"
     - "#ofertasmexico"

@@ -109,8 +109,10 @@ def creativos_por_destino(deal: Deal, i: int = 0) -> dict:
     return {
         "instagram": str(card.render(deal, formato="instagram",
                                      plantilla=plantilla)),
-        "tiktok": str(story.render_offer(deal, plantilla=plantilla,
-                                         destino="tiktok")),
+        # El CTA del creativo tiene que decir la verdad de ESA red.
+        "tiktok": str(story.render_offer(
+            deal, plantilla=plantilla, destino="tiktok",
+            cta_texto=get("copy.cta_creativo_tiktok", "COMENTA 'LINK'"))),
     }
 
 
@@ -131,7 +133,8 @@ def build_posts(deals: list[Deal]) -> list[Post]:
             deal=d,
             image_paths=paths,
             image_urls=urls,
-            caption=copywriter.caption(d),
+            caption=copywriter.caption(d, red="instagram"),
+            caption_tiktok=copywriter.caption(d, red="tiktok"),
             scheduled_at=tiempos[i] if i < len(tiempos) else None,
         ))
     return posts
@@ -174,7 +177,10 @@ def publish(posts: list[Post], dry_run: bool = False) -> list[Post]:
             try:
                 # Buffer acepta un canal por llamada, no una lista.
                 bf.create_post(
-                    channel_id, p.caption, url,
+                    channel_id,
+                    (p.caption_tiktok if red == "tiktok" and p.caption_tiktok
+                     else p.caption),
+                    url,
                     due_at=p.scheduled_at, servicio=red, borrador=draft,
                     # En TikTok el título es lo que se lee bajo el video;
                     # el caption largo con hashtags va aparte.

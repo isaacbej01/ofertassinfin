@@ -158,9 +158,14 @@ def c_ml_forma():
                 print(f"      · HIJO {hijos[0]}: precio={phr} original={phorig}")
             else:
                 print(f"      · HIJO {hijos[0]} → {rh.status_code}")
-        # ¿existe la lista de ofertas del producto?
-        ri = s.get(f"{API}/products/{pid}/items", timeout=25)
+        # Aquí es donde vive el precio: las ofertas concretas del producto.
+        ri = s.get(f"{API}/products/{pid}/items",
+                   params={"limit": 1}, timeout=25)
         print(f"      · /products/{pid}/items → {ri.status_code}")
+        if ri.status_code == 200:
+            res = (ri.json() or {}).get("results") or []
+            print(f"      · {len(res)} ofertas · "
+                  f"{json.dumps(res[0], ensure_ascii=False)[:420] if res else 'vacío'}")
 
     # 2. USER_PRODUCT: no es un item, /items le da 404. ¿Por dónde se resuelve?
     uid = next((c["id"] for c in contenido
@@ -218,10 +223,10 @@ def c_ml_cosecha():
     if not (items or productos):
         return FAIL, "ninguna categoría devolvió best-sellers"
 
-    d_items = [d for d in (ml.to_deal(r) for r in ml.items(items[:200])) if d]
-    crudos = ml.productos(productos[:60])
-    d_prod = [d for d in (ml.producto_a_deal(r) for r in crudos) if d]
-    deals = d_items + d_prod
+    del_catalogo = ml.items_de_productos(productos[:60])   # muestra de 60
+    todos = items[:200] + del_catalogo
+    crudos = ml.items(todos)
+    deals = [d for d in (ml.to_deal(r) for r in crudos) if d]
 
     minimo = get("filtros.descuento_minimo_pct", 25)
     con_desc = [d for d in deals if d.discount_pct > 0]
@@ -229,8 +234,8 @@ def c_ml_cosecha():
 
     print(f"      · {len(cats)} categorías → {len(items)} items + "
           f"{len(productos)} productos + {otros} de otro tipo")
-    print(f"      · normalizados: {len(d_items)} de items, {len(d_prod)} de "
-          f"{len(crudos)} productos con precio (muestra de 60)")
+    print(f"      · 60 productos → {len(del_catalogo)} publicaciones · "
+          f"multiget devolvió {len(crudos)} · {len(deals)} normalizados")
     print(f"      · {len(con_desc)} con descuento → {len(publicables)} "
           f"sobre el mínimo de {minimo}%")
     for d in sorted(publicables, key=lambda x: -x.discount_pct)[:3]:

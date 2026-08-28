@@ -247,38 +247,32 @@ class MercadoLibre:
     def _tiene_precio(p: dict) -> bool:
         return bool((p.get("buy_box_winner") or {}).get("price"))
 
-    def productos(self, ids: list[str]) -> list[dict]:
-        """Resuelve productos de catálogo. Uno por llamada: no hay multiget.
+    def items_de_productos(self, product_ids: list[str]) -> list[str]:
+        """Traduce productos de catálogo a IDs de publicación con precio.
 
-        Los best-sellers apuntan casi siempre a la FAMILIA (el producto padre
-        que agrupa colores y capacidades), y la familia no tiene buy box: el
-        precio vive en el hijo concreto que la gente compra. Si el padre viene
-        sin precio, se baja al primer hijo que sí lo tenga.
+        Un producto de catálogo es una ficha, no una oferta: describe "Freidora
+        Ninja 5.5L" sin decir a cuánto. Quien pone precio es cada vendedor, y
+        esas ofertas cuelgan de /products/{id}/items — el único de los caminos
+        probados que respondió 200 con datos reales. buy_box_winner viene nulo,
+        /products/search no trae precio, y los USER_PRODUCT dan 403.
+
+        Devolver IDs (y no Deals) es a propósito: así el multiget y el
+        normalizador de items que ya funcionan se encargan del resto.
         """
-        out = []
-        for pid in ids:
+        item_ids: list[str] = []
+        for pid in product_ids:
             try:
-                p = self._get(f"/products/{pid}")
+                data = self._get(f"/products/{pid}/items", {"limit": 1})
             except MercadoLibreError as e:
-                log.warning("producto %s falló: %s", pid, e)
+                log.warning("ofertas del producto %s: %s", pid, e)
                 continue
-
-            if not self._tiene_precio(p):
-                for hijo in (p.get("children_ids") or [])[:2]:
-                    try:
-                        h = self._get(f"/products/{hijo}")
-                    except MercadoLibreError:
-                        continue
-                    if self._tiene_precio(h):
-                        # El hijo trae el precio; el nombre de la familia suele
-                        # leerse mejor en un creativo que "… Color Negro 128GB".
-                        h.setdefault("family_name", p.get("name"))
-                        p = h
-                        break
-
-            if self._tiene_precio(p):
-                out.append(p)
-        return out
+            for r in (data.get("results") or [])[:1]:
+                iid = r.get("item_id") or r.get("id")
+                if iid:
+                    item_ids.append(iid)
+        log.info("productos de catálogo: %d → %d publicaciones",
+                 len(product_ids), len(item_ids))
+        return item_ids
 
     # -------------------------------------------------------------- normaliza
     @staticmethod
@@ -418,16 +412,14 @@ class MercadoLibre:
                       "diagnóstico: puede que ML haya cerrado otro endpoint.")
             return
 
-        for raw in self.items(items):
-            d = self.to_deal(raw)
-            if d:
-                yield d
-
-        # Los productos van de uno en uno, así que se topan: el rate limit de
-        # ML es finito y una corrida no necesita el catálogo entero.
+        # Cada producto cuesta una llamada extra para saber su precio, así que
+        # se topan: el rate limit es finito y una corrida no necesita el
+        # catálogo entero, solo suficientes candidatos para elegir 4.
         tope = int(get("fuentes.mercadolibre.max_productos", 150))
-        for raw in self.productos(productos[:tope]):
-            d = self.producto_a_deal(raw)
+        todos = items + self.items_de_productos(productos[:tope])
+
+        for raw in self.items(todos):
+            d = self.to_deal(raw)
             if d:
                 yield d
 

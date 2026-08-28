@@ -138,27 +138,54 @@ def c_ml_forma():
     def campos(d: dict, k: str = "") -> str:
         return f"{k}{sorted(d.keys())}"[:320]
 
+    def precio_de(p: dict) -> tuple:
+        b = p.get("buy_box_winner") or {}
+        return b.get("price"), b.get("original_price")
+
+    # 1. Producto de catálogo: el padre suele ser una FAMILIA sin buy box.
     pid = next((c["id"] for c in contenido if c.get("type") == "PRODUCT"), "")
     if pid:
-        rp = s.get(f"{API}/products/{pid}", timeout=25)
-        print(f"      · /products/{pid} → {rp.status_code}")
-        if rp.status_code == 200:
-            p = rp.json()
-            print(f"      · campos: {campos(p)}")
-            bbw = p.get("buy_box_winner") or {}
-            print(f"      · buy_box_winner: {campos(bbw) if bbw else 'AUSENTE'}")
-            print(f"      · precio={bbw.get('price')} "
-                  f"original={bbw.get('original_price')}")
+        p = s.get(f"{API}/products/{pid}", timeout=25).json()
+        pr, orig = precio_de(p)
+        hijos = p.get("children_ids") or []
+        print(f"      · producto {pid}: precio={pr} original={orig} "
+              f"hijos={len(hijos)}")
+        if not pr and hijos:
+            rh = s.get(f"{API}/products/{hijos[0]}", timeout=25)
+            if rh.status_code == 200:
+                h = rh.json()
+                phr, phorig = precio_de(h)
+                print(f"      · HIJO {hijos[0]}: precio={phr} original={phorig}")
+            else:
+                print(f"      · HIJO {hijos[0]} → {rh.status_code}")
+        # ¿existe la lista de ofertas del producto?
+        ri = s.get(f"{API}/products/{pid}/items", timeout=25)
+        print(f"      · /products/{pid}/items → {ri.status_code}")
 
-    iid = next((c["id"] for c in contenido if c.get("type") != "PRODUCT"), "")
-    if iid:
-        ri = s.get(f"{API}/items", params={"ids": iid}, timeout=25)
-        cuerpo = ri.json() if ri.status_code == 200 else []
-        w = cuerpo[0] if isinstance(cuerpo, list) and cuerpo else {}
-        print(f"      · /items?ids={iid} → {ri.status_code} · "
-              f"code={w.get('code')}")
-        if w.get("body"):
-            print(f"      · campos: {campos(w['body'])}")
+    # 2. USER_PRODUCT: no es un item, /items le da 404. ¿Por dónde se resuelve?
+    uid = next((c["id"] for c in contenido
+                if c.get("type") == "USER_PRODUCT"), "")
+    if uid:
+        for ruta in (f"/user-products/{uid}", f"/products/{uid}",
+                     f"/items/{uid}"):
+            r2 = s.get(f"{API}{ruta}", timeout=25)
+            extra = ""
+            if r2.status_code == 200:
+                j = r2.json()
+                extra = f" · {campos(j)[:150]}"
+            print(f"      · {ruta} → {r2.status_code}{extra}")
+
+    # 3. /products/search: ¿trae precio de una vez? Sería una llamada, no dos.
+    rs = s.get(f"{API}/products/search",
+               params={"site_id": site, "status": "active",
+                       "q": "freidora de aire"}, timeout=25)
+    if rs.status_code == 200:
+        res = (rs.json() or {}).get("results") or []
+        print(f"      · products/search: {len(res)} resultados")
+        if res:
+            pr, orig = precio_de(res[0])
+            print(f"      · campos: {campos(res[0])}")
+            print(f"      · primero: precio={pr} original={orig}")
 
     return OK, "forma de las respuestas impresa arriba"
 
@@ -175,26 +202,35 @@ def c_ml_cosecha():
     items: list[str] = []
     productos: list[str] = []
     vistos: set[str] = set()
+    otros = 0
     for cat in cats:
         for pos in ml.highlights(cat):
             if pos["id"] in vistos:
                 continue
             vistos.add(pos["id"])
-            (productos if pos["type"] == "PRODUCT" else items).append(pos["id"])
+            if pos["type"] == "PRODUCT":
+                productos.append(pos["id"])
+            elif pos["type"] == "ITEM":
+                items.append(pos["id"])
+            else:
+                otros += 1
 
     if not (items or productos):
         return FAIL, "ninguna categoría devolvió best-sellers"
 
-    deals = [d for d in (ml.to_deal(r) for r in ml.items(items[:200])) if d]
-    deals += [d for d in (ml.producto_a_deal(r)
-                          for r in ml.productos(productos[:60])) if d]
+    d_items = [d for d in (ml.to_deal(r) for r in ml.items(items[:200])) if d]
+    crudos = ml.productos(productos[:60])
+    d_prod = [d for d in (ml.producto_a_deal(r) for r in crudos) if d]
+    deals = d_items + d_prod
 
     minimo = get("filtros.descuento_minimo_pct", 25)
     con_desc = [d for d in deals if d.discount_pct > 0]
     publicables = [d for d in con_desc if d.discount_pct >= minimo]
 
     print(f"      · {len(cats)} categorías → {len(items)} items + "
-          f"{len(productos)} productos → {len(deals)} normalizados")
+          f"{len(productos)} productos + {otros} de otro tipo")
+    print(f"      · normalizados: {len(d_items)} de items, {len(d_prod)} de "
+          f"{len(crudos)} productos con precio (muestra de 60)")
     print(f"      · {len(con_desc)} con descuento → {len(publicables)} "
           f"sobre el mínimo de {minimo}%")
     for d in sorted(publicables, key=lambda x: -x.discount_pct)[:3]:

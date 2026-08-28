@@ -243,14 +243,41 @@ class MercadoLibre:
                     out.append(wrapper["body"])
         return out
 
+    @staticmethod
+    def _tiene_precio(p: dict) -> bool:
+        return bool((p.get("buy_box_winner") or {}).get("price"))
+
     def productos(self, ids: list[str]) -> list[dict]:
-        """Resuelve productos de catálogo. Uno por llamada: no hay multiget."""
+        """Resuelve productos de catálogo. Uno por llamada: no hay multiget.
+
+        Los best-sellers apuntan casi siempre a la FAMILIA (el producto padre
+        que agrupa colores y capacidades), y la familia no tiene buy box: el
+        precio vive en el hijo concreto que la gente compra. Si el padre viene
+        sin precio, se baja al primer hijo que sí lo tenga.
+        """
         out = []
         for pid in ids:
             try:
-                out.append(self._get(f"/products/{pid}"))
+                p = self._get(f"/products/{pid}")
             except MercadoLibreError as e:
                 log.warning("producto %s falló: %s", pid, e)
+                continue
+
+            if not self._tiene_precio(p):
+                for hijo in (p.get("children_ids") or [])[:2]:
+                    try:
+                        h = self._get(f"/products/{hijo}")
+                    except MercadoLibreError:
+                        continue
+                    if self._tiene_precio(h):
+                        # El hijo trae el precio; el nombre de la familia suele
+                        # leerse mejor en un creativo que "… Color Negro 128GB".
+                        h.setdefault("family_name", p.get("name"))
+                        p = h
+                        break
+
+            if self._tiene_precio(p):
+                out.append(p)
         return out
 
     # -------------------------------------------------------------- normaliza
@@ -263,7 +290,7 @@ class MercadoLibre:
         box no hay nada que anunciar: el producto existe pero nadie lo vende.
         """
         pid = raw.get("id")
-        nombre = raw.get("name") or raw.get("title")
+        nombre = raw.get("family_name") or raw.get("name") or raw.get("title")
         ganador = raw.get("buy_box_winner") or {}
         precio = ganador.get("price")
         if not (pid and nombre and precio):
@@ -366,16 +393,26 @@ class MercadoLibre:
         cats = self.categorias()
         items: list[str] = []
         productos: list[str] = []
+        ignorados = 0
         vistos: set[str] = set()
         for cat in cats:
             for pos in self.highlights(cat):
                 if pos["id"] in vistos:
                     continue
                 vistos.add(pos["id"])
-                (productos if pos["type"] == "PRODUCT" else items).append(pos["id"])
+                if pos["type"] == "PRODUCT":
+                    productos.append(pos["id"])
+                elif pos["type"] == "ITEM":
+                    items.append(pos["id"])
+                else:
+                    # USER_PRODUCT y similares: no son items ni productos de
+                    # catálogo, y /items les responde 404. Son pocos; mandarlos
+                    # al multiget solo ensucia el resultado.
+                    ignorados += 1
 
-        log.info("descubrimiento: %d categorías → %d items + %d productos",
-                 len(cats), len(items), len(productos))
+        log.info("descubrimiento: %d categorías → %d items + %d productos "
+                 "(%d posiciones de otro tipo, ignoradas)",
+                 len(cats), len(items), len(productos), ignorados)
         if not (items or productos):
             log.error("ninguna categoría devolvió best-sellers. Corre el "
                       "diagnóstico: puede que ML haya cerrado otro endpoint.")

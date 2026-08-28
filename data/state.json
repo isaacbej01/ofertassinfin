@@ -1,6 +1,43 @@
 {
   "version": 1,
-  "published": {},
+  "published": {
+    "mercadolibre:MLM72390922": {
+      "published_at": "2026-08-28T22:14:30.903467+00:00",
+      "scheduled_at": "2026-08-29T01:04:00Z",
+      "source": "mercadolibre",
+      "title": "Arrancador de Batería Portátil 8000A para Auto y Moto con Linterna LED y Pantalla LCD",
+      "price": 298.2,
+      "discount_pct": 78.0,
+      "category_id": "MLM22596"
+    },
+    "mercadolibre:MLM58978915": {
+      "published_at": "2026-08-28T22:14:30.903478+00:00",
+      "scheduled_at": "2026-08-29T03:05:00Z",
+      "source": "mercadolibre",
+      "title": "Asistente Virtual Amazon Echo Dot 5ta Gen Blanco Glacier White",
+      "price": 799.0,
+      "discount_pct": 60.0,
+      "category_id": "MLM187752"
+    },
+    "mercadolibre:MLM47807630": {
+      "published_at": "2026-08-28T22:14:30.903481+00:00",
+      "scheduled_at": "2026-08-29T15:07:00Z",
+      "source": "mercadolibre",
+      "title": "Audífonos Inalámbricos Sony Wh-ch520 Color Rosa",
+      "price": 699.0,
+      "discount_pct": 60.0,
+      "category_id": "MLM7533"
+    },
+    "mercadolibre:MLM66149468": {
+      "published_at": "2026-08-28T22:14:30.903488+00:00",
+      "scheduled_at": "2026-08-29T19:19:00Z",
+      "source": "mercadolibre",
+      "title": "Samsung Galaxy A57 Azul Marino 256GB",
+      "price": 6781.0,
+      "discount_pct": 28.0,
+      "category_id": "MLM1055"
+    }
+  },
   "runs": [
     {
       "at": "2026-08-27T23:30:29.217295+00:00",
@@ -31,6 +68,13 @@
         "mercadolibre:MLM47807630",
         "mercadolibre:MLM66149468"
       ]
+    },
+    {
+      "at": "2026-08-28T22:14:30.903503+00:00",
+      "encontrados": 150,
+      "candidatos": 150,
+      "publicados": 4,
+      "dry_run": false
     }
   ]
 }

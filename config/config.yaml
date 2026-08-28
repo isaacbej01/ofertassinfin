@@ -70,8 +70,10 @@ cadencia:
     - "18:45"
     - "21:20"
   jitter_minutos: 25              # ± minutos aleatorios sobre el horario base
+  # Mientras Amazon esté apagado, ML es la única fuente: si su tope fuera
+  # menor que posts_por_dia, pedir 4 devolvería 3 y parecería una falla.
   max_por_fuente_por_dia:
-    mercadolibre: 3
+    mercadolibre: 4
     amazon: 3
   dias_bloqueo_reposteo: 45       # no repetir el mismo producto en N días
   max_misma_categoria_seguidos: 2

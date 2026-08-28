@@ -225,6 +225,20 @@ def run(n: int | None = None, dry_run: bool = False) -> dict:
     posts = publish(posts, dry_run=dry_run)
     save_queue(posts)
 
+    if dry_run:
+        # Un ensayo no deja huella. Si marcara las ofertas como publicadas,
+        # cada prueba quemaría productos por 45 días sin que nadie los haya
+        # visto, y el link-in-bio público mostraría ofertas que no se
+        # publicaron. Los creativos sí quedan, que es lo que se quiere ver.
+        log.info("ENSAYO: %d creativos generados. Nada se marcó como "
+                 "publicado y no se tocó el link-in-bio.", len(posts))
+        st.log_run({"encontrados": len(crudos), "candidatos": len(nuevos),
+                    "publicados": 0, "dry_run": True,
+                    "ensayo": [d.key for d in elegidos]})
+        st.save()
+        return {"publicados": 0, "encontrados": len(crudos),
+                "generados": len(posts), "dry_run": True}
+
     feed = linkinbio.add([p.deal for p in posts if p.status in ("scheduled", "queued")])
     linkinbio.build(feed)
 
@@ -235,7 +249,7 @@ def run(n: int | None = None, dry_run: bool = False) -> dict:
             ok += 1
     st.prune()
     st.log_run({"encontrados": len(crudos), "candidatos": len(nuevos),
-                "publicados": ok, "dry_run": dry_run})
+                "publicados": ok, "dry_run": False})
     st.save()
 
     return {"publicados": ok, "encontrados": len(crudos),

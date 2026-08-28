@@ -275,6 +275,78 @@ class MercadoLibre:
     def _tiene_precio(p: dict) -> bool:
         return bool((p.get("buy_box_winner") or {}).get("price"))
 
+    def catalogo_a_deals(self, product_ids: list[str]) -> Iterator[Deal]:
+        """Arma ofertas juntando las dos capas que ML SÍ deja leer.
+
+        El diagnóstico del 28/08/2026 cerró la discusión: /items/{id} responde
+        403 hasta con un ID real, o sea que no hay forma de leer la publicación
+        completa de otro vendedor. Pero no hace falta:
+
+            /products/{id}        → nombre, fotos, marca, permalink, rating
+            /products/{id}/items  → precio, precio anterior, envío, vendidos
+
+        Entre las dos está todo lo que necesita un creativo. Son dos llamadas
+        por producto en vez de una, y es el precio de seguir vivos en ML.
+        """
+        for pid in product_ids:
+            try:
+                p = self._get(f"/products/{pid}")
+                data = self._get(f"/products/{pid}/items", {"limit": 1})
+            except MercadoLibreError as e:
+                log.warning("producto %s: %s", pid, e)
+                continue
+
+            ofertas = data.get("results") or []
+            if not ofertas:
+                continue
+            d = self.catalogo_a_deal(p, ofertas[0])
+            if d:
+                yield d
+
+    @staticmethod
+    def catalogo_a_deal(producto: dict, oferta: dict) -> Deal | None:
+        precio = oferta.get("price")
+        pid = producto.get("id") or oferta.get("item_id")
+        nombre = producto.get("name") or producto.get("title")
+        if not (precio and pid and nombre):
+            return None
+
+        img = ""
+        for foto in (producto.get("pictures") or []):
+            img = foto.get("secure_url") or foto.get("url") or ""
+            if img:
+                break
+
+        envio = oferta.get("shipping") or {}
+        attrs = {a.get("id"): a.get("value_name")
+                 for a in (producto.get("attributes") or [])}
+        reviews = producto.get("reviews") or {}
+
+        return Deal(
+            source="mercadolibre",
+            source_id=str(oferta.get("item_id") or pid),
+            # El link va a la ficha del producto, no a la publicación de un
+            # vendedor: si ese vendedor se queda sin stock, la ficha sigue viva.
+            url=(producto.get("permalink")
+                 or f"https://www.mercadolibre.com.mx/p/{pid}"),
+            title=nombre,
+            image_url=img.replace("http://", "https://"),
+            category_id=(oferta.get("category_id")
+                         or producto.get("domain_id") or ""),
+            brand=attrs.get("BRAND", "") or "",
+            price=float(precio),
+            original_price=(float(oferta["original_price"])
+                            if oferta.get("original_price") else None),
+            reviews=int(reviews.get("total") or 0),
+            rating=(producto.get("rating_average")
+                    or reviews.get("rating_average")),
+            sold=int(oferta.get("sold_quantity")
+                     or producto.get("sold_quantity") or 0),
+            free_shipping=bool(envio.get("free_shipping")),
+            is_full=bool(envio.get("logistic_type") == "fulfillment"),
+            raw={"producto": producto, "oferta": oferta},
+        )
+
     def items_de_productos(self, product_ids: list[str]) -> list[str]:
         """Traduce productos de catálogo a IDs de publicación con precio.
 
@@ -440,16 +512,18 @@ class MercadoLibre:
                       "diagnóstico: puede que ML haya cerrado otro endpoint.")
             return
 
-        # Cada producto cuesta una llamada extra para saber su precio, así que
-        # se topan: el rate limit es finito y una corrida no necesita el
-        # catálogo entero, solo suficientes candidatos para elegir 4.
-        tope = int(get("fuentes.mercadolibre.max_productos", 150))
-        todos = items + self.items_de_productos(productos[:tope])
-
-        for raw in self.items(todos):
+        # Las publicaciones sueltas (ITEM) casi siempre dan 403 desde 2026;
+        # se intentan igual porque son gratis de intentar y a veces pasan.
+        for raw in self.items(items):
             d = self.to_deal(raw)
             if d:
                 yield d
+
+        # El grueso viene del catálogo. Dos llamadas por producto, así que se
+        # topa: una corrida no necesita el catálogo entero, solo candidatos
+        # suficientes para elegir cuatro.
+        tope = int(get("fuentes.mercadolibre.max_productos", 150))
+        yield from self.catalogo_a_deals(productos[:tope])
 
 
 # ---------------------------------------------------------------------------

@@ -164,8 +164,13 @@ def c_ml_forma():
         print(f"      · /products/{pid}/items → {ri.status_code}")
         if ri.status_code == 200:
             res = (ri.json() or {}).get("results") or []
-            print(f"      · {len(res)} ofertas · "
-                  f"{json.dumps(res[0], ensure_ascii=False)[:260] if res else 'vacío'}")
+            if res:
+                o = res[0]
+                print(f"      · campos de la oferta: {campos(o)}")
+                print(f"      · precio={o.get('price')} "
+                      f"original={o.get('original_price')} "
+                      f"vendidos={o.get('sold_quantity')} "
+                      f"envío={(o.get('shipping') or {}).get('free_shipping')}")
 
             # Con un item_id REAL en la mano: ¿por qué el multiget da 0?
             real = (res[0].get("item_id") or res[0].get("id")) if res else ""
@@ -240,10 +245,9 @@ def c_ml_cosecha():
     if not (items or productos):
         return FAIL, "ninguna categoría devolvió best-sellers"
 
-    del_catalogo = ml.items_de_productos(productos[:60])   # muestra de 60
-    todos = items[:200] + del_catalogo
-    crudos = ml.items(todos)
-    deals = [d for d in (ml.to_deal(r) for r in crudos) if d]
+    d_items = [d for d in (ml.to_deal(r) for r in ml.items(items[:20])) if d]
+    d_cat = list(ml.catalogo_a_deals(productos[:40]))      # muestra de 40
+    deals = d_items + d_cat
 
     minimo = get("filtros.descuento_minimo_pct", 25)
     con_desc = [d for d in deals if d.discount_pct > 0]
@@ -251,8 +255,11 @@ def c_ml_cosecha():
 
     print(f"      · {len(cats)} categorías → {len(items)} items + "
           f"{len(productos)} productos + {otros} de otro tipo")
-    print(f"      · 60 productos → {len(del_catalogo)} publicaciones · "
-          f"multiget devolvió {len(crudos)} · {len(deals)} normalizados")
+    print(f"      · 40 productos de catálogo → {len(d_cat)} ofertas armadas "
+          f"· {len(d_items)} de publicaciones sueltas")
+    sin_tachado = sum(1 for d in d_cat if not d.original_price)
+    print(f"      · {sin_tachado} de {len(d_cat)} sin precio anterior "
+          f"(esos nunca podrán mostrar descuento)")
     print(f"      · {len(con_desc)} con descuento → {len(publicables)} "
           f"sobre el mínimo de {minimo}%")
     for d in sorted(publicables, key=lambda x: -x.discount_pct)[:3]:

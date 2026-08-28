@@ -13,6 +13,12 @@ name: Diagnóstico
 on:
   workflow_dispatch:
 
+concurrency:
+  # El diagnóstico también pide un access token, y pedirlo rota el refresh
+  # token de ML. Comparte fila con la corrida diaria para que nunca coincidan.
+  group: ml-token
+  cancel-in-progress: false
+
 jobs:
   revisar:
     runs-on: ubuntu-latest
@@ -42,7 +48,25 @@ jobs:
           BUFFER_CHANNEL_IG:     ${{ secrets.BUFFER_CHANNEL_IG }}
           BUFFER_CHANNEL_TIKTOK: ${{ secrets.BUFFER_CHANNEL_TIKTOK }}
           MEDIA_BASE_URL:        ${{ secrets.MEDIA_BASE_URL }}
+          ML_TOKEN_FILE:         ${{ runner.temp }}/ml_refresh.txt
         run: python scripts/doctor.py | tee salud.txt
+
+      - name: Persistir el refresh token de ML si rotó
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          f="${{ runner.temp }}/ml_refresh.txt"
+          if [ ! -s "$f" ]; then
+            echo "El refresh token no rotó en esta corrida."
+            exit 0
+          fi
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::ML rotó el refresh token y no hay GH_PAT para guardarlo. La corrida diaria va a fallar."
+            exit 1
+          fi
+          gh secret set ML_REFRESH_TOKEN --repo "$GITHUB_REPOSITORY" < "$f"
+          echo "🔄 ML_REFRESH_TOKEN actualizado automáticamente."
 
       - name: Dejar el resultado a la vista
         if: always()

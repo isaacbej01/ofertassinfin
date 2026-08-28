@@ -78,24 +78,42 @@ class MLAuth:
 
         nuevo_refresh = data.get("refresh_token")
         if nuevo_refresh and nuevo_refresh != refresh:
-            # ML rota el refresh token. Hay que persistirlo o el sistema muere
-            # en 6 horas. El workflow lo escribe de vuelta a los secrets.
-            log.warning(
-                "ML rotó el refresh token. Actualiza el secret ML_REFRESH_TOKEN con: %s",
-                nuevo_refresh,
-            )
-            _emit_github_output("ml_new_refresh_token", nuevo_refresh)
+            _persistir_refresh(nuevo_refresh)
 
         return self._token
 
 
-def _emit_github_output(name: str, value: str):
-    """Expone un valor al workflow de GitHub Actions."""
+def _persistir_refresh(token: str):
+    """Guarda el refresh token nuevo. Este es el punto más frágil del sistema.
+
+    La documentación de ML es explícita: «the refresh_token is for one-time use
+    only and you will receive a new one at each token update process» y «after
+    being used it will become invalid». O sea que el valor guardado en el secret
+    queda muerto en cuanto se usa una vez. Si el nuevo no se persiste, la
+    siguiente corrida falla y hay que reautorizar a mano.
+
+    Por eso NO se imprime ni se avisa nada más: se escribe en el archivo que
+    indica ML_TOKEN_FILE y el workflow lo sube como secret del repo. El log de
+    un repo público también es público.
+    """
     import os
-    out = os.environ.get("GITHUB_OUTPUT")
-    if out:
-        with open(out, "a", encoding="utf-8") as f:
-            f.write(f"{name}={value}\n")
+
+    # Si algún otro punto del código llegara a imprimirlo, que GitHub lo tape.
+    if os.environ.get("GITHUB_ACTIONS"):
+        print(f"::add-mask::{token}", flush=True)
+
+    destino = os.environ.get("ML_TOKEN_FILE")
+    if not destino:
+        log.error(
+            "ML rotó el refresh token y no hay ML_TOKEN_FILE donde guardarlo. "
+            "La próxima corrida va a fallar: reautoriza con el workflow "
+            "«Autorizar MercadoLibre»."
+        )
+        return
+
+    with open(destino, "w", encoding="utf-8") as f:
+        f.write(token)          # sin salto de línea: `gh secret set` lo toma tal cual
+    log.warning("ML rotó el refresh token; escrito para persistirlo como secret.")
 
 
 # ---------------------------------------------------------------------------

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Autorizar MercadoLibre · Ofertas Sin Fin</title>
+<style>
+  :root{
+    --naranja:#F96D0F; --crema:#FCF7F1; --tinta:#101010;
+    --linea:#E7DED3; --gris:#6B6259;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; padding:32px 20px 64px; background:var(--crema); color:var(--tinta);
+    font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  .wrap{max-width:620px;margin:0 auto}
+  .marca{
+    display:inline-block; background:var(--naranja); color:var(--crema);
+    font-weight:800; letter-spacing:.02em; font-size:13px; text-transform:uppercase;
+    padding:6px 12px; border-radius:6px;
+  }
+  h1{font-size:26px; line-height:1.2; margin:18px 0 6px}
+  p.sub{color:var(--gris); margin:0 0 28px}
+  .caja{
+    background:#fff; border:1px solid var(--linea); border-radius:14px;
+    padding:22px; margin-bottom:18px;
+  }
+  label{display:block; font-weight:700; font-size:14px; margin-bottom:8px}
+  input{
+    width:100%; padding:13px 14px; font-size:17px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    border:1px solid var(--linea); border-radius:9px; background:var(--crema); color:var(--tinta);
+  }
+  input:focus{outline:2px solid var(--naranja); outline-offset:1px}
+  button{
+    width:100%; margin-top:14px; padding:14px 18px; font-size:16px; font-weight:700;
+    color:var(--crema); background:var(--naranja); border:0; border-radius:9px; cursor:pointer;
+  }
+  button:hover{filter:brightness(1.06)}
+  button.sec{background:var(--tinta)}
+  .hint{font-size:13.5px; color:var(--gris); margin-top:12px}
+  .code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:17px;
+    word-break:break-all; background:var(--crema); border:1px dashed var(--naranja);
+    border-radius:9px; padding:16px; margin:4px 0 0;
+  }
+  .ok{border-left:5px solid var(--naranja)}
+  .err{border-left:5px solid #B3261E}
+  a{color:var(--naranja)}
+  ol{padding-left:20px} li{margin-bottom:7px}
+  .paso{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--gris);font-weight:800}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="marca">Ofertas Sin Fin</span>
+  <h1>Autorizar MercadoLibre</h1>
+  <p class="sub">Esta página es solo para conectar el sistema. No la compartas en la bio.</p>
+  <div id="app"></div>
+</div>
+
+<script>
+(function () {
+  var REDIRECT = "https://isaacbej01.github.io/ofertassinfin/auth/";
+  var REPO     = "https://github.com/isaacbej01/ofertassinfin";
+  var app      = document.getElementById("app");
+  var q        = new URLSearchParams(location.search);
+  var code     = q.get("code");
+  var error    = q.get("error");
+
+  function esc(s){ return String(s).replace(/[<>&"]/g, function(c){
+    return {"<":"&lt;",">":"&gt;","&":"&amp;",'"':"&quot;"}[c]; }); }
+
+  if (error) {
+    app.innerHTML =
+      '<div class="caja err"><span class="paso">No se autorizó</span>' +
+      '<h2 style="margin:8px 0 6px;font-size:19px">MercadoLibre devolvió un error</h2>' +
+      '<p class="code">' + esc(error) + (q.get("message") ? " — " + esc(q.get("message")) : "") + '</p>' +
+      '<p class="hint">Lo más común es que el <em>redirect URI</em> de la app no sea exactamente ' +
+      '<code>' + REDIRECT + '</code>, o que falte el permiso <code>offline_access</code>. ' +
+      'Corrígelo en el DevCenter y vuelve a empezar.</p>' +
+      '<button onclick="location.href=\'' + REDIRECT + '\'">Empezar de nuevo</button></div>';
+    return;
+  }
+
+  if (code) {
+    app.innerHTML =
+      '<div class="caja ok"><span class="paso">Paso 2 de 2</span>' +
+      '<h2 style="margin:8px 0 10px;font-size:19px">Listo. Copia este código</h2>' +
+      '<p class="code" id="c">' + esc(code) + '</p>' +
+      '<button id="cp">Copiar el código</button>' +
+      '<button class="sec" onclick="window.open(\'' + REPO + '/actions/workflows/autorizar-ml.yml\',\'_blank\')">' +
+      'Abrir el workflow en GitHub</button>' +
+      '<p class="hint"><strong>Hazlo ya:</strong> este código vence en pocos minutos y solo sirve una vez. ' +
+      'En GitHub: <em>Run workflow</em> → pega el código → <em>Run workflow</em>.</p></div>';
+    document.getElementById("cp").onclick = function () {
+      var b = this;
+      navigator.clipboard.writeText(code).then(function(){
+        b.textContent = "Copiado ✓";
+        setTimeout(function(){ b.textContent = "Copiar el código"; }, 2200);
+      }).catch(function(){ b.textContent = "Selecciónalo y cópialo a mano"; });
+    };
+    return;
+  }
+
+  var guardado = "";
+  try { guardado = localStorage.getItem("osf_app_id") || ""; } catch (e) {}
+
+  app.innerHTML =
+    '<div class="caja"><span class="paso">Paso 1 de 2</span>' +
+    '<h2 style="margin:8px 0 14px;font-size:19px">Pega el App ID de tu aplicación</h2>' +
+    '<label for="id">App ID (el número que da el DevCenter de MercadoLibre)</label>' +
+    '<input id="id" inputmode="numeric" placeholder="1234567890123456" value="' + esc(guardado) + '">' +
+    '<button id="go">Autorizar con MercadoLibre</button>' +
+    '<p class="hint">Te va a mandar a MercadoLibre. <strong>Inicia sesión con la cuenta ' +
+    'que va a usar el sistema</strong>, acepta los permisos, y regresas aquí solo con el código. ' +
+    'El App ID no es secreto; el <em>Secret Key</em> nunca se pone aquí, ese va directo a los ' +
+    'secrets de GitHub.</p></div>';
+
+  document.getElementById("go").onclick = function () {
+    var id = document.getElementById("id").value.trim();
+    if (!/^\d{6,}$/.test(id)) { alert("El App ID son solo números. Revísalo en el DevCenter."); return; }
+    try { localStorage.setItem("osf_app_id", id); } catch (e) {}
+    location.href = "https://auth.mercadolibre.com.mx/authorization"
+      + "?response_type=code&client_id=" + encodeURIComponent(id)
+      + "&redirect_uri=" + encodeURIComponent(REDIRECT);
+  };
+})();
+</script>
+</body>
+</html>

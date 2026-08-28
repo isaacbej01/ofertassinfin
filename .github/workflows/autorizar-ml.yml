@@ -1,0 +1,57 @@
+name: Autorizar MercadoLibre
+
+# Se corre A MANO, una sola vez por autorización.
+#
+# Antes de correrlo: entra a https://isaacbej01.github.io/ofertassinfin/auth/,
+# genera el link, autoriza con la cuenta de ML, y copia el `code` que te muestra
+# esa misma página. Pégalo aquí abajo y dale Run workflow.
+#
+# El refresh token que devuelve ML se guarda solo como secret ML_REFRESH_TOKEN.
+# Nunca aparece en el log ni hay que copiarlo a ningún lado.
+
+on:
+  workflow_dispatch:
+    inputs:
+      code:
+        description: "El code= de la redirección (o pega la URL completa)"
+        required: true
+
+concurrency:
+  # Comparte grupo con las demás corridas: ML invalida el refresh token en cada
+  # uso, así que dos workflows tocándolo al mismo tiempo lo romperían.
+  group: ml-token
+  cancel-in-progress: false
+
+jobs:
+  autorizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Canjear el code por el refresh token
+        env:
+          ML_CLIENT_ID:     ${{ secrets.ML_CLIENT_ID }}
+          ML_CLIENT_SECRET: ${{ secrets.ML_CLIENT_SECRET }}
+          ML_CODE:          ${{ inputs.code }}
+          ML_REDIRECT_URI:  ${{ vars.ML_REDIRECT_URI || 'https://isaacbej01.github.io/ofertassinfin/auth/' }}
+          ML_TOKEN_FILE:    ${{ runner.temp }}/ml_refresh.txt
+        run: python scripts/ml_exchange.py
+
+      - name: Guardarlo como secret del repo
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::Falta el secret GH_PAT. Sin él no se puede guardar el token solo."
+            exit 1
+          fi
+          gh secret set ML_REFRESH_TOKEN --repo "$GITHUB_REPOSITORY" < "${{ runner.temp }}/ml_refresh.txt"
+          echo "✅ ML_REFRESH_TOKEN guardado. Ya puedes correr el Diagnóstico." >> "$GITHUB_STEP_SUMMARY"

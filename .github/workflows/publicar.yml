@@ -19,7 +19,10 @@ on:
         default: false
 
 concurrency:
-  group: publicar
+  # ML invalida su refresh token en cada uso y entrega uno nuevo. Dos corridas
+  # simultáneas se lo pisarían y habría que reautorizar a mano: por eso todos
+  # los workflows que tocan ML comparten este grupo y hacen fila.
+  group: ml-token
   cancel-in-progress: false
 
 permissions:
@@ -54,11 +57,32 @@ jobs:
           BUFFER_CHANNEL_IG:   ${{ secrets.BUFFER_CHANNEL_IG }}
           BUFFER_CHANNEL_TIKTOK: ${{ secrets.BUFFER_CHANNEL_TIKTOK }}
           MEDIA_BASE_URL:      ${{ secrets.MEDIA_BASE_URL }}
+          ML_TOKEN_FILE:       ${{ runner.temp }}/ml_refresh.txt
         run: |
           python -m src.pipeline \
             -n "${{ github.event.inputs.n || 4 }}" \
             ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }} \
             | tee corrida.log
+
+      # Va inmediatamente después del pipeline y con `always()` a propósito:
+      # si el token rotó y algo posterior falla, perder este paso significa
+      # quedarse sin acceso a ML hasta reautorizar a mano.
+      - name: Persistir el refresh token de ML si rotó
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          f="${{ runner.temp }}/ml_refresh.txt"
+          if [ ! -s "$f" ]; then
+            echo "El refresh token no rotó en esta corrida."
+            exit 0
+          fi
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::ML rotó el refresh token y no hay GH_PAT para guardarlo. La próxima corrida va a fallar."
+            exit 1
+          fi
+          gh secret set ML_REFRESH_TOKEN --repo "$GITHUB_REPOSITORY" < "$f"
+          echo "🔄 ML_REFRESH_TOKEN actualizado automáticamente." >> "$GITHUB_STEP_SUMMARY"
 
       - name: Limpiar imágenes viejas
         run: |
@@ -73,12 +97,6 @@ jobs:
           git add data/ docs/ || true
           git diff --staged --quiet || git commit -m "🤖 corrida $(date -u +%Y-%m-%d)"
           git push
-
-      - name: Avisar si el refresh token de ML rotó
-        if: steps.pipeline.outputs.ml_new_refresh_token != ''
-        run: |
-          echo "::warning::MercadoLibre rotó el refresh token."
-          echo "Actualiza el secret ML_REFRESH_TOKEN o el sistema muere en 6 h."
 
       - name: Resumen
         if: always()

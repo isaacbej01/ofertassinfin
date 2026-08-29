@@ -45,6 +45,15 @@
       "price": 3491.44,
       "discount_pct": 30.0,
       "category_id": "MLM1055"
+    },
+    "mercadolibre:MLM48897018": {
+      "published_at": "2026-08-29T18:01:54.421602+00:00",
+      "scheduled_at": "2026-08-29T18:13:29Z",
+      "source": "mercadolibre",
+      "title": "Jbl Charge 6 Bocina Portátil Bluetooth Resistente Al Agua color Azul marino",
+      "price": 2392.59,
+      "discount_pct": 44.0,
+      "category_id": "MLM59800"
     }
   },
   "runs": [
@@ -103,6 +112,12 @@
       "encontrados": 150,
       "publicados": 0,
       "nota": "sin candidatos que pasen los filtros"
+    },
+    {
+      "at": "2026-08-29T18:01:54.421633+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
     }
   ]
 }

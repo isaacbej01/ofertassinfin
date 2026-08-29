@@ -97,6 +97,12 @@
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0
+    },
+    {
+      "at": "2026-08-29T04:47:35.268498+00:00",
+      "encontrados": 150,
+      "publicados": 0,
+      "nota": "sin candidatos que pasen los filtros"
     }
   ]
 }

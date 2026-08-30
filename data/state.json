@@ -90,6 +90,15 @@
       "price": 5105.37,
       "discount_pct": 27.0,
       "category_id": "MLM1676"
+    },
+    "mercadolibre:MLM46085382": {
+      "published_at": "2026-08-30T23:02:13.366760+00:00",
+      "scheduled_at": "2026-08-30T23:13:36Z",
+      "source": "mercadolibre",
+      "title": "12v Cargador Rápido Inteligente Brpom Cargador Con Reparación De Pulso Para Automóvil, Moto, Camión Cortacésped Calcium ",
+      "price": 160.86,
+      "discount_pct": 79.0,
+      "category_id": "MLM22596"
     }
   },
   "runs": [
@@ -175,6 +184,12 @@
     },
     {
       "at": "2026-08-30T18:16:41.410642+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-08-30T23:02:13.366789+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

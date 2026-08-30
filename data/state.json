@@ -72,6 +72,15 @@
       "price": 231.06,
       "discount_pct": 65.0,
       "category_id": "MLM4840"
+    },
+    "mercadolibre:MLM66528367": {
+      "published_at": "2026-08-30T08:40:54.770993+00:00",
+      "scheduled_at": "2026-08-30T08:52:20Z",
+      "source": "mercadolibre",
+      "title": "Espejo Luz Led Touch Pared Baño Tocador Vestidor 3 Luces Ch1 Marco Es72 Rectangular Con Marco",
+      "price": 198.64,
+      "discount_pct": 74.0,
+      "category_id": "MLM151399"
     }
   },
   "runs": [
@@ -145,6 +154,12 @@
     },
     {
       "at": "2026-08-30T02:25:29.482737+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-08-30T08:40:54.771066+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

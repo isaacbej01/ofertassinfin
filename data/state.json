@@ -63,6 +63,15 @@
       "price": 699.0,
       "discount_pct": 60.0,
       "category_id": "MLM7533"
+    },
+    "mercadolibre:MLM45647645": {
+      "published_at": "2026-08-30T02:25:29.482710+00:00",
+      "scheduled_at": "2026-08-30T02:37:04Z",
+      "source": "mercadolibre",
+      "title": "Kit Destornillador Inalambrico Taladro Electrico Con Bateria leds taladro kit de herramienta led luz taladros de velocid",
+      "price": 231.06,
+      "discount_pct": 65.0,
+      "category_id": "MLM4840"
     }
   },
   "runs": [
@@ -130,6 +139,12 @@
     },
     {
       "at": "2026-08-29T22:56:14.156067+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-08-30T02:25:29.482737+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

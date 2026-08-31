@@ -117,6 +117,15 @@
       "price": 1036.93,
       "discount_pct": 65.0,
       "category_id": "MLM59800"
+    },
+    "mercadolibre:MLM23138483": {
+      "published_at": "2026-08-31T20:29:44.280967+00:00",
+      "scheduled_at": "2026-08-31T20:41:09Z",
+      "source": "mercadolibre",
+      "title": "Audífonos Inalámbricos Sony Wh-ch520 color Azul",
+      "price": 699.0,
+      "discount_pct": 60.0,
+      "category_id": "MLM7533"
     }
   },
   "runs": [
@@ -220,6 +229,12 @@
     },
     {
       "at": "2026-08-31T09:04:39.154077+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-08-31T20:29:44.281014+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

@@ -99,6 +99,15 @@
       "price": 160.86,
       "discount_pct": 79.0,
       "category_id": "MLM22596"
+    },
+    "mercadolibre:MLM54628732": {
+      "published_at": "2026-08-31T02:20:11.240785+00:00",
+      "scheduled_at": "2026-08-31T02:31:34Z",
+      "source": "mercadolibre",
+      "title": "Alfombra Decorativa Sala De Estar Y Dormitorio 200x160cm Color Rojo 1.6m X 2m",
+      "price": 295.02,
+      "discount_pct": 67.0,
+      "category_id": "MLM145934"
     }
   },
   "runs": [
@@ -190,6 +199,12 @@
     },
     {
       "at": "2026-08-30T23:02:13.366789+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-08-31T02:20:11.240812+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

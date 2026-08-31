@@ -108,6 +108,15 @@
       "price": 295.02,
       "discount_pct": 67.0,
       "category_id": "MLM145934"
+    },
+    "mercadolibre:MLM62903461": {
+      "published_at": "2026-08-31T09:04:39.154050+00:00",
+      "scheduled_at": "2026-08-31T09:16:03Z",
+      "source": "mercadolibre",
+      "title": "Bocina JBL Grip Bluetooth Portátil IP68 14 h Batería Blanco",
+      "price": 1036.93,
+      "discount_pct": 65.0,
+      "category_id": "MLM59800"
     }
   },
   "runs": [
@@ -205,6 +214,12 @@
     },
     {
       "at": "2026-08-31T02:20:11.240812+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-08-31T09:04:39.154077+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

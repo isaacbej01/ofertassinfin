@@ -153,6 +153,15 @@
       "price": 4599.0,
       "discount_pct": 37.0,
       "category_id": "MLM1676"
+    },
+    "mercadolibre:MLM64995279": {
+      "published_at": "2026-09-01T22:54:43.376441+00:00",
+      "scheduled_at": "2026-09-01T23:06:09Z",
+      "source": "mercadolibre",
+      "title": "Cámara Digital Fotos De 4k Video Con Voltear La Pantalla 180°, Beaowink Recargable Cámara Webcam Principiantes De 4800w ",
+      "price": 356.32,
+      "discount_pct": 64.0,
+      "category_id": "MLM1042"
     }
   },
   "runs": [
@@ -280,6 +289,12 @@
     },
     {
       "at": "2026-09-01T18:03:59.940197+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-01T22:54:43.376474+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

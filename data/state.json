@@ -135,6 +135,15 @@
       "price": 2999.0,
       "discount_pct": 40.0,
       "category_id": "MLM7642"
+    },
+    "mercadolibre:MLM42430892": {
+      "published_at": "2026-09-01T08:07:54.801510+00:00",
+      "scheduled_at": "2026-09-01T08:19:09Z",
+      "source": "mercadolibre",
+      "title": "Auriculares In-ear Inalámbricos Aiwa Awtwsgprow Noise Cancelling Blanco",
+      "price": 419.0,
+      "discount_pct": 58.0,
+      "category_id": "MLM7533"
     }
   },
   "runs": [
@@ -250,6 +259,12 @@
     },
     {
       "at": "2026-09-01T00:12:40.374119+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-01T08:07:54.801539+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

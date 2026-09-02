@@ -189,6 +189,15 @@
       "price": 294.63,
       "discount_pct": 66.0,
       "category_id": "MLM145934"
+    },
+    "mercadolibre:MLM63043381": {
+      "published_at": "2026-09-02T22:55:37.517468+00:00",
+      "scheduled_at": "2026-09-02T23:07:01Z",
+      "source": "mercadolibre",
+      "title": "Celular Motorola Moto G06 128gb 4gb Ram Color Naranja",
+      "price": 2439.0,
+      "discount_pct": 51.0,
+      "category_id": "MLM1055"
     }
   },
   "runs": [
@@ -340,6 +349,12 @@
     },
     {
       "at": "2026-09-02T18:15:06.727191+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-02T22:55:37.517495+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

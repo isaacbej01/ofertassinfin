@@ -171,6 +171,15 @@
       "price": 205.0,
       "discount_pct": 74.0,
       "category_id": "MLM151399"
+    },
+    "mercadolibre:MLM23138486": {
+      "published_at": "2026-09-02T07:26:39.717526+00:00",
+      "scheduled_at": "2026-09-02T07:38:05Z",
+      "source": "mercadolibre",
+      "title": "Audífonos Inalámbricos Wh-ch520 Color Blanco",
+      "price": 699.0,
+      "discount_pct": 60.0,
+      "category_id": "MLM7533"
     }
   },
   "runs": [
@@ -310,6 +319,12 @@
     },
     {
       "at": "2026-09-02T01:58:56.939552+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-02T07:26:39.717561+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

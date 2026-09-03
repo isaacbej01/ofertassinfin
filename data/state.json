@@ -207,6 +207,15 @@
       "price": 699.0,
       "discount_pct": 60.0,
       "category_id": "MLM7533"
+    },
+    "mercadolibre:MLM56690049": {
+      "published_at": "2026-09-03T07:31:07.412810+00:00",
+      "scheduled_at": "2026-09-03T07:42:32Z",
+      "source": "mercadolibre",
+      "title": "Bocina Portatil Bluetooth JBL Charge 6 Inalambrica Recargable Bateria Larga Duracion Funcion Powerbank Integrado Resiste",
+      "price": 2389.0,
+      "discount_pct": 40.0,
+      "category_id": "MLM59800"
     }
   },
   "runs": [
@@ -370,6 +379,12 @@
     },
     {
       "at": "2026-09-03T02:04:04.387247+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-03T07:31:07.412843+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

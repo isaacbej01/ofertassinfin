@@ -198,6 +198,15 @@
       "price": 2439.0,
       "discount_pct": 51.0,
       "category_id": "MLM1055"
+    },
+    "mercadolibre:MLM47857275": {
+      "published_at": "2026-09-03T02:04:04.387214+00:00",
+      "scheduled_at": "2026-09-03T02:15:27Z",
+      "source": "mercadolibre",
+      "title": "Audífonos Inalámbricos Sony Wh-ch520 Color Amarillo",
+      "price": 699.0,
+      "discount_pct": 60.0,
+      "category_id": "MLM7533"
     }
   },
   "runs": [
@@ -355,6 +364,12 @@
     },
     {
       "at": "2026-09-02T22:55:37.517495+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-03T02:04:04.387247+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

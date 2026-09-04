@@ -270,6 +270,15 @@
       "price": 355.45,
       "discount_pct": 55.0,
       "category_id": "MLM7533"
+    },
+    "mercadolibre:MLM63130955": {
+      "published_at": "2026-09-04T22:39:05.290560+00:00",
+      "scheduled_at": "2026-09-04T22:50:28Z",
+      "source": "mercadolibre",
+      "title": "Audífonos Moto Buds Bass Con Cancelación De Ruido, Verde Verde",
+      "price": 591.78,
+      "discount_pct": 70.0,
+      "category_id": "MLM5072"
     }
   },
   "runs": [
@@ -475,6 +484,12 @@
     },
     {
       "at": "2026-09-04T20:02:29.989349+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-04T22:39:05.290589+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

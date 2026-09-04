@@ -234,6 +234,15 @@
       "price": 182.35,
       "discount_pct": 64.0,
       "category_id": "MLM30059"
+    },
+    "mercadolibre:MLM60051607": {
+      "published_at": "2026-09-04T02:00:08.832108+00:00",
+      "scheduled_at": "2026-09-04T02:11:31Z",
+      "source": "mercadolibre",
+      "title": "Xiaomi Poco C85 4G Br 8 GB de RAM y 8GB virtuales con 256 GB color morado",
+      "price": 3133.49,
+      "discount_pct": 28.0,
+      "category_id": "MLM1055"
     }
   },
   "runs": [
@@ -415,6 +424,12 @@
     },
     {
       "at": "2026-09-03T22:54:39.408962+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-04T02:00:08.832145+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

@@ -306,6 +306,15 @@
       "price": 328.0,
       "discount_pct": 72.0,
       "category_id": "MLM58401"
+    },
+    "mercadolibre:MLM67009154": {
+      "published_at": "2026-09-05T19:43:14.503304+00:00",
+      "scheduled_at": "2026-09-05T19:54:35Z",
+      "source": "mercadolibre",
+      "title": "Tlimast Espejo 3 Luces Led Táctil Pared De Tocador Baño Vestidor Cuarto De Alta Gama Decoracion Espejo Rectangular 52.5x",
+      "price": 218.98,
+      "discount_pct": 72.0,
+      "category_id": "MLM151399"
     }
   },
   "runs": [
@@ -535,6 +544,12 @@
     },
     {
       "at": "2026-09-05T17:02:27.573142+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-05T19:43:14.503337+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

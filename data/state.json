@@ -297,6 +297,15 @@
       "price": 284.0,
       "discount_pct": 59.0,
       "category_id": "MLM376317"
+    },
+    "mercadolibre:MLM10312333": {
+      "published_at": "2026-09-05T17:02:27.573103+00:00",
+      "scheduled_at": "2026-09-05T17:13:41Z",
+      "source": "mercadolibre",
+      "title": "Control joystick inalámbrico Sony PlayStation Dualshock 4 Wireless controller magma red",
+      "price": 328.0,
+      "discount_pct": 72.0,
+      "category_id": "MLM58401"
     }
   },
   "runs": [
@@ -520,6 +529,12 @@
     },
     {
       "at": "2026-09-05T07:13:30.934785+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-05T17:02:27.573142+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

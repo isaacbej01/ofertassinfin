@@ -288,6 +288,15 @@
       "price": 362.0,
       "discount_pct": 69.0,
       "category_id": "MLM120067"
+    },
+    "mercadolibre:MLM29367002": {
+      "published_at": "2026-09-05T07:13:30.934730+00:00",
+      "scheduled_at": "2026-09-05T07:24:56Z",
+      "source": "mercadolibre",
+      "title": "Recipientes 24 Pz Herméticos De Almacenamiento De Cocina Transparente Raganet",
+      "price": 284.0,
+      "discount_pct": 59.0,
+      "category_id": "MLM376317"
     }
   },
   "runs": [
@@ -505,6 +514,12 @@
     },
     {
       "at": "2026-09-05T02:00:32.682529+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-05T07:13:30.934785+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

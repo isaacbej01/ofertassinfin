@@ -333,6 +333,15 @@
       "price": 789.0,
       "discount_pct": 53.0,
       "category_id": "MLM187752"
+    },
+    "mercadolibre:MLM66424294": {
+      "published_at": "2026-09-06T07:26:04.844735+00:00",
+      "scheduled_at": "2026-09-06T07:37:29Z",
+      "source": "mercadolibre",
+      "title": "Gwynne Coq10 Cápsulas,120 Cápsulas,con Pqq,400 Mg Coq10 Y 1200 Mg Omega-3,salud Cerebral Y Cardíaca, Hígado,hueso Y Apoy",
+      "price": 149.0,
+      "discount_pct": 67.0,
+      "category_id": "MLM438195"
     }
   },
   "runs": [
@@ -580,6 +589,12 @@
     },
     {
       "at": "2026-09-06T01:55:19.217702+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-06T07:26:04.844767+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

@@ -342,6 +342,15 @@
       "price": 149.0,
       "discount_pct": 67.0,
       "category_id": "MLM438195"
+    },
+    "mercadolibre:MLM63800476": {
+      "published_at": "2026-09-06T17:26:06.761352+00:00",
+      "scheduled_at": "2026-09-06T17:37:31Z",
+      "source": "mercadolibre",
+      "title": "Y Alexa Echo Dot De Quinta Generación Con Procesador. Color Blue",
+      "price": 849.0,
+      "discount_pct": 57.0,
+      "category_id": "MLM187752"
     }
   },
   "runs": [
@@ -595,6 +604,12 @@
     },
     {
       "at": "2026-09-06T07:26:04.844767+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-06T17:26:06.761386+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

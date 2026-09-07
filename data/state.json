@@ -378,6 +378,15 @@
       "price": 730.0,
       "discount_pct": 61.0,
       "category_id": "MLM6585"
+    },
+    "mercadolibre:MLM51758686": {
+      "published_at": "2026-09-07T07:41:45.246232+00:00",
+      "scheduled_at": "2026-09-07T07:53:09Z",
+      "source": "mercadolibre",
+      "title": "Alfombra nórdico Fouortunate-Bee Carpet-02D color Azul geométrico - de 2m x 1.6m",
+      "price": 292.9,
+      "discount_pct": 66.0,
+      "category_id": "MLM145934"
     }
   },
   "runs": [
@@ -655,6 +664,12 @@
     },
     {
       "at": "2026-09-07T01:53:33.673235+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-07T07:41:45.246280+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

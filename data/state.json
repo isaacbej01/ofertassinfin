@@ -369,6 +369,15 @@
       "price": 182.35,
       "discount_pct": 64.0,
       "category_id": "MLM30059"
+    },
+    "mercadolibre:MLM35646985": {
+      "published_at": "2026-09-07T01:53:33.673197+00:00",
+      "scheduled_at": "2026-09-07T02:04:27Z",
+      "source": "mercadolibre",
+      "title": "Tenis New Balance 530 Adulto Comodos Para Diario",
+      "price": 730.0,
+      "discount_pct": 61.0,
+      "category_id": "MLM6585"
     }
   },
   "runs": [
@@ -640,6 +649,12 @@
     },
     {
       "at": "2026-09-06T22:34:26.702890+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-07T01:53:33.673235+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

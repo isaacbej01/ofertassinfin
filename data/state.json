@@ -405,6 +405,15 @@
       "price": 185.6,
       "discount_pct": 68.0,
       "category_id": "MLM3553"
+    },
+    "mercadolibre:MLM42865017": {
+      "published_at": "2026-09-08T02:03:57.449737+00:00",
+      "scheduled_at": "2026-09-08T02:15:22Z",
+      "source": "mercadolibre",
+      "title": "Auriculares In-ear Inalámbricos Aiwa Awtwsgprob Con Cancelación De Ruido Negro",
+      "price": 400.0,
+      "discount_pct": 59.0,
+      "category_id": "MLM7533"
     }
   },
   "runs": [
@@ -700,6 +709,12 @@
     },
     {
       "at": "2026-09-07T23:12:40.532233+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-08T02:03:57.449792+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

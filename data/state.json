@@ -432,6 +432,15 @@
       "price": 14585.6,
       "discount_pct": 28.0,
       "category_id": "MLM174554"
+    },
+    "mercadolibre:MLM34962481": {
+      "published_at": "2026-09-08T23:04:20.334094+00:00",
+      "scheduled_at": "2026-09-08T23:15:45Z",
+      "source": "mercadolibre",
+      "title": "Mando Joystick Inalámbrico Sony Playstation Dualshock 4 Ps4 Color Red Camouflage",
+      "price": 432.0,
+      "discount_pct": 64.0,
+      "category_id": "MLM120067"
     }
   },
   "runs": [
@@ -745,6 +754,12 @@
     },
     {
       "at": "2026-09-08T18:12:19.691713+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-08T23:04:20.334140+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

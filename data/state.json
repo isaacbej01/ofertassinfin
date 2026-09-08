@@ -414,6 +414,15 @@
       "price": 400.0,
       "discount_pct": 59.0,
       "category_id": "MLM7533"
+    },
+    "mercadolibre:MLM66456073": {
+      "published_at": "2026-09-08T07:34:49.116107+00:00",
+      "scheduled_at": "2026-09-08T07:46:11Z",
+      "source": "mercadolibre",
+      "title": "Gwynne Candida Cleanse Seed Oil 120Capsulas,hierbas Naturales Para La Desintoxicacion Intestinal Con 15 Billion Cfu,11-i",
+      "price": 149.0,
+      "discount_pct": 67.0,
+      "category_id": "MLM438195"
     }
   },
   "runs": [
@@ -715,6 +724,12 @@
     },
     {
       "at": "2026-09-08T02:03:57.449792+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-08T07:34:49.116149+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

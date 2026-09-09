@@ -450,6 +450,15 @@
       "price": 198.0,
       "discount_pct": 60.0,
       "category_id": "MLM376317"
+    },
+    "mercadolibre:MLM63043373": {
+      "published_at": "2026-09-09T07:41:08.281666+00:00",
+      "scheduled_at": "2026-09-09T07:52:34Z",
+      "source": "mercadolibre",
+      "title": "Celular Motorola Moto G06 128gb 4gb Ram Color Verde",
+      "price": 2449.0,
+      "discount_pct": 51.0,
+      "category_id": "MLM1055"
     }
   },
   "runs": [
@@ -775,6 +784,12 @@
     },
     {
       "at": "2026-09-09T02:08:39.568054+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-09T07:41:08.281708+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

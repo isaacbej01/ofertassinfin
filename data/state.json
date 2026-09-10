@@ -486,6 +486,15 @@
       "price": 1602.0,
       "discount_pct": 46.0,
       "category_id": "MLM59800"
+    },
+    "mercadolibre:MLM10312334": {
+      "published_at": "2026-09-10T07:38:55.816649+00:00",
+      "scheduled_at": "2026-09-10T07:50:20Z",
+      "source": "mercadolibre",
+      "title": "Control joystick inalámbrico Sony PlayStation Dualshock 4 ps4 Azul",
+      "price": 412.0,
+      "discount_pct": 72.0,
+      "category_id": "MLM120067"
     }
   },
   "runs": [
@@ -835,6 +844,12 @@
     },
     {
       "at": "2026-09-10T02:06:22.805738+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-10T07:38:55.816695+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

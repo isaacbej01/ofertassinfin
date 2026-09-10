@@ -513,15 +513,18 @@
       "price": 2324.0,
       "discount_pct": 41.0,
       "category_id": "MLM59800"
+    },
+    "mercadolibre:MLM53872320": {
+      "published_at": "2026-09-10T22:52:18.538184+00:00",
+      "scheduled_at": "2026-09-10T23:03:42Z",
+      "source": "mercadolibre",
+      "title": "Celular Xiaomi Poco M7 8 GB de RAM 256 GB Rom Dual Sim Plateado",
+      "price": 3508.65,
+      "discount_pct": 29.0,
+      "category_id": "MLM1055"
     }
   },
   "runs": [
-    {
-      "at": "2026-08-27T23:30:29.217295+00:00",
-      "encontrados": 0,
-      "publicados": 0,
-      "nota": "sin candidatos que pasen los filtros"
-    },
     {
       "at": "2026-08-28T21:50:53.740473+00:00",
       "encontrados": 150,
@@ -880,6 +883,12 @@
     },
     {
       "at": "2026-09-10T20:22:19.089162+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-10T22:52:18.538220+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

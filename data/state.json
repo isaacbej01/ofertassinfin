@@ -495,6 +495,15 @@
       "price": 412.0,
       "discount_pct": 72.0,
       "category_id": "MLM120067"
+    },
+    "mercadolibre:MLM54939997": {
+      "published_at": "2026-09-10T17:58:16.340578+00:00",
+      "scheduled_at": "2026-09-10T18:09:39Z",
+      "source": "mercadolibre",
+      "title": "Energyark Con Inflador 150psi Arrancador De Batería 8000 A 12v 4.8 Kw Black/red",
+      "price": 657.66,
+      "discount_pct": 61.0,
+      "category_id": "MLM22596"
     }
   },
   "runs": [
@@ -850,6 +859,12 @@
     },
     {
       "at": "2026-09-10T07:38:55.816695+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-10T17:58:16.340620+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

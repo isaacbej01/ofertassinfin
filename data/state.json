@@ -549,16 +549,18 @@
       "price": 203.69,
       "discount_pct": 64.0,
       "category_id": "MLM30059"
+    },
+    "mercadolibre:MLM22538554": {
+      "published_at": "2026-09-11T22:54:37.612267+00:00",
+      "scheduled_at": "2026-09-11T23:05:52Z",
+      "source": "mercadolibre",
+      "title": "L'bel Perfume Para Hombre Bleu Intense Night Fresco 100 Ml",
+      "price": 275.0,
+      "discount_pct": 66.0,
+      "category_id": "MLM1271"
     }
   },
   "runs": [
-    {
-      "at": "2026-08-28T22:14:30.903503+00:00",
-      "encontrados": 150,
-      "candidatos": 150,
-      "publicados": 4,
-      "dry_run": false
-    },
     {
       "at": "2026-08-28T22:27:07.280460+00:00",
       "encontrados": 150,
@@ -910,6 +912,12 @@
     },
     {
       "at": "2026-09-11T18:01:04.921181+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-11T22:54:37.612325+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

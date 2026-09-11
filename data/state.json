@@ -540,22 +540,18 @@
       "price": 899.0,
       "discount_pct": 55.0,
       "category_id": "MLM187752"
+    },
+    "mercadolibre:MLM25415858": {
+      "published_at": "2026-09-11T18:01:04.921137+00:00",
+      "scheduled_at": "2026-09-11T18:12:17Z",
+      "source": "mercadolibre",
+      "title": "Sábanas Matrimoniales Ultra Suaves Premium Blancos Azteca Color Rosa Liso",
+      "price": 203.69,
+      "discount_pct": 64.0,
+      "category_id": "MLM30059"
     }
   },
   "runs": [
-    {
-      "at": "2026-08-28T22:04:38.592246+00:00",
-      "encontrados": 150,
-      "candidatos": 150,
-      "publicados": 0,
-      "dry_run": true,
-      "ensayo": [
-        "mercadolibre:MLM72390922",
-        "mercadolibre:MLM58978915",
-        "mercadolibre:MLM47807630",
-        "mercadolibre:MLM66149468"
-      ]
-    },
     {
       "at": "2026-08-28T22:14:30.903503+00:00",
       "encontrados": 150,
@@ -908,6 +904,12 @@
     },
     {
       "at": "2026-09-11T07:36:07.237644+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-11T18:01:04.921181+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

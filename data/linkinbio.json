@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM23462531",
+    "source": "mercadolibre",
+    "title": "Multifuncional Canon Pixma G3170 Color Negro",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_904018-MLA99950436191_112025-F.jpg",
+    "price": 3249.0,
+    "original_price": 4862.54,
+    "discount_pct": 33.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM23462531",
+    "added_at": "2026-09-12T22:44:25.704279+00:00"
+  },
+  {
     "key": "mercadolibre:MLM66845536",
     "source": "mercadolibre",
     "title": "Espejo Luz Led Touch Pared Baño Tocador Vestidor 3 Luces Ch1 Marco Es78 Rectangular Acostado",
@@ -647,16 +658,5 @@
     "discount_pct": 65.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM45647645",
     "added_at": "2026-08-30T02:25:29.482099+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM23138485",
-    "source": "mercadolibre",
-    "title": "Audífonos Inalámbricos Wh-ch520 Color Beige",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_631213-MLA99448230660_112025-F.jpg",
-    "price": 699.0,
-    "original_price": 1777.0,
-    "discount_pct": 60.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM23138485",
-    "added_at": "2026-08-29T22:56:14.155423+00:00"
   }
 ]

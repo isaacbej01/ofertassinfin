@@ -567,15 +567,18 @@
       "price": 949.0,
       "discount_pct": 52.0,
       "category_id": "MLM157937"
+    },
+    "mercadolibre:MLM45259667": {
+      "published_at": "2026-09-12T07:28:01.251433+00:00",
+      "scheduled_at": "2026-09-12T07:39:25Z",
+      "source": "mercadolibre",
+      "title": "New Balance 9060 Hombre Adultos",
+      "price": 1391.52,
+      "discount_pct": 52.0,
+      "category_id": "MLM6585"
     }
   },
   "runs": [
-    {
-      "at": "2026-08-28T23:45:43.222211+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-08-29T04:47:35.268498+00:00",
       "encontrados": 150,
@@ -926,6 +929,12 @@
     },
     {
       "at": "2026-09-12T02:08:35.711438+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-12T07:28:01.251471+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

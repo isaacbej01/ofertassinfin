@@ -576,15 +576,18 @@
       "price": 1391.52,
       "discount_pct": 52.0,
       "category_id": "MLM6585"
+    },
+    "mercadolibre:MLM63043383": {
+      "published_at": "2026-09-12T17:32:58.487392+00:00",
+      "scheduled_at": "2026-09-12T17:44:23Z",
+      "source": "mercadolibre",
+      "title": "Celular Motorola Moto G06 128gb 4gb Ram Color Azul",
+      "price": 2449.0,
+      "discount_pct": 51.0,
+      "category_id": "MLM1055"
     }
   },
   "runs": [
-    {
-      "at": "2026-08-29T04:47:35.268498+00:00",
-      "encontrados": 150,
-      "publicados": 0,
-      "nota": "sin candidatos que pasen los filtros"
-    },
     {
       "at": "2026-08-29T18:01:54.421633+00:00",
       "publicados": 1,
@@ -935,6 +938,12 @@
     },
     {
       "at": "2026-09-12T07:28:01.251471+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-12T17:32:58.487428+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

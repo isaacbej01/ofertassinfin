@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM63043383",
+    "source": "mercadolibre",
+    "title": "Celular Motorola Moto G06 128gb 4gb Ram Color Azul",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_819589-MLA100977465205_122025-F.jpg",
+    "price": 2449.0,
+    "original_price": 4999.0,
+    "discount_pct": 51.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM63043383",
+    "added_at": "2026-09-12T17:32:58.485429+00:00"
+  },
+  {
     "key": "mercadolibre:MLM45259667",
     "source": "mercadolibre",
     "title": "New Balance 9060 Hombre Adultos",
@@ -647,16 +658,5 @@
     "discount_pct": 44.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM48897018",
     "added_at": "2026-08-29T18:01:54.420991+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM53824452",
-    "source": "mercadolibre",
-    "title": "Xiaomi Pocophone Poco M7 Dual Sim 6.9\" 256 Gb Azul 8 Gb RAM Snapdragon 685 7000 mAh",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_934363-MLA99508027366_112025-F.jpg",
-    "price": 3491.44,
-    "original_price": 5012.05,
-    "discount_pct": 30.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM53824452",
-    "added_at": "2026-08-28T23:45:43.221500+00:00"
   }
 ]

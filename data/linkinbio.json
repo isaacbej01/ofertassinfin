@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM66845536",
+    "source": "mercadolibre",
+    "title": "Espejo Luz Led Touch Pared Baño Tocador Vestidor 3 Luces Ch1 Marco Es78 Rectangular Acostado",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_877418-MLA109036710627_032026-F.jpg",
+    "price": 206.0,
+    "original_price": 792.0,
+    "discount_pct": 73.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM66845536",
+    "added_at": "2026-09-12T19:52:12.061625+00:00"
+  },
+  {
     "key": "mercadolibre:MLM63043383",
     "source": "mercadolibre",
     "title": "Celular Motorola Moto G06 128gb 4gb Ram Color Azul",
@@ -647,16 +658,5 @@
     "discount_pct": 60.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM23138485",
     "added_at": "2026-08-29T22:56:14.155423+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM48897018",
-    "source": "mercadolibre",
-    "title": "Jbl Charge 6 Bocina Portátil Bluetooth Resistente Al Agua color Azul marino",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_616394-MLA99884944697_112025-F.jpg",
-    "price": 2392.59,
-    "original_price": 4272.61,
-    "discount_pct": 44.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM48897018",
-    "added_at": "2026-08-29T18:01:54.420991+00:00"
   }
 ]

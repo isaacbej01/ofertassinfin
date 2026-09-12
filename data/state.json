@@ -558,16 +558,18 @@
       "price": 275.0,
       "discount_pct": 66.0,
       "category_id": "MLM1271"
+    },
+    "mercadolibre:MLM74847366": {
+      "published_at": "2026-09-12T02:08:35.711396+00:00",
+      "scheduled_at": "2026-09-12T02:20:00Z",
+      "source": "mercadolibre",
+      "title": "Carpa Toldo Plegable Reforzado 3x3 Lona Acero Inoxidable Impermeable Color Rojo",
+      "price": 949.0,
+      "discount_pct": 52.0,
+      "category_id": "MLM157937"
     }
   },
   "runs": [
-    {
-      "at": "2026-08-28T22:27:07.280460+00:00",
-      "encontrados": 150,
-      "candidatos": 146,
-      "publicados": 0,
-      "dry_run": false
-    },
     {
       "at": "2026-08-28T23:45:43.222211+00:00",
       "publicados": 1,
@@ -918,6 +920,12 @@
     },
     {
       "at": "2026-09-11T22:54:37.612325+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-12T02:08:35.711438+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

@@ -639,15 +639,18 @@
       "price": 671.0,
       "discount_pct": 66.0,
       "category_id": "MLM5072"
+    },
+    "mercadolibre:MLM67979054": {
+      "published_at": "2026-09-13T22:44:58.322240+00:00",
+      "scheduled_at": "2026-09-13T22:56:23Z",
+      "source": "mercadolibre",
+      "title": "Taladro Destornillador Electrico Inalambrico Con 2 Baterias Amarillo Pinchan",
+      "price": 230.04,
+      "discount_pct": 79.0,
+      "category_id": "MLM456969"
     }
   },
   "runs": [
-    {
-      "at": "2026-08-31T02:20:11.240812+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-08-31T09:04:39.154077+00:00",
       "publicados": 1,
@@ -998,6 +1001,12 @@
     },
     {
       "at": "2026-09-13T20:01:12.738138+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-13T22:44:58.322279+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

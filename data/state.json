@@ -630,15 +630,18 @@
       "price": 295.02,
       "discount_pct": 67.0,
       "category_id": "MLM145934"
+    },
+    "mercadolibre:MLM52056865": {
+      "published_at": "2026-09-13T20:01:12.738093+00:00",
+      "scheduled_at": "2026-09-13T20:11:57Z",
+      "source": "mercadolibre",
+      "title": "Samsung Galaxy Buds Core Negro",
+      "price": 671.0,
+      "discount_pct": 66.0,
+      "category_id": "MLM5072"
     }
   },
   "runs": [
-    {
-      "at": "2026-08-30T23:02:13.366789+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-08-31T02:20:11.240812+00:00",
       "publicados": 1,
@@ -989,6 +992,12 @@
     },
     {
       "at": "2026-09-13T17:48:22.582013+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-13T20:01:12.738138+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM48472797",
+    "source": "mercadolibre",
+    "title": "Alfombra Decorativa Sala Estar Y Dormitorio 200x160 Cm Carpet02dg Color Gris",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_931427-MLA96667276948_112025-F.jpg",
+    "price": 295.02,
+    "original_price": 894.0,
+    "discount_pct": 67.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM48472797",
+    "added_at": "2026-09-13T17:48:22.580077+00:00"
+  },
+  {
     "key": "mercadolibre:MLM47863803",
     "source": "mercadolibre",
     "title": "Sábanas Individuales Ultra Suaves Premium. Blancos Azteca. Color Verde Diseño de la tela Liso",
@@ -647,16 +658,5 @@
     "discount_pct": 79.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM46085382",
     "added_at": "2026-08-30T23:02:13.365996+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM53968883",
-    "source": "mercadolibre",
-    "title": "Epson Ecotank Impresora Multifuncional a Color L4360",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_777849-MLA99958240917_112025-F.jpg",
-    "price": 5105.37,
-    "original_price": 6999.0,
-    "discount_pct": 27.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM53968883",
-    "added_at": "2026-08-30T18:16:41.409881+00:00"
   }
 ]

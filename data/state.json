@@ -621,15 +621,18 @@
       "price": 187.98,
       "discount_pct": 63.0,
       "category_id": "MLM30059"
+    },
+    "mercadolibre:MLM48472797": {
+      "published_at": "2026-09-13T17:48:22.581962+00:00",
+      "scheduled_at": "2026-09-13T17:59:46Z",
+      "source": "mercadolibre",
+      "title": "Alfombra Decorativa Sala Estar Y Dormitorio 200x160 Cm Carpet02dg Color Gris",
+      "price": 295.02,
+      "discount_pct": 67.0,
+      "category_id": "MLM145934"
     }
   },
   "runs": [
-    {
-      "at": "2026-08-30T18:16:41.410642+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-08-30T23:02:13.366789+00:00",
       "publicados": 1,
@@ -980,6 +983,12 @@
     },
     {
       "at": "2026-09-13T07:46:38.610242+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-13T17:48:22.582013+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

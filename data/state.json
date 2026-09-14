@@ -675,15 +675,18 @@
       "price": 187.98,
       "discount_pct": 63.0,
       "category_id": "MLM30059"
+    },
+    "mercadolibre:MLM41148572": {
+      "published_at": "2026-09-14T23:36:35.099507+00:00",
+      "scheduled_at": "2026-09-14T23:47:59Z",
+      "source": "mercadolibre",
+      "title": "Alfombra Decorativa Sala Estar y Dormitorio 200x160 Cm Fouortunate Bee Carpet02dg Color Gris Claro",
+      "price": 294.42,
+      "discount_pct": 66.0,
+      "category_id": "MLM145934"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-01T08:07:54.801539+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-01T18:03:59.940197+00:00",
       "publicados": 1,
@@ -1034,6 +1037,12 @@
     },
     {
       "at": "2026-09-14T19:43:16.089206+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-14T23:36:35.099547+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

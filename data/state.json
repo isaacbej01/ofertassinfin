@@ -666,15 +666,18 @@
       "price": 2242.35,
       "discount_pct": 43.0,
       "category_id": "MLM59800"
+    },
+    "mercadolibre:MLM44589553": {
+      "published_at": "2026-09-14T19:43:16.089167+00:00",
+      "scheduled_at": "2026-09-14T19:54:40Z",
+      "source": "mercadolibre",
+      "title": "Sábanas Individuales Ultra Suaves Premium. Blancos Azteca. Color Gris perla Diseño de la tela Liso",
+      "price": 187.98,
+      "discount_pct": 63.0,
+      "category_id": "MLM30059"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-01T00:12:40.374119+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-01T08:07:54.801539+00:00",
       "publicados": 1,
@@ -1025,6 +1028,12 @@
     },
     {
       "at": "2026-09-14T08:18:13.796974+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-14T19:43:16.089206+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

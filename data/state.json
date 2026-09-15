@@ -684,15 +684,18 @@
       "price": 294.42,
       "discount_pct": 66.0,
       "category_id": "MLM145934"
+    },
+    "mercadolibre:MLM26030984": {
+      "published_at": "2026-09-15T02:28:13.698857+00:00",
+      "scheduled_at": "2026-09-15T02:39:37Z",
+      "source": "mercadolibre",
+      "title": "Almohadas 2 Pack Estándar Microfibra Densidad Media Blancos Azteca",
+      "price": 184.15,
+      "discount_pct": 63.0,
+      "category_id": "MLM31529"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-01T18:03:59.940197+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-01T22:54:43.376474+00:00",
       "publicados": 1,
@@ -1043,6 +1046,12 @@
     },
     {
       "at": "2026-09-14T23:36:35.099547+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-15T02:28:13.698905+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

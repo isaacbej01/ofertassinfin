@@ -711,15 +711,18 @@
       "price": 2593.12,
       "discount_pct": 49.0,
       "category_id": "MLM1055"
+    },
+    "mercadolibre:MLM62943906": {
+      "published_at": "2026-09-15T23:19:39.966666+00:00",
+      "scheduled_at": "2026-09-15T23:31:04Z",
+      "source": "mercadolibre",
+      "title": "Compresor Cargador De Baterias Arrancador Con Inflador 150psi EnergyArk",
+      "price": 537.56,
+      "discount_pct": 69.0,
+      "category_id": "MLM22596"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-02T07:26:39.717561+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-02T18:15:06.727191+00:00",
       "publicados": 1,
@@ -1070,6 +1073,12 @@
     },
     {
       "at": "2026-09-15T18:35:53.543014+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-15T23:19:39.966715+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

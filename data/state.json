@@ -738,15 +738,18 @@
       "price": 929.0,
       "discount_pct": 52.0,
       "category_id": "MLM434394"
+    },
+    "mercadolibre:MLM54097181": {
+      "published_at": "2026-09-16T18:35:10.388983+00:00",
+      "scheduled_at": "2026-09-16T18:45:54Z",
+      "source": "mercadolibre",
+      "title": "Xiaomi Pocophone Xiaomi Poco C85 Dual Sim 128 Gb 6 Gb Color Negro",
+      "price": 2593.12,
+      "discount_pct": 49.0,
+      "category_id": "MLM1055"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-03T02:04:04.387247+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-03T07:31:07.412843+00:00",
       "publicados": 1,
@@ -1097,6 +1100,12 @@
     },
     {
       "at": "2026-09-16T08:04:31.096720+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-16T18:35:10.389036+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

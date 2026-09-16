@@ -720,15 +720,18 @@
       "price": 537.56,
       "discount_pct": 69.0,
       "category_id": "MLM22596"
+    },
+    "mercadolibre:MLM19559684": {
+      "published_at": "2026-09-16T02:21:20.259344+00:00",
+      "scheduled_at": "2026-09-16T02:32:45Z",
+      "source": "mercadolibre",
+      "title": "CeraVe Gel Limpiador Espumoso facial para Piel Mixta a Grasa 473 ml",
+      "price": 261.15,
+      "discount_pct": 56.0,
+      "category_id": "MLM178705"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-02T18:15:06.727191+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-02T22:55:37.517495+00:00",
       "publicados": 1,
@@ -1079,6 +1082,12 @@
     },
     {
       "at": "2026-09-15T23:19:39.966715+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-16T02:21:20.259433+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

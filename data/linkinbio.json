@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM19559684",
+    "source": "mercadolibre",
+    "title": "CeraVe Gel Limpiador Espumoso facial para Piel Mixta a Grasa 473 ml",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_881917-MLU77762159963_072024-F.jpg",
+    "price": 261.15,
+    "original_price": 599.0,
+    "discount_pct": 56.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM19559684",
+    "added_at": "2026-09-16T02:21:20.256850+00:00"
+  },
+  {
     "key": "mercadolibre:MLM62943906",
     "source": "mercadolibre",
     "title": "Compresor Cargador De Baterias Arrancador Con Inflador 150psi EnergyArk",
@@ -647,16 +658,5 @@
     "discount_pct": 51.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM63043381",
     "added_at": "2026-09-02T22:55:37.516593+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM43393044",
-    "source": "mercadolibre",
-    "title": "Alfombra Decorativa Sala Estar Y Dormitorio 200x160 Cm Fouortunate-bee Carpet02dg Gris Oscuro",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_969839-MLA95501410908_102025-F.jpg",
-    "price": 294.63,
-    "original_price": 866.65,
-    "discount_pct": 66.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM43393044",
-    "added_at": "2026-09-02T18:15:06.726010+00:00"
   }
 ]

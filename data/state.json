@@ -729,15 +729,18 @@
       "price": 261.15,
       "discount_pct": 56.0,
       "category_id": "MLM178705"
+    },
+    "mercadolibre:MLM26657595": {
+      "published_at": "2026-09-16T08:04:31.096678+00:00",
+      "scheduled_at": "2026-09-16T08:15:46Z",
+      "source": "mercadolibre",
+      "title": "Carpa Toldo Plegable 3x3 Impermeable Y Reforzado Styrka Color Verde",
+      "price": 929.0,
+      "discount_pct": 52.0,
+      "category_id": "MLM434394"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-02T22:55:37.517495+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-03T02:04:04.387247+00:00",
       "publicados": 1,
@@ -1088,6 +1091,12 @@
     },
     {
       "at": "2026-09-16T02:21:20.259433+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-16T08:04:31.096720+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

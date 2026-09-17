@@ -783,15 +783,18 @@
       "price": 949.0,
       "discount_pct": 52.0,
       "category_id": "MLM157937"
+    },
+    "mercadolibre:MLM54097314": {
+      "published_at": "2026-09-17T23:16:44.950254+00:00",
+      "scheduled_at": "2026-09-17T23:28:09Z",
+      "source": "mercadolibre",
+      "title": "Xiaomi Pocophone Xiaomi Poco C85 Dual Sim 128 Gb 6 Gb Color Violeta",
+      "price": 2593.12,
+      "discount_pct": 39.0,
+      "category_id": "MLM1055"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-04T07:32:46.544459+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-04T17:54:55.476537+00:00",
       "publicados": 1,
@@ -1142,6 +1145,12 @@
     },
     {
       "at": "2026-09-17T18:42:20.704708+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-17T23:16:44.950305+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

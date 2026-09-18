@@ -801,15 +801,18 @@
       "price": 949.0,
       "discount_pct": 52.0,
       "category_id": "MLM157937"
+    },
+    "mercadolibre:MLM65477067": {
+      "published_at": "2026-09-18T07:45:10.439062+00:00",
+      "scheduled_at": "2026-09-18T07:56:35Z",
+      "source": "mercadolibre",
+      "title": "Audífonos Traductores In-ear HTC NE76 Bluetooth con Cancelación de Ruido y Modo Sueño",
+      "price": 355.45,
+      "discount_pct": 55.0,
+      "category_id": "MLM7533"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-04T20:02:29.989349+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-04T22:39:05.290589+00:00",
       "publicados": 1,
@@ -1160,6 +1163,12 @@
     },
     {
       "at": "2026-09-18T02:10:54.986742+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-18T07:45:10.439113+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

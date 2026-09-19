@@ -864,15 +864,18 @@
       "price": 295.02,
       "discount_pct": 67.0,
       "category_id": "MLM145934"
+    },
+    "mercadolibre:MLM65699480": {
+      "published_at": "2026-09-19T19:46:29.954326+00:00",
+      "scheduled_at": "2026-09-19T19:57:55Z",
+      "source": "mercadolibre",
+      "title": "Audífonos In-Ear Lenovo EA166 Bluetooth con Micrófono y Estuche de Carga",
+      "price": 192.92,
+      "discount_pct": 67.0,
+      "category_id": "MLM7533"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-06T01:55:19.217702+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-06T07:26:04.844767+00:00",
       "publicados": 1,
@@ -1223,6 +1226,12 @@
     },
     {
       "at": "2026-09-19T17:36:28.981212+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-19T19:46:29.954381+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

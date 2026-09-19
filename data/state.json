@@ -846,15 +846,18 @@
       "price": 154.23,
       "discount_pct": 61.0,
       "category_id": "MLM189602"
+    },
+    "mercadolibre:MLM72800012": {
+      "published_at": "2026-09-19T07:39:39.333323+00:00",
+      "scheduled_at": "2026-09-19T07:51:04Z",
+      "source": "mercadolibre",
+      "title": "Llave de Impacto Inalámbrica Pinchan 20V Roja Sin Escobillas con 2 Baterías y Cargador",
+      "price": 398.41,
+      "discount_pct": 53.0,
+      "category_id": "MLM456969"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-05T19:43:14.503337+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-05T22:29:35.176066+00:00",
       "publicados": 1,
@@ -1205,6 +1208,12 @@
     },
     {
       "at": "2026-09-19T02:14:50.835172+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-19T07:39:39.333378+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

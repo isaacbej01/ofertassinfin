@@ -855,15 +855,18 @@
       "price": 398.41,
       "discount_pct": 53.0,
       "category_id": "MLM456969"
+    },
+    "mercadolibre:MLM48553996": {
+      "published_at": "2026-09-19T17:36:28.981175+00:00",
+      "scheduled_at": "2026-09-19T17:47:53Z",
+      "source": "mercadolibre",
+      "title": "Alfombra Decorativa Sala De Estar Y Dormitorio 160*200cm Color Blanco Fouortunate-Bee Carpet-02D",
+      "price": 295.02,
+      "discount_pct": 67.0,
+      "category_id": "MLM145934"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-05T22:29:35.176066+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-06T01:55:19.217702+00:00",
       "publicados": 1,
@@ -1214,6 +1217,12 @@
     },
     {
       "at": "2026-09-19T07:39:39.333378+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-19T17:36:28.981212+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

@@ -837,15 +837,18 @@
       "price": 2099.0,
       "discount_pct": 64.0,
       "category_id": "MLM121837"
+    },
+    "mercadolibre:MLM47079328": {
+      "published_at": "2026-09-19T02:14:50.835129+00:00",
+      "scheduled_at": "2026-09-19T02:26:15Z",
+      "source": "mercadolibre",
+      "title": "Album de fotos Darsen 300K-B color negro con diseño Cuadrado",
+      "price": 154.23,
+      "discount_pct": 61.0,
+      "category_id": "MLM189602"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-05T17:02:27.573142+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-05T19:43:14.503337+00:00",
       "publicados": 1,
@@ -1196,6 +1199,12 @@
     },
     {
       "at": "2026-09-18T22:56:09.871613+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-19T02:14:50.835172+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

@@ -873,15 +873,18 @@
       "price": 192.92,
       "discount_pct": 67.0,
       "category_id": "MLM7533"
+    },
+    "mercadolibre:MLM26128919": {
+      "published_at": "2026-09-19T22:35:28.113378+00:00",
+      "scheduled_at": "2026-09-19T22:46:48Z",
+      "source": "mercadolibre",
+      "title": "Blancos Azteca Ultra Suaves Premium sábanas matrimoniales estampado color croma",
+      "price": 240.49,
+      "discount_pct": 63.0,
+      "category_id": "MLM30059"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-06T07:26:04.844767+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-06T17:26:06.761386+00:00",
       "publicados": 1,
@@ -1232,6 +1235,12 @@
     },
     {
       "at": "2026-09-19T19:46:29.954381+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-19T22:35:28.113432+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

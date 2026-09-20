@@ -909,15 +909,18 @@
       "price": 355.45,
       "discount_pct": 55.0,
       "category_id": "MLM7533"
+    },
+    "mercadolibre:MLM68575057": {
+      "published_at": "2026-09-20T19:58:56.117522+00:00",
+      "scheduled_at": "2026-09-20T20:10:21Z",
+      "source": "mercadolibre",
+      "title": "Motosierra a Gasolina WANSE de 52 cc y 2 hp con Cadena de 20\" para Tala y Jardinería",
+      "price": 890.4,
+      "discount_pct": 47.0,
+      "category_id": "MLM457020"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-07T01:53:33.673235+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-07T07:41:45.246280+00:00",
       "publicados": 1,
@@ -1268,6 +1271,12 @@
     },
     {
       "at": "2026-09-20T17:48:38.159872+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-20T19:58:56.117568+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

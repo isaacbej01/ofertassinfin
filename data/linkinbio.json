@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM68575057",
+    "source": "mercadolibre",
+    "title": "Motosierra a Gasolina WANSE de 52 cc y 2 hp con Cadena de 20\" para Tala y Jardinería",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_674536-MLA112608109244_062026-F.jpg",
+    "price": 890.4,
+    "original_price": 1696.0,
+    "discount_pct": 47.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM68575057",
+    "added_at": "2026-09-20T19:58:56.115628+00:00"
+  },
+  {
     "key": "mercadolibre:MLM72907969",
     "source": "mercadolibre",
     "title": "Audífonos Traductores In-ear Htc Ne76 Bluetooth Con Cancelación De Ruido Y Modo Sueño",
@@ -647,16 +658,5 @@
     "discount_pct": 66.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM51758686",
     "added_at": "2026-09-07T07:41:45.244094+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM35646985",
-    "source": "mercadolibre",
-    "title": "Tenis New Balance 530 Adulto Comodos Para Diario",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_772536-MLA53298898743_012023-F.jpg",
-    "price": 730.0,
-    "original_price": 1900.0,
-    "discount_pct": 61.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM35646985",
-    "added_at": "2026-09-07T01:53:33.671752+00:00"
   }
 ]

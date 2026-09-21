@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM76723362",
+    "source": "mercadolibre",
+    "title": "Audífonos Inalámbricos Lenovo EA166 con Bluetooth 5.4 y Cancelación de Ruido",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_662141-MLA114635624168_082026-F.jpg",
+    "price": 192.24,
+    "original_price": 602.35,
+    "discount_pct": 68.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM76723362",
+    "added_at": "2026-09-21T08:22:42.673977+00:00"
+  },
+  {
     "key": "mercadolibre:MLM65607575",
     "source": "mercadolibre",
     "title": "Audífonos Lenovo EA166 In-ear Inalámbricos con Bluetooth y Micrófono Beige",
@@ -647,16 +658,5 @@
     "discount_pct": 59.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM42865017",
     "added_at": "2026-09-08T02:03:57.447750+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM74981499",
-    "source": "mercadolibre",
-    "title": "Tarjeta De Memoria Micro SD Vanance 256GB Con Adaptador 120 MB/s Tarjeta TF Vídeo Full HD Memory Sd Card Impermeable Clase 10 U3 A1 Alta Velocidad Memoria Alto Rendimiento Para Cámaras Y Celulares",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_775267-MLA114106123004_082026-F.jpg",
-    "price": 185.6,
-    "original_price": 580.0,
-    "discount_pct": 68.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM74981499",
-    "added_at": "2026-09-07T23:12:40.530189+00:00"
   }
 ]

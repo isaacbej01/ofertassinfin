@@ -990,15 +990,18 @@
       "price": 770.0,
       "discount_pct": 65.0,
       "category_id": "MLM438480"
+    },
+    "mercadolibre:MLM77382095": {
+      "published_at": "2026-09-22T23:23:51.779298+00:00",
+      "scheduled_at": "2026-09-22T23:35:06Z",
+      "source": "mercadolibre",
+      "title": "Sjrohe X-400 Base Soportes De Pantalla Pared Tv 14 A 55 Pulgadas Soporta 30kg Soporte De Tv Universal Compatible Soporte",
+      "price": 158.98,
+      "discount_pct": 60.0,
+      "category_id": "MLM194128"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-09T07:41:08.281708+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-09T18:11:19.228195+00:00",
       "publicados": 1,
@@ -1349,6 +1352,12 @@
     },
     {
       "at": "2026-09-22T18:25:36.996751+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-22T23:23:51.779337+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

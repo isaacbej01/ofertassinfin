@@ -972,15 +972,18 @@
       "price": 686.5,
       "discount_pct": 47.0,
       "category_id": "MLM11041"
+    },
+    "mercadolibre:MLM67329478": {
+      "published_at": "2026-09-22T08:04:54.771790+00:00",
+      "scheduled_at": "2026-09-22T08:16:03Z",
+      "source": "mercadolibre",
+      "title": "Llave de Impacto Eléctrica Pinchan Inalámbrica, Sin Escobillas, 520 N.m, 3500 Rpm, con Batería y Cargador",
+      "price": 297.22,
+      "discount_pct": 65.0,
+      "category_id": "MLM456969"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-08T23:04:20.334140+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-09T02:08:39.568054+00:00",
       "publicados": 1,
@@ -1331,6 +1334,12 @@
     },
     {
       "at": "2026-09-22T02:25:20.962141+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-22T08:04:54.771834+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

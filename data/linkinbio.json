@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM37288559",
+    "source": "mercadolibre",
+    "title": "Micrófono x2 - JBL PartyBox Wireless Mic - Inalámbrico y Recargable - Color Negro",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_866190-MLA113621786569_062026-F.jpg",
+    "price": 770.0,
+    "original_price": 2200.0,
+    "discount_pct": 65.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM37288559",
+    "added_at": "2026-09-22T18:25:36.994399+00:00"
+  },
+  {
     "key": "mercadolibre:MLM67329478",
     "source": "mercadolibre",
     "title": "Llave de Impacto Eléctrica Pinchan Inalámbrica, Sin Escobillas, 520 N.m, 3500 Rpm, con Batería y Cargador",
@@ -647,16 +658,5 @@
     "discount_pct": 51.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM63043373",
     "added_at": "2026-09-09T07:41:08.279498+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM56449916",
-    "source": "mercadolibre",
-    "title": "Recipientes Herméticos De Almacenamiento De Cocina 12 Pz",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_778976-MLA111876334416_062026-F.jpg",
-    "price": 198.0,
-    "original_price": 498.0,
-    "discount_pct": 60.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM56449916",
-    "added_at": "2026-09-09T02:08:39.565856+00:00"
   }
 ]

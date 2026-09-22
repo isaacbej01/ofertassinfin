@@ -981,15 +981,18 @@
       "price": 297.22,
       "discount_pct": 65.0,
       "category_id": "MLM456969"
+    },
+    "mercadolibre:MLM37288559": {
+      "published_at": "2026-09-22T18:25:36.996694+00:00",
+      "scheduled_at": "2026-09-22T18:37:01Z",
+      "source": "mercadolibre",
+      "title": "Micrófono x2 - JBL PartyBox Wireless Mic - Inalámbrico y Recargable - Color Negro",
+      "price": 770.0,
+      "discount_pct": 65.0,
+      "category_id": "MLM438480"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-09T02:08:39.568054+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-09T07:41:08.281708+00:00",
       "publicados": 1,
@@ -1340,6 +1343,12 @@
     },
     {
       "at": "2026-09-22T08:04:54.771834+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-22T18:25:36.996751+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

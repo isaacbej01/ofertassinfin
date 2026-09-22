@@ -963,15 +963,18 @@
       "price": 167.16,
       "discount_pct": 58.0,
       "category_id": "MLM189602"
+    },
+    "mercadolibre:MLM47003664": {
+      "published_at": "2026-09-22T02:25:20.962093+00:00",
+      "scheduled_at": "2026-09-22T02:36:45Z",
+      "source": "mercadolibre",
+      "title": "Mesa Plegable Blanca 1.80 m tipo Portafolio",
+      "price": 686.5,
+      "discount_pct": 47.0,
+      "category_id": "MLM11041"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-08T18:12:19.691713+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-08T23:04:20.334140+00:00",
       "publicados": 1,
@@ -1322,6 +1325,12 @@
     },
     {
       "at": "2026-09-21T23:45:22.537687+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-22T02:25:20.962141+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

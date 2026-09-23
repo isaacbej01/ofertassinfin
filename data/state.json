@@ -1008,15 +1008,18 @@
       "price": 191.53,
       "discount_pct": 55.0,
       "category_id": "MLM5015"
+    },
+    "mercadolibre:MLM36580546": {
+      "published_at": "2026-09-23T08:07:06.786253+00:00",
+      "scheduled_at": "2026-09-23T08:18:21Z",
+      "source": "mercadolibre",
+      "title": "Juego de Sábanas Matrimonial de Algodón Egipcio Premium Azul con Rayas",
+      "price": 179.0,
+      "discount_pct": 55.0,
+      "category_id": "MLM30059"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-09T22:51:16.502432+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-10T02:06:22.805738+00:00",
       "publicados": 1,
@@ -1367,6 +1370,12 @@
     },
     {
       "at": "2026-09-23T02:25:19.410819+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-23T08:07:06.786314+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

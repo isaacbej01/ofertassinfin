@@ -999,15 +999,18 @@
       "price": 158.98,
       "discount_pct": 60.0,
       "category_id": "MLM194128"
+    },
+    "mercadolibre:MLM68288757": {
+      "published_at": "2026-09-23T02:25:19.410762+00:00",
+      "scheduled_at": "2026-09-23T02:36:34Z",
+      "source": "mercadolibre",
+      "title": "Repetidor De Wifi 2.4g Amplificador Rompe Muros Router 300mbps 6 Antenas，Amplia Cobertura, Fácil Instalación, Color Blan",
+      "price": 191.53,
+      "discount_pct": 55.0,
+      "category_id": "MLM5015"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-09T18:11:19.228195+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-09T22:51:16.502432+00:00",
       "publicados": 1,
@@ -1358,6 +1361,12 @@
     },
     {
       "at": "2026-09-22T23:23:51.779337+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-23T02:25:19.410819+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

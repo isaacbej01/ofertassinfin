@@ -1062,15 +1062,18 @@
       "price": 219.0,
       "discount_pct": 56.0,
       "category_id": "MLM157927"
+    },
+    "mercadolibre:MLM69557115": {
+      "published_at": "2026-09-24T23:41:48.930383+00:00",
+      "scheduled_at": "2026-09-24T23:53:03Z",
+      "source": "mercadolibre",
+      "title": "2 Panele Cortinas Blackout Para Para Ventana 300x230cm Habitacion Diseño Moderno Ventanas Decorativas Aislamiento Sala R",
+      "price": 185.01,
+      "discount_pct": 56.0,
+      "category_id": "MLM4771"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-11T02:03:42.837478+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-11T07:36:07.237644+00:00",
       "publicados": 1,
@@ -1421,6 +1424,12 @@
     },
     {
       "at": "2026-09-24T18:46:17.043105+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-24T23:41:48.930424+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

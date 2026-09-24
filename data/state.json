@@ -1044,15 +1044,18 @@
       "price": 205.32,
       "discount_pct": 76.0,
       "category_id": "MLM456969"
+    },
+    "mercadolibre:MLM40732643": {
+      "published_at": "2026-09-24T07:58:07.002548+00:00",
+      "scheduled_at": "2026-09-24T08:09:30Z",
+      "source": "mercadolibre",
+      "title": "Kit Anti Imperfecciones Express Aclara Garnier: Limpiador Facial + Sérum Facial + Crema Hidratante Matificante",
+      "price": 338.0,
+      "discount_pct": 48.0,
+      "category_id": "MLM432650"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-10T20:22:19.089162+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-10T22:52:18.538220+00:00",
       "publicados": 1,
@@ -1403,6 +1406,12 @@
     },
     {
       "at": "2026-09-24T02:14:00.932101+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-24T07:58:07.002608+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

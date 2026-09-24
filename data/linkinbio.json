@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM40732643",
+    "source": "mercadolibre",
+    "title": "Kit Anti Imperfecciones Express Aclara Garnier: Limpiador Facial + Sérum Facial + Crema Hidratante Matificante",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_782568-MLU79241068221_092024-F.jpg",
+    "price": 338.0,
+    "original_price": 655.0,
+    "discount_pct": 48.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM40732643",
+    "added_at": "2026-09-24T07:58:06.999766+00:00"
+  },
+  {
     "key": "mercadolibre:MLM73232480",
     "source": "mercadolibre",
     "title": "Kit De Taladro Inalámbrico Destornillador Eléctrico Azul Pinchan 2000 RPM Incluye batería y cargador Iluminación LED 50 Hz/60 Hz",
@@ -647,16 +658,5 @@
     "discount_pct": 29.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM53872320",
     "added_at": "2026-09-10T22:52:18.536279+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM50286496",
-    "source": "mercadolibre",
-    "title": "Bocina Portatil Bluetooth JBL Charge 6 Inalambrica Recargable Bateria Larga Duracion Funcion Powerbank Integrado Resistente Al Agua Polvo IP67 Sonido JBL Original Pro Sound Conectividad Auracast Squad",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_872618-MLA99933488835_112025-F.jpg",
-    "price": 2324.0,
-    "original_price": 3999.0,
-    "discount_pct": 41.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM50286496",
-    "added_at": "2026-09-10T20:22:19.086770+00:00"
   }
 ]

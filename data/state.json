@@ -1053,15 +1053,18 @@
       "price": 338.0,
       "discount_pct": 48.0,
       "category_id": "MLM432650"
+    },
+    "mercadolibre:MLM50798802": {
+      "published_at": "2026-09-24T18:46:17.043043+00:00",
+      "scheduled_at": "2026-09-24T18:57:30Z",
+      "source": "mercadolibre",
+      "title": "Tapete de Yoga Mat Foamy Grueso 8mm Muuk Balance, Fitness, Ejercicio en Casa, Pilates Y Relajación, Portátil Color Negro",
+      "price": 219.0,
+      "discount_pct": 56.0,
+      "category_id": "MLM157927"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-10T22:52:18.538220+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-11T02:03:42.837478+00:00",
       "publicados": 1,
@@ -1412,6 +1415,12 @@
     },
     {
       "at": "2026-09-24T07:58:07.002608+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-24T18:46:17.043105+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

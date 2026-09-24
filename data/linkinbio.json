@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM50798802",
+    "source": "mercadolibre",
+    "title": "Tapete de Yoga Mat Foamy Grueso 8mm Muuk Balance, Fitness, Ejercicio en Casa, Pilates Y Relajación, Portátil Color Negro",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_988904-MLA112997843228_072026-F.jpg",
+    "price": 219.0,
+    "original_price": 499.0,
+    "discount_pct": 56.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM50798802",
+    "added_at": "2026-09-24T18:46:17.040444+00:00"
+  },
+  {
     "key": "mercadolibre:MLM40732643",
     "source": "mercadolibre",
     "title": "Kit Anti Imperfecciones Express Aclara Garnier: Limpiador Facial + Sérum Facial + Crema Hidratante Matificante",
@@ -647,16 +658,5 @@
     "discount_pct": 67.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM76220485",
     "added_at": "2026-09-11T02:03:42.834998+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM53872320",
-    "source": "mercadolibre",
-    "title": "Celular Xiaomi Poco M7 8 GB de RAM 256 GB Rom Dual Sim Plateado",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_804980-MLA99596568328_122025-F.jpg",
-    "price": 3508.65,
-    "original_price": 5000.25,
-    "discount_pct": 29.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM53872320",
-    "added_at": "2026-09-10T22:52:18.536279+00:00"
   }
 ]

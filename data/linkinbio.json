@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM74597022",
+    "source": "mercadolibre",
+    "title": "Pack 2 Tarjetas de Memoria MicroSD 128GB Vanance Con Adaptador 120MB/s Tarjeta TF Micor SD Card Impermeable Resistente Altas Temperatura Clase 10 U3 A1 Alta Velocidad Memoria Para Cámaras Y Celulares",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_699989-MLA113278720480_072026-F.jpg",
+    "price": 268.84,
+    "original_price": 572.0,
+    "discount_pct": 53.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM74597022",
+    "added_at": "2026-09-25T02:30:21.371211+00:00"
+  },
+  {
     "key": "mercadolibre:MLM69557115",
     "source": "mercadolibre",
     "title": "2 Panele Cortinas Blackout Para Para Ventana 300x230cm Habitacion Diseño Moderno Ventanas Decorativas Aislamiento Sala Recamara Térmico Y Reducción De Ruido Tela Impermeable Gris ARTROLIN",
@@ -647,16 +658,5 @@
     "discount_pct": 64.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM25415858",
     "added_at": "2026-09-11T18:01:04.918125+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM19795010",
-    "source": "mercadolibre",
-    "title": "Amazon Dot Echo Dot 5th Gen con asistente virtual Alexa color negro 127/220V",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_753481-MLA111978412408_062026-F.jpg",
-    "price": 899.0,
-    "original_price": 1999.0,
-    "discount_pct": 55.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM19795010",
-    "added_at": "2026-09-11T07:36:07.235655+00:00"
   }
 ]

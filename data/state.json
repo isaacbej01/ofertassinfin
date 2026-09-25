@@ -1071,15 +1071,18 @@
       "price": 185.01,
       "discount_pct": 56.0,
       "category_id": "MLM4771"
+    },
+    "mercadolibre:MLM74597022": {
+      "published_at": "2026-09-25T02:30:21.373822+00:00",
+      "scheduled_at": "2026-09-25T02:41:46Z",
+      "source": "mercadolibre",
+      "title": "Pack 2 Tarjetas de Memoria MicroSD 128GB Vanance Con Adaptador 120MB/s Tarjeta TF Micor SD Card Impermeable Resistente A",
+      "price": 268.84,
+      "discount_pct": 53.0,
+      "category_id": "MLM3553"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-11T07:36:07.237644+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-11T18:01:04.921181+00:00",
       "publicados": 1,
@@ -1430,6 +1433,12 @@
     },
     {
       "at": "2026-09-24T23:41:48.930424+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-25T02:30:21.373881+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

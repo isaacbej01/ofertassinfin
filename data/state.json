@@ -1089,15 +1089,18 @@
       "price": 438.0,
       "discount_pct": 46.0,
       "category_id": "MLM189529"
+    },
+    "mercadolibre:MLM54041654": {
+      "published_at": "2026-09-25T19:02:59.706814+00:00",
+      "scheduled_at": "2026-09-25T19:14:14Z",
+      "source": "mercadolibre",
+      "title": "Compresor De Aire Portátil Bombas Aire Inflador De Llanta 150psi Doble Indicación De Presión Recargable Inalámbrico Powe",
+      "price": 237.87,
+      "discount_pct": 52.0,
+      "category_id": "MLM371422"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-11T22:54:37.612325+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-12T02:08:35.711438+00:00",
       "publicados": 1,
@@ -1448,6 +1451,12 @@
     },
     {
       "at": "2026-09-25T08:21:14.407118+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-25T19:02:59.706885+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

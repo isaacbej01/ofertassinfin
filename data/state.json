@@ -1080,15 +1080,18 @@
       "price": 268.84,
       "discount_pct": 53.0,
       "category_id": "MLM3553"
+    },
+    "mercadolibre:MLM61624962": {
+      "published_at": "2026-09-25T08:21:14.407056+00:00",
+      "scheduled_at": "2026-09-25T08:32:28Z",
+      "source": "mercadolibre",
+      "title": "Sillas De Camping Playa Pesca Plegables Impermeables Set 2 Negro",
+      "price": 438.0,
+      "discount_pct": 46.0,
+      "category_id": "MLM189529"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-11T18:01:04.921181+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-11T22:54:37.612325+00:00",
       "publicados": 1,
@@ -1439,6 +1442,12 @@
     },
     {
       "at": "2026-09-25T02:30:21.373881+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-25T08:21:14.407118+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

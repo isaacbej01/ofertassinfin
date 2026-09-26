@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM28765287",
+    "source": "mercadolibre",
+    "title": "Batería Externa 1Hora de 20000mAh con Carga Rápida 22.5W y Cable USB-C",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_821026-MLA110625137273_042026-F.jpg",
+    "price": 313.31,
+    "original_price": 599.0,
+    "discount_pct": 47.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM28765287",
+    "added_at": "2026-09-26T23:16:33.579003+00:00"
+  },
+  {
     "key": "mercadolibre:MLM74868348",
     "source": "mercadolibre",
     "title": "Audífonos In-ear 1Hora R-AUT217 TWS con Bluetooth y Doble Micrófono para Llamadas Claras",
@@ -647,16 +658,5 @@
     "discount_pct": 46.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM57800073",
     "added_at": "2026-09-13T02:04:19.768604+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM23462531",
-    "source": "mercadolibre",
-    "title": "Multifuncional Canon Pixma G3170 Color Negro",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_904018-MLA99950436191_112025-F.jpg",
-    "price": 3249.0,
-    "original_price": 4862.54,
-    "discount_pct": 33.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM23462531",
-    "added_at": "2026-09-12T22:44:25.704279+00:00"
   }
 ]

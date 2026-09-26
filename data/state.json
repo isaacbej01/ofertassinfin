@@ -1134,15 +1134,18 @@
       "price": 174.59,
       "discount_pct": 50.0,
       "category_id": "MLM7533"
+    },
+    "mercadolibre:MLM28765287": {
+      "published_at": "2026-09-26T23:16:33.580724+00:00",
+      "scheduled_at": "2026-09-26T23:27:17Z",
+      "source": "mercadolibre",
+      "title": "Batería Externa 1Hora de 20000mAh con Carga Rápida 22.5W y Cable USB-C",
+      "price": 313.31,
+      "discount_pct": 47.0,
+      "category_id": "MLM429747"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-12T22:44:25.706377+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-13T02:04:19.771222+00:00",
       "publicados": 1,
@@ -1493,6 +1496,12 @@
     },
     {
       "at": "2026-09-26T18:11:11.626248+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-26T23:16:33.580765+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

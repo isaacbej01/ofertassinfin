@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM74868348",
+    "source": "mercadolibre",
+    "title": "Audífonos In-ear 1Hora R-AUT217 TWS con Bluetooth y Doble Micrófono para Llamadas Claras",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_946203-MLA113425328366_072026-F.jpg",
+    "price": 174.59,
+    "original_price": 349.99,
+    "discount_pct": 50.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM74868348",
+    "added_at": "2026-09-26T18:11:11.624327+00:00"
+  },
+  {
     "key": "mercadolibre:MLM66345549",
     "source": "mercadolibre",
     "title": "Compresor De Aire Eléctrica Inalámbrico 150psi, Bupmova Bomba Inflador De Llantas, Power Bank Recargable Portátil, Inflar Auto 5 Modos Con Led Luz Y Pantalla Para Auto, Motocicleta, Neumaticos",
@@ -647,16 +658,5 @@
     "discount_pct": 33.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM23462531",
     "added_at": "2026-09-12T22:44:25.704279+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM66845536",
-    "source": "mercadolibre",
-    "title": "Espejo Luz Led Touch Pared Baño Tocador Vestidor 3 Luces Ch1 Marco Es78 Rectangular Acostado",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_877418-MLA109036710627_032026-F.jpg",
-    "price": 206.0,
-    "original_price": 792.0,
-    "discount_pct": 73.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM66845536",
-    "added_at": "2026-09-12T19:52:12.061625+00:00"
   }
 ]

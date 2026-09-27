@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM19532504",
+    "source": "mercadolibre",
+    "title": "Sanitas Kimberly Clark Toalla Para Manos Interdoblada Caja 2000 pz",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_963354-MLA102290161257_122025-F.jpg",
+    "price": 256.0,
+    "original_price": 499.0,
+    "discount_pct": 48.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM19532504",
+    "added_at": "2026-09-27T23:30:14.551376+00:00"
+  },
+  {
     "key": "mercadolibre:MLM67443844",
     "source": "mercadolibre",
     "title": "Termo Botella Agua Termica Acero Inoxidable Buffer Flask 1lt Tapa 2 En 1 - Pinky",
@@ -647,16 +658,5 @@
     "discount_pct": 79.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM67979054",
     "added_at": "2026-09-13T22:44:58.320348+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM52056865",
-    "source": "mercadolibre",
-    "title": "Samsung Galaxy Buds Core Negro",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_688639-MLA95698257854_102025-F.jpg",
-    "price": 671.0,
-    "original_price": 1999.0,
-    "discount_pct": 66.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM52056865",
-    "added_at": "2026-09-13T20:01:12.735697+00:00"
   }
 ]

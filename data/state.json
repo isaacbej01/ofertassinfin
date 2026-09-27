@@ -1143,15 +1143,18 @@
       "price": 313.31,
       "discount_pct": 47.0,
       "category_id": "MLM429747"
+    },
+    "mercadolibre:MLM65521570": {
+      "published_at": "2026-09-27T02:30:58.774076+00:00",
+      "scheduled_at": "2026-09-27T02:42:23Z",
+      "source": "mercadolibre",
+      "title": "Wanse Llave De Impacto Inalámbrica 520nm Taladros Inalambricos Sin Escobillas 1/2 Batería 6000mah",
+      "price": 379.25,
+      "discount_pct": 43.0,
+      "category_id": "MLM456969"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-13T02:04:19.771222+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-13T07:46:38.610242+00:00",
       "publicados": 1,
@@ -1502,6 +1505,12 @@
     },
     {
       "at": "2026-09-26T23:16:33.580765+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-27T02:30:58.774138+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

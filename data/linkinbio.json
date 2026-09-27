@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM65521570",
+    "source": "mercadolibre",
+    "title": "Wanse Llave De Impacto Inalámbrica 520nm Taladros Inalambricos Sin Escobillas 1/2 Batería 6000mah",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_609256-MLA114509011453_072026-F.jpg",
+    "price": 379.25,
+    "original_price": 670.48,
+    "discount_pct": 43.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM65521570",
+    "added_at": "2026-09-27T02:30:58.771335+00:00"
+  },
+  {
     "key": "mercadolibre:MLM28765287",
     "source": "mercadolibre",
     "title": "Batería Externa 1Hora de 20000mAh con Carga Rápida 22.5W y Cable USB-C",
@@ -647,16 +658,5 @@
     "discount_pct": 63.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM47863803",
     "added_at": "2026-09-13T07:46:38.607709+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM57800073",
-    "source": "mercadolibre",
-    "title": "Parlante Bluetooth JBL Flip7 Rojo A Prueba Agua Larga Batería",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_610892-MLA112991336834_072026-F.jpg",
-    "price": 1614.0,
-    "original_price": 2999.0,
-    "discount_pct": 46.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM57800073",
-    "added_at": "2026-09-13T02:04:19.768604+00:00"
   }
 ]

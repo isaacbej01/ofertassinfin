@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM52897968",
+    "source": "mercadolibre",
+    "title": "Roku Streaming Stick Plus 4K con Control con Comando de Voz",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_668288-MLA99495462854_112025-F.jpg",
+    "price": 771.21,
+    "original_price": 2899.0,
+    "discount_pct": 73.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM52897968",
+    "added_at": "2026-09-28T20:56:59.448066+00:00"
+  },
+  {
     "key": "mercadolibre:MLM21087813",
     "source": "mercadolibre",
     "title": "Tenis New Balance 530 Adulto Comodos Para Diario",
@@ -647,16 +658,5 @@
     "discount_pct": 63.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM44589553",
     "added_at": "2026-09-14T19:43:16.086773+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM49006175",
-    "source": "mercadolibre",
-    "title": "Jbl Charge 6 Bocina Portátil Bluetooth Resistente Al Agua",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_668182-MLA99950089989_112025-F.jpg",
-    "price": 2242.35,
-    "original_price": 3999.0,
-    "discount_pct": 43.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM49006175",
-    "added_at": "2026-09-14T08:18:13.794526+00:00"
   }
 ]

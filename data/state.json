@@ -1179,15 +1179,18 @@
       "price": 256.0,
       "discount_pct": 48.0,
       "category_id": "MLM167970"
+    },
+    "mercadolibre:MLM47107878": {
+      "published_at": "2026-09-28T02:35:17.465350+00:00",
+      "scheduled_at": "2026-09-28T02:46:02Z",
+      "source": "mercadolibre",
+      "title": "Soldadora Inversora WANSE MIG-300 Multipropósito 3 en 1 para MMA, MIG y TIG de",
+      "price": 1093.47,
+      "discount_pct": 31.0,
+      "category_id": "MLM442419"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-13T22:44:58.322279+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-14T02:22:38.607145+00:00",
       "publicados": 1,
@@ -1538,6 +1541,12 @@
     },
     {
       "at": "2026-09-27T23:30:14.554201+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-28T02:35:17.465412+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

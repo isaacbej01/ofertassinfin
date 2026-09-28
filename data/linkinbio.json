@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM47107878",
+    "source": "mercadolibre",
+    "title": "Soldadora Inversora WANSE MIG-300 Multipropósito 3 en 1 para MMA, MIG y TIG de",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_952600-MLA116356610258_092026-F.jpg",
+    "price": 1093.47,
+    "original_price": 1600.2,
+    "discount_pct": 31.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM47107878",
+    "added_at": "2026-09-28T02:35:17.462623+00:00"
+  },
+  {
     "key": "mercadolibre:MLM19532504",
     "source": "mercadolibre",
     "title": "Sanitas Kimberly Clark Toalla Para Manos Interdoblada Caja 2000 pz",
@@ -647,16 +658,5 @@
     "discount_pct": 65.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM73648685",
     "added_at": "2026-09-14T02:22:38.604574+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM67979054",
-    "source": "mercadolibre",
-    "title": "Taladro Destornillador Electrico Inalambrico Con 2 Baterias Amarillo Pinchan",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_983451-MLA111138645518_052026-F.jpg",
-    "price": 230.04,
-    "original_price": 1107.6,
-    "discount_pct": 79.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM67979054",
-    "added_at": "2026-09-13T22:44:58.320348+00:00"
   }
 ]

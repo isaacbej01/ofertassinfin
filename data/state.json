@@ -1215,15 +1215,18 @@
       "price": 229.0,
       "discount_pct": 42.0,
       "category_id": "MLM376317"
+    },
+    "mercadolibre:MLM61502777": {
+      "published_at": "2026-09-29T09:17:39.196875+00:00",
+      "scheduled_at": "2026-09-29T09:28:51Z",
+      "source": "mercadolibre",
+      "title": "Soldadora Inversora WANSE 3 en 1 para MIG TIG MMA de 300A con Doble Voltaje",
+      "price": 1466.59,
+      "discount_pct": 31.0,
+      "category_id": "MLM442419"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-14T23:36:35.099547+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-15T02:28:13.698905+00:00",
       "publicados": 1,
@@ -1574,6 +1577,12 @@
     },
     {
       "at": "2026-09-29T00:46:06.576983+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-29T09:17:39.196957+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

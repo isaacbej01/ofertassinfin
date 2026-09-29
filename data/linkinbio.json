@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM61502777",
+    "source": "mercadolibre",
+    "title": "Soldadora Inversora WANSE 3 en 1 para MIG TIG MMA de 300A con Doble Voltaje",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_629166-MLA114510227543_072026-F.jpg",
+    "price": 1466.59,
+    "original_price": 2138.4,
+    "discount_pct": 31.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM61502777",
+    "added_at": "2026-09-29T09:17:39.194601+00:00"
+  },
+  {
     "key": "mercadolibre:MLM59117483",
     "source": "mercadolibre",
     "title": "Recipientes Herméticos De Vidrio Almacenamiento Cocina 5 Pz. Transparente",
@@ -647,16 +658,5 @@
     "discount_pct": 63.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM26030984",
     "added_at": "2026-09-15T02:28:13.696272+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM41148572",
-    "source": "mercadolibre",
-    "title": "Alfombra Decorativa Sala Estar y Dormitorio 200x160 Cm Fouortunate Bee Carpet02dg Color Gris Claro",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_833670-MLA95396185396_102025-F.jpg",
-    "price": 294.42,
-    "original_price": 866.14,
-    "discount_pct": 66.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM41148572",
-    "added_at": "2026-09-14T23:36:35.097612+00:00"
   }
 ]

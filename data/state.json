@@ -1224,15 +1224,18 @@
       "price": 1466.59,
       "discount_pct": 31.0,
       "category_id": "MLM442419"
+    },
+    "mercadolibre:MLM39962085": {
+      "published_at": "2026-09-29T19:43:45.639076+00:00",
+      "scheduled_at": "2026-09-29T19:55:10Z",
+      "source": "mercadolibre",
+      "title": "Auriculares Inalámbricos Xiaomi Redmi Buds 6 Play Negro",
+      "price": 192.0,
+      "discount_pct": 53.0,
+      "category_id": "MLM5072"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-15T02:28:13.698905+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-15T08:10:26.323715+00:00",
       "publicados": 1,
@@ -1583,6 +1586,12 @@
     },
     {
       "at": "2026-09-29T09:17:39.196957+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-29T19:43:45.639151+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

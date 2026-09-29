@@ -1206,15 +1206,18 @@
       "price": 771.21,
       "discount_pct": 73.0,
       "category_id": "MLM126075"
+    },
+    "mercadolibre:MLM59117483": {
+      "published_at": "2026-09-29T00:46:06.576895+00:00",
+      "scheduled_at": "2026-09-29T00:57:21Z",
+      "source": "mercadolibre",
+      "title": "Recipientes Herméticos De Vidrio Almacenamiento Cocina 5 Pz. Transparente",
+      "price": 229.0,
+      "discount_pct": 42.0,
+      "category_id": "MLM376317"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-14T19:43:16.089206+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-14T23:36:35.099547+00:00",
       "publicados": 1,
@@ -1565,6 +1568,12 @@
     },
     {
       "at": "2026-09-28T20:56:59.451123+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-29T00:46:06.576983+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

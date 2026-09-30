@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM50106473",
+    "source": "mercadolibre",
+    "title": "Kit Desatornillardor Electrico Taladro Atornillador Inalámbrico 2 Batería Wanse Rojo",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_689576-MLA113376669454_072026-F.jpg",
+    "price": 255.63,
+    "original_price": 453.25,
+    "discount_pct": 43.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM50106473",
+    "added_at": "2026-09-30T19:45:22.293085+00:00"
+  },
+  {
     "key": "mercadolibre:MLM21096841",
     "source": "mercadolibre",
     "title": "Limpiador Cerave Control Imperfecciones Para Piel con Tendencia Acnéica de Todas las Edades de Dia y Noche 236ml Skin Care",
@@ -647,16 +658,5 @@
     "discount_pct": 56.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM19559684",
     "added_at": "2026-09-16T02:21:20.256850+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM62943906",
-    "source": "mercadolibre",
-    "title": "Compresor Cargador De Baterias Arrancador Con Inflador 150psi EnergyArk",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_657872-MLA114733259525_072026-F.jpg",
-    "price": 537.56,
-    "original_price": 1791.3,
-    "discount_pct": 69.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM62943906",
-    "added_at": "2026-09-15T23:19:39.964294+00:00"
   }
 ]

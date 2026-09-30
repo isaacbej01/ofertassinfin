@@ -1251,15 +1251,18 @@
       "price": 269.09,
       "discount_pct": 40.0,
       "category_id": "MLM178705"
+    },
+    "mercadolibre:MLM50106473": {
+      "published_at": "2026-09-30T19:45:22.295399+00:00",
+      "scheduled_at": "2026-09-30T19:56:36Z",
+      "source": "mercadolibre",
+      "title": "Kit Desatornillardor Electrico Taladro Atornillador Inalámbrico 2 Batería Wanse Rojo",
+      "price": 255.63,
+      "discount_pct": 43.0,
+      "category_id": "MLM456969"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-15T23:19:39.966715+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-16T02:21:20.259433+00:00",
       "publicados": 1,
@@ -1610,6 +1613,12 @@
     },
     {
       "at": "2026-09-30T04:44:25.256727+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-30T19:45:22.295451+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

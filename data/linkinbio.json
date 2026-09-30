@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM68725491",
+    "source": "mercadolibre",
+    "title": "Audífonos In-ear Inalámbricos 1hora Auriculares Inalambricos Bluetooth 5.4 Con Microfono (blanco)",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_773608-MLA110074982030_042026-F.jpg",
+    "price": 179.99,
+    "original_price": 339.0,
+    "discount_pct": 46.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM68725491",
+    "added_at": "2026-09-30T00:01:20.599512+00:00"
+  },
+  {
     "key": "mercadolibre:MLM39962085",
     "source": "mercadolibre",
     "title": "Auriculares Inalámbricos Xiaomi Redmi Buds 6 Play Negro",
@@ -647,16 +658,5 @@
     "discount_pct": 49.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM54105052",
     "added_at": "2026-09-15T18:35:53.539940+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM23138487",
-    "source": "mercadolibre",
-    "title": "Audífonos Inalámbricos Sony Wh-ch520 Negro",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_963414-MLA99445666920_112025-F.jpg",
-    "price": 699.0,
-    "original_price": 1777.0,
-    "discount_pct": 60.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM23138487",
-    "added_at": "2026-09-15T08:10:26.321205+00:00"
   }
 ]

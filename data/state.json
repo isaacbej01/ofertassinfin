@@ -1233,15 +1233,18 @@
       "price": 192.0,
       "discount_pct": 53.0,
       "category_id": "MLM5072"
+    },
+    "mercadolibre:MLM68725491": {
+      "published_at": "2026-09-30T00:01:20.601763+00:00",
+      "scheduled_at": "2026-09-30T00:12:45Z",
+      "source": "mercadolibre",
+      "title": "Audífonos In-ear Inalámbricos 1hora Auriculares Inalambricos Bluetooth 5.4 Con Microfono (blanco)",
+      "price": 179.99,
+      "discount_pct": 46.0,
+      "category_id": "MLM7533"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-15T08:10:26.323715+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-15T18:35:53.543014+00:00",
       "publicados": 1,
@@ -1592,6 +1595,12 @@
     },
     {
       "at": "2026-09-29T19:43:45.639151+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-09-30T00:01:20.601817+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

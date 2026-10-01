@@ -1260,15 +1260,18 @@
       "price": 255.63,
       "discount_pct": 43.0,
       "category_id": "MLM456969"
+    },
+    "mercadolibre:MLM44016197": {
+      "published_at": "2026-10-01T00:16:19.857379+00:00",
+      "scheduled_at": "2026-10-01T00:27:45Z",
+      "source": "mercadolibre",
+      "title": "Maybelline Tinta para labios Super Stay Teddy Tint, 5ml - Tinta multiusos de larga duración, Labial efecto mate, difumin",
+      "price": 154.26,
+      "discount_pct": 43.0,
+      "category_id": "MLM29883"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-16T02:21:20.259433+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-16T08:04:31.096720+00:00",
       "publicados": 1,
@@ -1619,6 +1622,12 @@
     },
     {
       "at": "2026-09-30T19:45:22.295451+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-01T00:16:19.857461+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

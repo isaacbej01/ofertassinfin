@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM44016197",
+    "source": "mercadolibre",
+    "title": "Maybelline Tinta para labios Super Stay Teddy Tint, 5ml - Tinta multiusos de larga duración, Labial efecto mate, difuminado hasta por 12H, textura suave a los labios, sin transferencias",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_626362-MLA92804179571_092025-F.jpg",
+    "price": 154.26,
+    "original_price": 275.0,
+    "discount_pct": 43.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM44016197",
+    "added_at": "2026-10-01T00:16:19.854760+00:00"
+  },
+  {
     "key": "mercadolibre:MLM50106473",
     "source": "mercadolibre",
     "title": "Kit Desatornillardor Electrico Taladro Atornillador Inalámbrico 2 Batería Wanse Rojo",
@@ -647,16 +658,5 @@
     "discount_pct": 52.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM26657595",
     "added_at": "2026-09-16T08:04:31.094728+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM19559684",
-    "source": "mercadolibre",
-    "title": "CeraVe Gel Limpiador Espumoso facial para Piel Mixta a Grasa 473 ml",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_881917-MLU77762159963_072024-F.jpg",
-    "price": 261.15,
-    "original_price": 599.0,
-    "discount_pct": 56.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM19559684",
-    "added_at": "2026-09-16T02:21:20.256850+00:00"
   }
 ]

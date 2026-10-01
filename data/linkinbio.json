@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM55893865",
+    "source": "mercadolibre",
+    "title": "Soldadora Inversora Portátil MMA/TIG Inverter 155A WANSE 2en1",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_737057-MLA105925065014_022026-F.jpg",
+    "price": 585.21,
+    "original_price": 883.16,
+    "discount_pct": 33.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM55893865",
+    "added_at": "2026-10-01T09:37:01.817742+00:00"
+  },
+  {
     "key": "mercadolibre:MLM44016197",
     "source": "mercadolibre",
     "title": "Maybelline Tinta para labios Super Stay Teddy Tint, 5ml - Tinta multiusos de larga duración, Labial efecto mate, difuminado hasta por 12H, textura suave a los labios, sin transferencias",
@@ -647,16 +658,5 @@
     "discount_pct": 49.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM54097181",
     "added_at": "2026-09-16T18:35:10.386563+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM26657595",
-    "source": "mercadolibre",
-    "title": "Carpa Toldo Plegable 3x3 Impermeable Y Reforzado Styrka Color Verde",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_708375-MLA106142597260_022026-F.jpg",
-    "price": 929.0,
-    "original_price": 1950.0,
-    "discount_pct": 52.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM26657595",
-    "added_at": "2026-09-16T08:04:31.094728+00:00"
   }
 ]

@@ -1269,15 +1269,18 @@
       "price": 154.26,
       "discount_pct": 43.0,
       "category_id": "MLM29883"
+    },
+    "mercadolibre:MLM55893865": {
+      "published_at": "2026-10-01T09:37:01.820621+00:00",
+      "scheduled_at": "2026-10-01T09:48:14Z",
+      "source": "mercadolibre",
+      "title": "Soldadora Inversora Portátil MMA/TIG Inverter 155A WANSE 2en1",
+      "price": 585.21,
+      "discount_pct": 33.0,
+      "category_id": "MLM442419"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-16T08:04:31.096720+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-16T18:35:10.389036+00:00",
       "publicados": 1,
@@ -1628,6 +1631,12 @@
     },
     {
       "at": "2026-10-01T00:16:19.857461+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-01T09:37:01.820723+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

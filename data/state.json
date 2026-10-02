@@ -1287,15 +1287,18 @@
       "price": 1147.0,
       "discount_pct": 32.0,
       "category_id": "MLM167994"
+    },
+    "mercadolibre:MLM34341029": {
+      "published_at": "2026-10-02T00:20:40.553210+00:00",
+      "scheduled_at": "2026-10-02T00:32:05Z",
+      "source": "mercadolibre",
+      "title": "Maybelline Super Stay Lumi Matte Base de Maquillaje Líquida, Alta Cobertura con Acabado Mate Luminoso, Tecnología Lightw",
+      "price": 198.35,
+      "discount_pct": 42.0,
+      "category_id": "MLM172337"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-16T23:25:24.194360+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-17T02:25:22.933012+00:00",
       "publicados": 1,
@@ -1646,6 +1649,12 @@
     },
     {
       "at": "2026-10-01T20:00:06.702190+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-02T00:20:40.553274+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

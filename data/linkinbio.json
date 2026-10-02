@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM67689331",
+    "source": "mercadolibre",
+    "title": "Mini soldadora inverter Maquina Soldar Inverter amarillo MMA y TIG 2 en 1 con Pantalla Digital PINCHAN",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_713600-MLA111939981918_062026-F.jpg",
+    "price": 497.01,
+    "original_price": 1834.0,
+    "discount_pct": 72.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM67689331",
+    "added_at": "2026-10-02T19:41:17.354468+00:00"
+  },
+  {
     "key": "mercadolibre:MLM32471998",
     "source": "mercadolibre",
     "title": "Creatina monohidratada GAT Sport Essentials en polvo Sin sabor x 1kg",
@@ -647,16 +658,5 @@
     "discount_pct": 52.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM74847364",
     "added_at": "2026-09-17T18:42:20.702111+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM53792007",
-    "source": "mercadolibre",
-    "title": "Celular Xiaomi Poco M7 8 GB Ram 256 GB Rom Dual Sim Black- 6.9 FHD+ 144 Hz, Snapdragon 685, 50 MP Camera, Battery 7000 mah, Rapid Charge 33 W, Inverse Charge 18 W",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_794691-MLA99451551274_112025-F.jpg",
-    "price": 3592.46,
-    "original_price": 5169.0,
-    "discount_pct": 30.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM53792007",
-    "added_at": "2026-09-17T08:10:23.890123+00:00"
   }
 ]

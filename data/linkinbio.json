@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM20922199",
+    "source": "mercadolibre",
+    "title": "Audífonos Inalámbricos 1HORA AUT205 In-Ear Bluetooth 6.0 con Micrófono, Auriculares Bluetooth Negro",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_725168-MLA100077728739_122025-F.jpg",
+    "price": 169.0,
+    "original_price": 338.0,
+    "discount_pct": 50.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM20922199",
+    "added_at": "2026-10-03T23:26:53.601549+00:00"
+  },
+  {
     "key": "mercadolibre:MLM21334121",
     "source": "mercadolibre",
     "title": "Cargador Portátil Power Bank 1Hora de 10000mAh con 4 Cables Integrados y Pantalla Digital",
@@ -647,16 +658,5 @@
     "discount_pct": 68.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM62942062",
     "added_at": "2026-09-18T17:58:55.314070+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM65477067",
-    "source": "mercadolibre",
-    "title": "Audífonos Traductores In-ear HTC NE76 Bluetooth con Cancelación de Ruido y Modo Sueño",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_890286-MLA108083329222_032026-F.jpg",
-    "price": 355.45,
-    "original_price": 789.89,
-    "discount_pct": 55.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM65477067",
-    "added_at": "2026-09-18T07:45:10.436569+00:00"
   }
 ]

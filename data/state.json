@@ -1341,15 +1341,18 @@
       "price": 185.0,
       "discount_pct": 62.0,
       "category_id": "MLM429747"
+    },
+    "mercadolibre:MLM20922199": {
+      "published_at": "2026-10-03T23:26:53.604218+00:00",
+      "scheduled_at": "2026-10-03T23:38:18Z",
+      "source": "mercadolibre",
+      "title": "Audífonos Inalámbricos 1HORA AUT205 In-Ear Bluetooth 6.0 con Micrófono, Auriculares Bluetooth Negro",
+      "price": 169.0,
+      "discount_pct": 50.0,
+      "category_id": "MLM7533"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-18T07:45:10.439113+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-18T17:58:55.316547+00:00",
       "publicados": 1,
@@ -1700,6 +1703,12 @@
     },
     {
       "at": "2026-10-03T18:26:24.989376+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-03T23:26:53.604283+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

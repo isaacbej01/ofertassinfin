@@ -1314,15 +1314,18 @@
       "price": 497.01,
       "discount_pct": 72.0,
       "category_id": "MLM442419"
+    },
+    "mercadolibre:MLM24454767": {
+      "published_at": "2026-10-03T00:04:36.591722+00:00",
+      "scheduled_at": "2026-10-03T00:16:00Z",
+      "source": "mercadolibre",
+      "title": "Kit Garnier Express Aclara Rutina Anti Manchas con Vitamina C, Gel Limpiador, Sérum Facial y Crema Hidratante FPS30, Hid",
+      "price": 293.72,
+      "discount_pct": 49.0,
+      "category_id": "MLM432650"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-17T18:42:20.704708+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-17T23:16:44.950305+00:00",
       "publicados": 1,
@@ -1673,6 +1676,12 @@
     },
     {
       "at": "2026-10-02T19:41:17.357189+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-03T00:04:36.591789+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

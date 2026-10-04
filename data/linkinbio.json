@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM60111122",
+    "source": "mercadolibre",
+    "title": "Casco Motocicleta Abatible Con Bluetooth + Certificado Dot + Luz, SUZWIP Cascos Para Moto Con Doble Visera, Casco Integral Para Hombres Y Mujeres, Tamaño Del Casco M",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_626488-MLA94720043616_102025-F.jpg",
+    "price": 911.21,
+    "original_price": 1722.0,
+    "discount_pct": 47.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM60111122",
+    "added_at": "2026-10-04T18:28:59.075697+00:00"
+  },
+  {
     "key": "mercadolibre:MLM19380755",
     "source": "mercadolibre",
     "title": "Fragancia Eau De Toilette Voyage - Nautica - Spray 200ml",
@@ -647,16 +658,5 @@
     "discount_pct": 64.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM53984971",
     "added_at": "2026-09-18T22:56:09.868854+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM74847365",
-    "source": "mercadolibre",
-    "title": "Carpa Toldo Plegable Reforzado 3x3 Lona Acero Inoxidable Impermeable Color Gris",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_878062-MLA112822978238_072026-F.jpg",
-    "price": 949.0,
-    "original_price": 1999.0,
-    "discount_pct": 52.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM74847365",
-    "added_at": "2026-09-18T20:22:10.876131+00:00"
   }
 ]

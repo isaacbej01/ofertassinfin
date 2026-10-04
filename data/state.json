@@ -1359,15 +1359,18 @@
       "price": 374.0,
       "discount_pct": 36.0,
       "category_id": "MLM1271"
+    },
+    "mercadolibre:MLM60111122": {
+      "published_at": "2026-10-04T18:28:59.078415+00:00",
+      "scheduled_at": "2026-10-04T18:40:22Z",
+      "source": "mercadolibre",
+      "title": "Casco Motocicleta Abatible Con Bluetooth + Certificado Dot + Luz, SUZWIP Cascos Para Moto Con Doble Visera, Casco Integr",
+      "price": 911.21,
+      "discount_pct": 47.0,
+      "category_id": "MLM5557"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-18T20:22:10.878621+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-18T22:56:09.871613+00:00",
       "publicados": 1,
@@ -1718,6 +1721,12 @@
     },
     {
       "at": "2026-10-04T03:24:41.853422+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-04T18:28:59.078482+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

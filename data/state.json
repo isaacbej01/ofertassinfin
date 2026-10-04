@@ -1350,15 +1350,18 @@
       "price": 169.0,
       "discount_pct": 50.0,
       "category_id": "MLM7533"
+    },
+    "mercadolibre:MLM19380755": {
+      "published_at": "2026-10-04T03:24:41.853330+00:00",
+      "scheduled_at": "2026-10-04T03:35:56Z",
+      "source": "mercadolibre",
+      "title": "Fragancia Eau De Toilette Voyage - Nautica - Spray 200ml",
+      "price": 374.0,
+      "discount_pct": 36.0,
+      "category_id": "MLM1271"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-18T17:58:55.316547+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-18T20:22:10.878621+00:00",
       "publicados": 1,
@@ -1709,6 +1712,12 @@
     },
     {
       "at": "2026-10-03T23:26:53.604283+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-04T03:24:41.853422+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

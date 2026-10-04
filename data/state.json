@@ -1368,15 +1368,18 @@
       "price": 911.21,
       "discount_pct": 47.0,
       "category_id": "MLM5557"
+    },
+    "mercadolibre:MLM58358051": {
+      "published_at": "2026-10-04T23:43:40.038792+00:00",
+      "scheduled_at": "2026-10-04T23:54:55Z",
+      "source": "mercadolibre",
+      "title": "L'Oréal Paris Revitalift Láser Sérum Facial Triple Acción, con Péptidos de Última Generación, Ácido Hialurónico Puro y V",
+      "price": 225.0,
+      "discount_pct": 45.0,
+      "category_id": "MLM178705"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-18T22:56:09.871613+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-19T02:14:50.835172+00:00",
       "publicados": 1,
@@ -1727,6 +1730,12 @@
     },
     {
       "at": "2026-10-04T18:28:59.078482+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-04T23:43:40.038854+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

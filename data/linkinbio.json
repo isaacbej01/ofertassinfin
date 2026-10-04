@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM58358051",
+    "source": "mercadolibre",
+    "title": "L'Oréal Paris Revitalift Láser Sérum Facial Triple Acción, con Péptidos de Última Generación, Ácido Hialurónico Puro y Vitamina C Estabilizada, Antiarrugas, 30 ml",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_811643-MLA106117369054_022026-F.jpg",
+    "price": 225.0,
+    "original_price": 410.0,
+    "discount_pct": 45.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM58358051",
+    "added_at": "2026-10-04T23:43:40.036331+00:00"
+  },
+  {
     "key": "mercadolibre:MLM60111122",
     "source": "mercadolibre",
     "title": "Casco Motocicleta Abatible Con Bluetooth + Certificado Dot + Luz, SUZWIP Cascos Para Moto Con Doble Visera, Casco Integral Para Hombres Y Mujeres, Tamaño Del Casco M",
@@ -647,16 +658,5 @@
     "discount_pct": 61.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM47079328",
     "added_at": "2026-09-19T02:14:50.833220+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM53984971",
-    "source": "mercadolibre",
-    "title": "Colchón Matrimonial Noite Basic Con Memory Adapt Gris",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_952024-MLA99442321822_112025-F.jpg",
-    "price": 2099.0,
-    "original_price": 5990.0,
-    "discount_pct": 64.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM53984971",
-    "added_at": "2026-09-18T22:56:09.868854+00:00"
   }
 ]

@@ -1377,15 +1377,18 @@
       "price": 225.0,
       "discount_pct": 45.0,
       "category_id": "MLM178705"
+    },
+    "mercadolibre:MLM64145570": {
+      "published_at": "2026-10-05T03:01:45.343974+00:00",
+      "scheduled_at": "2026-10-05T03:13:10Z",
+      "source": "mercadolibre",
+      "title": "Álbum de Fotos Coil Notebook 80 Páginas, DIY Personalizado, Mejor Regalo para Amigos, San Valentín, Navidad, Día de la M",
+      "price": 181.0,
+      "discount_pct": 39.0,
+      "category_id": "MLM189602"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-19T02:14:50.835172+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-19T07:39:39.333378+00:00",
       "publicados": 1,
@@ -1736,6 +1739,12 @@
     },
     {
       "at": "2026-10-04T23:43:40.038854+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-05T03:01:45.344042+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

@@ -1422,15 +1422,18 @@
       "price": 498.0,
       "discount_pct": 43.0,
       "category_id": "MLM187727"
+    },
+    "mercadolibre:MLM18956615": {
+      "published_at": "2026-10-07T20:20:52.391824+00:00",
+      "scheduled_at": "2026-10-07T20:32:06Z",
+      "source": "mercadolibre",
+      "title": "L'Oréal Paris Revitalift Sérum Ácido Hialurónico, Hidratante, 30 ml",
+      "price": 199.0,
+      "discount_pct": 45.0,
+      "category_id": "MLM178705"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-20T02:22:58.646968+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-20T08:04:28.661154+00:00",
       "publicados": 1,
@@ -1781,6 +1784,12 @@
     },
     {
       "at": "2026-10-07T09:32:13.504447+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-07T20:20:52.391894+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

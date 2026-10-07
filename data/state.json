@@ -1404,15 +1404,18 @@
       "price": 394.7,
       "discount_pct": 51.0,
       "category_id": "MLM49283"
+    },
+    "mercadolibre:MLM47710915": {
+      "published_at": "2026-10-07T00:15:18.575552+00:00",
+      "scheduled_at": "2026-10-07T00:26:32Z",
+      "source": "mercadolibre",
+      "title": "Ratón Inalámbrico Gamer Bluetooth Recargable Negro Conexión USB-C 3 DPI Inphic A1",
+      "price": 179.99,
+      "discount_pct": 66.0,
+      "category_id": "MLM1714"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-19T19:46:29.954381+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-19T22:35:28.113432+00:00",
       "publicados": 1,
@@ -1763,6 +1766,12 @@
     },
     {
       "at": "2026-10-06T03:51:18.332743+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-07T00:15:18.575612+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

@@ -1413,15 +1413,18 @@
       "price": 179.99,
       "discount_pct": 66.0,
       "category_id": "MLM1714"
+    },
+    "mercadolibre:MLM36317452": {
+      "published_at": "2026-10-07T09:32:13.504379+00:00",
+      "scheduled_at": "2026-10-07T09:43:58Z",
+      "source": "mercadolibre",
+      "title": "Catre Plegable Para Acampar Cama Portátil Exterior Campismo",
+      "price": 498.0,
+      "discount_pct": 43.0,
+      "category_id": "MLM187727"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-19T22:35:28.113432+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-20T02:22:58.646968+00:00",
       "publicados": 1,
@@ -1772,6 +1775,12 @@
     },
     {
       "at": "2026-10-07T00:15:18.575612+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-07T09:32:13.504447+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

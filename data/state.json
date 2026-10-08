@@ -1431,15 +1431,18 @@
       "price": 199.0,
       "discount_pct": 45.0,
       "category_id": "MLM178705"
+    },
+    "mercadolibre:MLM76454494": {
+      "published_at": "2026-10-08T00:35:52.755626+00:00",
+      "scheduled_at": "2026-10-08T00:46:37Z",
+      "source": "mercadolibre",
+      "title": "Soldadora inverter portatil inversores soldadoras inversor para soldar wanse",
+      "price": 565.08,
+      "discount_pct": 37.0,
+      "category_id": "MLM120103"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-20T08:04:28.661154+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-20T17:48:38.159872+00:00",
       "publicados": 1,
@@ -1790,6 +1793,12 @@
     },
     {
       "at": "2026-10-07T20:20:52.391894+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-08T00:35:52.755697+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

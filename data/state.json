@@ -1449,15 +1449,18 @@
       "price": 669.0,
       "discount_pct": 50.0,
       "category_id": "MLM11041"
+    },
+    "mercadolibre:MLM46086458": {
+      "published_at": "2026-10-08T20:22:43.694353+00:00",
+      "scheduled_at": "2026-10-08T20:33:57Z",
+      "source": "mercadolibre",
+      "title": "DJI Osmo Mobile 7P para Celular, iPhone, Android, Seguimiento Nativo, Iluminación, Estabilizador de teléfono de 3 Ejes, ",
+      "price": 1989.34,
+      "discount_pct": 47.0,
+      "category_id": "MLM127873"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-20T19:58:56.117568+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-20T22:49:24.302267+00:00",
       "publicados": 1,
@@ -1808,6 +1811,12 @@
     },
     {
       "at": "2026-10-08T09:43:18.534191+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-08T20:22:43.694410+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

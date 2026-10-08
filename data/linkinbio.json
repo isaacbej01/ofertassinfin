@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM46086458",
+    "source": "mercadolibre",
+    "title": "DJI Osmo Mobile 7P para Celular, iPhone, Android, Seguimiento Nativo, Iluminación, Estabilizador de teléfono de 3 Ejes, Inicio rápido, Edición con un Toque, Brazo Extensible",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_992805-MLA99948349215_112025-F.jpg",
+    "price": 1989.34,
+    "original_price": 3821.21,
+    "discount_pct": 47.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM46086458",
+    "added_at": "2026-10-08T20:22:43.692078+00:00"
+  },
+  {
     "key": "mercadolibre:MLM45810075",
     "source": "mercadolibre",
     "title": "Mesa Plegable Verona Blanca HDPE Loomber",
@@ -647,16 +658,5 @@
     "discount_pct": 67.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM53174004",
     "added_at": "2026-09-20T22:49:24.299752+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM68575057",
-    "source": "mercadolibre",
-    "title": "Motosierra a Gasolina WANSE de 52 cc y 2 hp con Cadena de 20\" para Tala y Jardinería",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_674536-MLA112608109244_062026-F.jpg",
-    "price": 890.4,
-    "original_price": 1696.0,
-    "discount_pct": 47.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM68575057",
-    "added_at": "2026-09-20T19:58:56.115628+00:00"
   }
 ]

@@ -1458,15 +1458,18 @@
       "price": 1989.34,
       "discount_pct": 47.0,
       "category_id": "MLM127873"
+    },
+    "mercadolibre:MLM67414196": {
+      "published_at": "2026-10-09T00:51:11.910759+00:00",
+      "scheduled_at": "2026-10-09T01:02:37Z",
+      "source": "mercadolibre",
+      "title": "Termo Botella Agua Termica Acero Inoxidable Buffer Flask 1lt Tapa 2 En 1 Viral - Sage Green",
+      "price": 249.0,
+      "discount_pct": 50.0,
+      "category_id": "MLM189028"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-20T22:49:24.302267+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-21T02:21:47.387062+00:00",
       "publicados": 1,
@@ -1817,6 +1820,12 @@
     },
     {
       "at": "2026-10-08T20:22:43.694410+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-09T00:51:11.910830+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

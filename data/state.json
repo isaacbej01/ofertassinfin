@@ -1467,15 +1467,18 @@
       "price": 249.0,
       "discount_pct": 50.0,
       "category_id": "MLM189028"
+    },
+    "mercadolibre:MLM18486368": {
+      "published_at": "2026-10-09T09:49:32.595913+00:00",
+      "scheduled_at": "2026-10-09T10:00:47Z",
+      "source": "mercadolibre",
+      "title": "Birdman Falcon Performance Proteína en Polvo Vegana | con Creatina, BCAAs y Enzimas | Sin Lactosa | Golden Vainilla | 1.",
+      "price": 1099.0,
+      "discount_pct": 34.0,
+      "category_id": "MLM167994"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-21T02:21:47.387062+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-21T08:22:42.676377+00:00",
       "publicados": 1,
@@ -1826,6 +1829,12 @@
     },
     {
       "at": "2026-10-09T00:51:11.910830+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-09T09:49:32.595985+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

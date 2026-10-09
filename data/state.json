@@ -1476,15 +1476,18 @@
       "price": 1099.0,
       "discount_pct": 34.0,
       "category_id": "MLM167994"
+    },
+    "mercadolibre:MLM24677503": {
+      "published_at": "2026-10-09T19:55:14.863933+00:00",
+      "scheduled_at": "2026-10-09T20:06:27Z",
+      "source": "mercadolibre",
+      "title": "Pre entrenamiento RAW CBUM Essential Pre-Workout en polvo sabor Sandía ácida x 399g",
+      "price": 434.07,
+      "discount_pct": 37.0,
+      "category_id": "MLM438195"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-21T08:22:42.676377+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-21T19:50:33.809026+00:00",
       "publicados": 1,
@@ -1835,6 +1838,12 @@
     },
     {
       "at": "2026-10-09T09:49:32.595985+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-09T19:55:14.863983+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

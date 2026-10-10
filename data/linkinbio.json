@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM53602040",
+    "source": "mercadolibre",
+    "title": "Bocina Portátil Bluetooth Tronsmart Trip 2 10W Contra Agua IPX7 20h Batería Larga APP control con Bajos Potentes Recargable para Exteriores Inalambrica",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_914740-MLA96081318729_102025-F.jpg",
+    "price": 336.89,
+    "original_price": 512.99,
+    "discount_pct": 34.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM53602040",
+    "added_at": "2026-10-10T23:59:19.303201+00:00"
+  },
+  {
     "key": "mercadolibre:MLM79726863",
     "source": "mercadolibre",
     "title": "Casco Niño Niña Infantil Moto Bici Scooter Alessia Ajustable Rojo",
@@ -647,16 +658,5 @@
     "discount_pct": 65.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM37288559",
     "added_at": "2026-09-22T18:25:36.994399+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM67329478",
-    "source": "mercadolibre",
-    "title": "Llave de Impacto Eléctrica Pinchan Inalámbrica, Sin Escobillas, 520 N.m, 3500 Rpm, con Batería y Cargador",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_876208-MLA112227012145_052026-F.jpg",
-    "price": 297.22,
-    "original_price": 864.0,
-    "discount_pct": 65.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM67329478",
-    "added_at": "2026-09-22T08:04:54.770201+00:00"
   }
 ]

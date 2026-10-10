@@ -1485,15 +1485,18 @@
       "price": 434.07,
       "discount_pct": 37.0,
       "category_id": "MLM438195"
+    },
+    "mercadolibre:MLM18625838": {
+      "published_at": "2026-10-10T00:24:49.617672+00:00",
+      "scheduled_at": "2026-10-10T00:36:02Z",
+      "source": "mercadolibre",
+      "title": "Birdman Creatina Monohidratada En Polvo | Alta Pureza | Sin Sabor | 90 Porciones 450g | Pre Entreno",
+      "price": 363.0,
+      "discount_pct": 35.0,
+      "category_id": "MLM167994"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-21T19:50:33.809026+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-21T23:45:22.537687+00:00",
       "publicados": 1,
@@ -1844,6 +1847,12 @@
     },
     {
       "at": "2026-10-09T19:55:14.863983+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-10T00:24:49.617732+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

@@ -1494,15 +1494,18 @@
       "price": 363.0,
       "discount_pct": 35.0,
       "category_id": "MLM167994"
+    },
+    "mercadolibre:MLM46537778": {
+      "published_at": "2026-10-10T09:13:34.433955+00:00",
+      "scheduled_at": "2026-10-10T09:24:59Z",
+      "source": "mercadolibre",
+      "title": "Birdman Creatine Refresher | Creatina Monohidratada con Electrolitos, Magnesio y Vitaminas | Pink Lemonade | 30 Porcione",
+      "price": 309.99,
+      "discount_pct": 35.0,
+      "category_id": "MLM167994"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-21T23:45:22.537687+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-22T02:25:20.962141+00:00",
       "publicados": 1,
@@ -1853,6 +1856,12 @@
     },
     {
       "at": "2026-10-10T00:24:49.617732+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-10T09:13:34.434034+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

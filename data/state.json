@@ -1503,15 +1503,18 @@
       "price": 309.99,
       "discount_pct": 35.0,
       "category_id": "MLM167994"
+    },
+    "mercadolibre:MLM79726863": {
+      "published_at": "2026-10-10T19:04:32.529440+00:00",
+      "scheduled_at": "2026-10-10T19:15:48Z",
+      "source": "mercadolibre",
+      "title": "Casco Niño Niña Infantil Moto Bici Scooter Alessia Ajustable Rojo",
+      "price": 249.13,
+      "discount_pct": 49.0,
+      "category_id": "MLM5557"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-22T02:25:20.962141+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-22T08:04:54.771834+00:00",
       "publicados": 1,
@@ -1862,6 +1865,12 @@
     },
     {
       "at": "2026-10-10T09:13:34.434034+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-10T19:04:32.529512+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

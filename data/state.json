@@ -1521,15 +1521,18 @@
       "price": 336.89,
       "discount_pct": 34.0,
       "category_id": "MLM59800"
+    },
+    "mercadolibre:MLM35239341": {
+      "published_at": "2026-10-11T04:00:01.047869+00:00",
+      "scheduled_at": "2026-10-11T04:11:24Z",
+      "source": "mercadolibre",
+      "title": "Proteína Euphoric en polvo sabor Cookies and cream x 2.27kg",
+      "price": 399.0,
+      "discount_pct": 36.0,
+      "category_id": "MLM167994"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-22T18:25:36.996751+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-22T23:23:51.779337+00:00",
       "publicados": 1,
@@ -1880,6 +1883,12 @@
     },
     {
       "at": "2026-10-10T23:59:19.306043+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-11T04:00:01.047950+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

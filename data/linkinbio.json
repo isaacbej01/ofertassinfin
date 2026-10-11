@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM35239341",
+    "source": "mercadolibre",
+    "title": "Proteína Euphoric en polvo sabor Cookies and cream x 2.27kg",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_824888-MLA96102958059_102025-F.jpg",
+    "price": 399.0,
+    "original_price": 629.0,
+    "discount_pct": 36.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM35239341",
+    "added_at": "2026-10-11T04:00:01.045093+00:00"
+  },
+  {
     "key": "mercadolibre:MLM53602040",
     "source": "mercadolibre",
     "title": "Bocina Portátil Bluetooth Tronsmart Trip 2 10W Contra Agua IPX7 20h Batería Larga APP control con Bajos Potentes Recargable para Exteriores Inalambrica",
@@ -647,16 +658,5 @@
     "discount_pct": 60.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM77382095",
     "added_at": "2026-09-22T23:23:51.777848+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM37288559",
-    "source": "mercadolibre",
-    "title": "Micrófono x2 - JBL PartyBox Wireless Mic - Inalámbrico y Recargable - Color Negro",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_866190-MLA113621786569_062026-F.jpg",
-    "price": 770.0,
-    "original_price": 2200.0,
-    "discount_pct": 65.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM37288559",
-    "added_at": "2026-09-22T18:25:36.994399+00:00"
   }
 ]

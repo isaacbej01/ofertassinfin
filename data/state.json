@@ -1530,15 +1530,18 @@
       "price": 399.0,
       "discount_pct": 36.0,
       "category_id": "MLM167994"
+    },
+    "mercadolibre:MLM62369518": {
+      "published_at": "2026-10-11T19:17:17.340283+00:00",
+      "scheduled_at": "2026-10-11T19:28:32Z",
+      "source": "mercadolibre",
+      "title": "Pantalla Smart Tv 32 Pulgadas Tfl Android Tv Dled Bluetooth",
+      "price": 1898.0,
+      "discount_pct": 33.0,
+      "category_id": "MLM1002"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-22T23:23:51.779337+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-23T02:25:19.410819+00:00",
       "publicados": 1,
@@ -1889,6 +1892,12 @@
     },
     {
       "at": "2026-10-11T04:00:01.047950+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-11T19:17:17.340361+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

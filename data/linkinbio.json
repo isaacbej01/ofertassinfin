@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM72390922",
+    "source": "mercadolibre",
+    "title": "Arrancador de Batería Portátil 8000A para Auto y Moto con Linterna LED y Pantalla LCD",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_906592-MLA112278405172_062026-F.jpg",
+    "price": 373.11,
+    "original_price": 1478.4,
+    "discount_pct": 74.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM72390922",
+    "added_at": "2026-10-12T22:20:08.860656+00:00"
+  },
+  {
     "key": "mercadolibre:MLM53123062",
     "source": "mercadolibre",
     "title": "Reloj Inteligente Honor Choice Watch 2i Bt Black Screen Amoled De 1.85 Bateria de Larga Duracion 330 Mah Asistente Deportivo Monitor De Salud Sport",
@@ -647,16 +658,5 @@
     "discount_pct": 71.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM48434598",
     "added_at": "2026-09-23T23:21:03.071425+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM38176139",
-    "source": "mercadolibre",
-    "title": "Audífonos Anker Soundcore P30i In-ear Bluetooth Inalámbrico Cancelación De Ruido adaptativa, 45 Horas de Reproducción, Soporte Para Móvil, Superior Bajos Potentes, Llamadas Claras Con IA, Color negro",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_894266-MLA94701476916_102025-F.jpg",
-    "price": 537.99,
-    "original_price": 999.0,
-    "discount_pct": 46.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM38176139",
-    "added_at": "2026-09-23T18:45:29.254466+00:00"
   }
 ]

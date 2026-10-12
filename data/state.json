@@ -1548,15 +1548,18 @@
       "price": 589.0,
       "discount_pct": 30.0,
       "category_id": "MLM126075"
+    },
+    "mercadolibre:MLM53123062": {
+      "published_at": "2026-10-12T10:00:26.720803+00:00",
+      "scheduled_at": "2026-10-12T10:11:39Z",
+      "source": "mercadolibre",
+      "title": "Reloj Inteligente Honor Choice Watch 2i Bt Black Screen Amoled De 1.85 Bateria de Larga Duracion 330 Mah Asistente Depor",
+      "price": 469.0,
+      "discount_pct": 62.0,
+      "category_id": "MLM126793"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-23T08:07:06.786314+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-23T18:45:29.256729+00:00",
       "publicados": 1,
@@ -1907,6 +1910,12 @@
     },
     {
       "at": "2026-10-12T00:07:32.238524+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-12T10:00:26.720866+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

@@ -1566,15 +1566,18 @@
       "price": 212.43,
       "discount_pct": 57.0,
       "category_id": "MLM32641"
+    },
+    "mercadolibre:MLM23611312": {
+      "published_at": "2026-10-13T20:27:59.611323+00:00",
+      "scheduled_at": "2026-10-13T20:38:53Z",
+      "source": "mercadolibre",
+      "title": "HP Impresora Multifuncional Smart Tank 585, Tinta Continua, Color, Wi-Fi, Dúplex (Doble Cara) Manual, Impresión Desde Sm",
+      "price": 3349.0,
+      "discount_pct": 33.0,
+      "category_id": "MLM1676"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-24T02:14:00.932101+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-24T07:58:07.002608+00:00",
       "publicados": 1,
@@ -1925,6 +1928,12 @@
     },
     {
       "at": "2026-10-13T04:32:55.943080+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-13T20:27:59.611398+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM23611312",
+    "source": "mercadolibre",
+    "title": "HP Impresora Multifuncional Smart Tank 585, Tinta Continua, Color, Wi-Fi, Dúplex (Doble Cara) Manual, Impresión Desde Smart App, Hasta 2 años de Garantía* (1F3Y4A)",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_915327-MLA112387372897_052026-F.jpg",
+    "price": 3349.0,
+    "original_price": 4999.0,
+    "discount_pct": 33.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM23611312",
+    "added_at": "2026-10-13T20:27:59.608542+00:00"
+  },
+  {
     "key": "mercadolibre:MLM45677214",
     "source": "mercadolibre",
     "title": "Cama Para Perro Mediana Afelpada Resistente Cómoda Suave Color Beige Diseño Rectangular",
@@ -647,16 +658,5 @@
     "discount_pct": 48.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM40732643",
     "added_at": "2026-09-24T07:58:06.999766+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM73232480",
-    "source": "mercadolibre",
-    "title": "Kit De Taladro Inalámbrico Destornillador Eléctrico Azul Pinchan 2000 RPM Incluye batería y cargador Iluminación LED 50 Hz/60 Hz",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_673472-MLA113181518332_072026-F.jpg",
-    "price": 205.32,
-    "original_price": 870.0,
-    "discount_pct": 76.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM73232480",
-    "added_at": "2026-09-24T02:14:00.929584+00:00"
   }
 ]

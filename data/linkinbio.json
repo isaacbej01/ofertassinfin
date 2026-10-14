@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM16090341",
+    "source": "mercadolibre",
+    "title": "Esmeril De Banco 5 Pulgadas 120W 3500 RPM Adir 906",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_708847-MLA99446194114_112025-F.jpg",
+    "price": 568.0,
+    "original_price": 899.0,
+    "discount_pct": 36.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM16090341",
+    "added_at": "2026-10-14T00:03:35.105462+00:00"
+  },
+  {
     "key": "mercadolibre:MLM23611312",
     "source": "mercadolibre",
     "title": "HP Impresora Multifuncional Smart Tank 585, Tinta Continua, Color, Wi-Fi, Dúplex (Doble Cara) Manual, Impresión Desde Smart App, Hasta 2 años de Garantía* (1F3Y4A)",
@@ -647,16 +658,5 @@
     "discount_pct": 56.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM50798802",
     "added_at": "2026-09-24T18:46:17.040444+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM40732643",
-    "source": "mercadolibre",
-    "title": "Kit Anti Imperfecciones Express Aclara Garnier: Limpiador Facial + Sérum Facial + Crema Hidratante Matificante",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_782568-MLU79241068221_092024-F.jpg",
-    "price": 338.0,
-    "original_price": 655.0,
-    "discount_pct": 48.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM40732643",
-    "added_at": "2026-09-24T07:58:06.999766+00:00"
   }
 ]

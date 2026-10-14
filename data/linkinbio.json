@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM70383418",
+    "source": "mercadolibre",
+    "title": "Báscula Comercial Digital ARTROLIN de 40 kg, Recargable y con Pantalla LCD para Cliente",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_959435-MLA119168968259_102026-F.jpg",
+    "price": 384.91,
+    "original_price": 887.48,
+    "discount_pct": 56.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM70383418",
+    "added_at": "2026-10-14T19:04:48.403479+00:00"
+  },
+  {
     "key": "mercadolibre:MLM45647645",
     "source": "mercadolibre",
     "title": "Kit Destornillador Inalambrico Taladro Electrico Con Bateria leds taladro kit de herramienta led luz taladros de velocidad variable destornillador electrico control",
@@ -647,16 +658,5 @@
     "discount_pct": 53.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM74597022",
     "added_at": "2026-09-25T02:30:21.371211+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM69557115",
-    "source": "mercadolibre",
-    "title": "2 Panele Cortinas Blackout Para Para Ventana 300x230cm Habitacion Diseño Moderno Ventanas Decorativas Aislamiento Sala Recamara Térmico Y Reducción De Ruido Tela Impermeable Gris ARTROLIN",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_978727-MLA115378782412_082026-F.jpg",
-    "price": 185.01,
-    "original_price": 422.88,
-    "discount_pct": 56.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM69557115",
-    "added_at": "2026-09-24T23:41:48.928660+00:00"
   }
 ]

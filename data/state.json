@@ -1584,15 +1584,18 @@
       "price": 568.0,
       "discount_pct": 36.0,
       "category_id": "MLM457981"
+    },
+    "mercadolibre:MLM70383418": {
+      "published_at": "2026-10-14T19:04:48.406349+00:00",
+      "scheduled_at": "2026-10-14T19:15:52Z",
+      "source": "mercadolibre",
+      "title": "Báscula Comercial Digital ARTROLIN de 40 kg, Recargable y con Pantalla LCD para Cliente",
+      "price": 384.91,
+      "discount_pct": 56.0,
+      "category_id": "MLM457196"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-24T23:41:48.930424+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-25T02:30:21.373881+00:00",
       "publicados": 1,
@@ -1943,6 +1946,12 @@
     },
     {
       "at": "2026-10-14T08:13:25.807044+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-14T19:04:48.406447+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

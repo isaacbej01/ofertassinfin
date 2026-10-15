@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM19834660",
+    "source": "mercadolibre",
+    "title": "Protector Solar Loreal Paris Fps50+ Uv Defender Fluido Tono Invisible 40gr",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_677047-MLA111927607747_052026-F.jpg",
+    "price": 174.0,
+    "original_price": 369.0,
+    "discount_pct": 52.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM19834660",
+    "added_at": "2026-10-15T18:47:53.855371+00:00"
+  },
+  {
     "key": "mercadolibre:MLM45772940",
     "source": "mercadolibre",
     "title": "Juego de Sábanas Matrimonial 3000 Hilos Suave Diseño Rayado 4 Piezas Blick Color Azul Mezclilla",
@@ -647,16 +658,5 @@
     "discount_pct": 52.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM48685681",
     "added_at": "2026-09-26T02:33:28.823739+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM63975730",
-    "source": "mercadolibre",
-    "title": "Audífonos Inalámbricos 1Hora con Estuche Giratorio, 32h de Batería, Azul",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_654835-MLA105211220871_012026-F.jpg",
-    "price": 187.9,
-    "original_price": 399.0,
-    "discount_pct": 52.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM63975730",
-    "added_at": "2026-09-25T23:42:39.784526+00:00"
   }
 ]

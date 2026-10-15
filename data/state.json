@@ -1611,15 +1611,18 @@
       "price": 179.0,
       "discount_pct": 55.0,
       "category_id": "MLM30059"
+    },
+    "mercadolibre:MLM19834660": {
+      "published_at": "2026-10-15T18:47:53.858083+00:00",
+      "scheduled_at": "2026-10-15T18:58:57Z",
+      "source": "mercadolibre",
+      "title": "Protector Solar Loreal Paris Fps50+ Uv Defender Fluido Tono Invisible 40gr",
+      "price": 174.0,
+      "discount_pct": 52.0,
+      "category_id": "MLM178702"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-25T23:42:39.787224+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-26T02:33:28.826418+00:00",
       "publicados": 1,
@@ -1970,6 +1973,12 @@
     },
     {
       "at": "2026-10-15T07:51:32.361417+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-15T18:47:53.858160+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

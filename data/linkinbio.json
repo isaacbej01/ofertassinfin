@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM26194700",
+    "source": "mercadolibre",
+    "title": "Gel de limpieza CeraVe Gel De Limpeza Facial día/noche para piel normal a grasa de 454g 18+ años",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_800068-MLA71143636847_082023-F.jpg",
+    "price": 373.1,
+    "original_price": 599.0,
+    "discount_pct": 37.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM26194700",
+    "added_at": "2026-10-15T23:26:47.942771+00:00"
+  },
+  {
     "key": "mercadolibre:MLM19834660",
     "source": "mercadolibre",
     "title": "Protector Solar Loreal Paris Fps50+ Uv Defender Fluido Tono Invisible 40gr",
@@ -647,16 +658,5 @@
     "discount_pct": 50.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM66345549",
     "added_at": "2026-09-26T08:07:50.340611+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM48685681",
-    "source": "mercadolibre",
-    "title": "Juego De Sábanas Individual Microfibra Ultra Suave Premium Color Crema Diseño De La Tela Rayas",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_924326-MLA83860104775_042025-F.jpg",
-    "price": 169.0,
-    "original_price": 358.0,
-    "discount_pct": 52.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM48685681",
-    "added_at": "2026-09-26T02:33:28.823739+00:00"
   }
 ]

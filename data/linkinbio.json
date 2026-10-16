@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM37314247",
+    "source": "mercadolibre",
+    "title": "L'Oréal Paris Infallible 3-Second Setting Mist, Fijador de maquillaje",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_764196-MLA108106216000_032026-F.jpg",
+    "price": 206.0,
+    "original_price": 350.0,
+    "discount_pct": 41.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM37314247",
+    "added_at": "2026-10-16T18:32:57.379787+00:00"
+  },
+  {
     "key": "mercadolibre:MLM38194366",
     "source": "mercadolibre",
     "title": "Garnier Super UV Toque Seco FPS 50+ Protector Solar Efecto Mate, 40ml Invisible",
@@ -647,16 +658,5 @@
     "discount_pct": 43.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM65521570",
     "added_at": "2026-09-27T02:30:58.771335+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM28765287",
-    "source": "mercadolibre",
-    "title": "Batería Externa 1Hora de 20000mAh con Carga Rápida 22.5W y Cable USB-C",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_821026-MLA110625137273_042026-F.jpg",
-    "price": 313.31,
-    "original_price": 599.0,
-    "discount_pct": 47.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM28765287",
-    "added_at": "2026-09-26T23:16:33.579003+00:00"
   }
 ]

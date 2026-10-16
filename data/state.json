@@ -1647,15 +1647,18 @@
       "price": 156.0,
       "discount_pct": 38.0,
       "category_id": "MLM178702"
+    },
+    "mercadolibre:MLM37314247": {
+      "published_at": "2026-10-16T18:32:57.383417+00:00",
+      "scheduled_at": "2026-10-16T18:43:51Z",
+      "source": "mercadolibre",
+      "title": "L'Oréal Paris Infallible 3-Second Setting Mist, Fijador de maquillaje",
+      "price": 206.0,
+      "discount_pct": 41.0,
+      "category_id": "MLM172359"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-26T23:16:33.580765+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-27T02:30:58.774138+00:00",
       "publicados": 1,
@@ -2006,6 +2009,12 @@
     },
     {
       "at": "2026-10-16T07:41:46.363357+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-16T18:32:57.383519+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

@@ -1629,15 +1629,18 @@
       "price": 373.1,
       "discount_pct": 37.0,
       "category_id": "MLM178705"
+    },
+    "mercadolibre:MLM61990584": {
+      "published_at": "2026-10-16T02:15:14.272195+00:00",
+      "scheduled_at": "2026-10-16T02:26:27Z",
+      "source": "mercadolibre",
+      "title": "Pack 2 MicroSD EdaGyee de 256 GB Clase 10 U3 con Adaptador SD y 100 MB/s",
+      "price": 312.0,
+      "discount_pct": 34.0,
+      "category_id": "MLM3553"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-26T08:07:50.342881+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-26T18:11:11.626248+00:00",
       "publicados": 1,
@@ -1988,6 +1991,12 @@
     },
     {
       "at": "2026-10-15T23:26:47.945530+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-16T02:15:14.272297+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

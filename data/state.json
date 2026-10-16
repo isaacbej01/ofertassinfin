@@ -1638,15 +1638,18 @@
       "price": 312.0,
       "discount_pct": 34.0,
       "category_id": "MLM3553"
+    },
+    "mercadolibre:MLM38194366": {
+      "published_at": "2026-10-16T07:41:46.363273+00:00",
+      "scheduled_at": "2026-10-16T07:52:41Z",
+      "source": "mercadolibre",
+      "title": "Garnier Super UV Toque Seco FPS 50+ Protector Solar Efecto Mate, 40ml Invisible",
+      "price": 156.0,
+      "discount_pct": 38.0,
+      "category_id": "MLM178702"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-26T18:11:11.626248+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-26T23:16:33.580765+00:00",
       "publicados": 1,
@@ -1997,6 +2000,12 @@
     },
     {
       "at": "2026-10-16T02:15:14.272297+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-16T07:41:46.363357+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

@@ -1656,15 +1656,18 @@
       "price": 206.0,
       "discount_pct": 41.0,
       "category_id": "MLM172359"
+    },
+    "mercadolibre:MLM45599134": {
+      "published_at": "2026-10-16T23:08:56.109784+00:00",
+      "scheduled_at": "2026-10-16T23:19:59Z",
+      "source": "mercadolibre",
+      "title": "Creatina Monohidratada Micronizada en Polvo Quotidien | Alta Pureza Certificada | Con Scoop Dosificador - Creatine Monoh",
+      "price": 286.22,
+      "discount_pct": 38.0,
+      "category_id": "MLM438195"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-27T02:30:58.774138+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-27T08:43:43.837238+00:00",
       "publicados": 1,
@@ -2015,6 +2018,12 @@
     },
     {
       "at": "2026-10-16T18:32:57.383519+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-16T23:08:56.109862+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

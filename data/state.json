@@ -1683,15 +1683,18 @@
       "price": 558.92,
       "discount_pct": 30.0,
       "category_id": "MLM172335"
+    },
+    "mercadolibre:MLM64295415": {
+      "published_at": "2026-10-17T17:38:46.861576+00:00",
+      "scheduled_at": "2026-10-17T17:50:01Z",
+      "source": "mercadolibre",
+      "title": "Tarjeta Micro SD EdaGyee de 128 GB U3 con Adaptador, Clase 10 para Cámaras y Drones",
+      "price": 184.9,
+      "discount_pct": 32.0,
+      "category_id": "MLM3553"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-27T23:30:14.554201+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-28T02:35:17.465412+00:00",
       "publicados": 1,
@@ -2042,6 +2045,12 @@
     },
     {
       "at": "2026-10-17T07:20:07.774417+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-17T17:38:46.861655+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

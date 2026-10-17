@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM63950508",
+    "source": "mercadolibre",
+    "title": "Control Remoto Para Smart Tv Curvo Samsung 4k (con Voz) JOWVDY BN59",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_926001-MLA109414322621_032026-F.jpg",
+    "price": 154.26,
+    "original_price": 228.0,
+    "discount_pct": 32.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM63950508",
+    "added_at": "2026-10-17T22:47:49.941095+00:00"
+  },
+  {
     "key": "mercadolibre:MLM47527014",
     "source": "mercadolibre",
     "title": "Oby Magnesio Complex 5: Citrato, Glicinato, Treonato, Taurato, Gluconato, Vitamina C y D3 | Magnesium Complejo Cortisol | 180 cápsulas",
@@ -647,16 +658,5 @@
     "discount_pct": 73.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM52897968",
     "added_at": "2026-09-28T20:56:59.448066+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM21087813",
-    "source": "mercadolibre",
-    "title": "Tenis New Balance 530 Adulto Comodos Para Diario",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_772536-MLA53298898743_012023-F.jpg",
-    "price": 720.0,
-    "original_price": 1900.0,
-    "discount_pct": 62.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM21087813",
-    "added_at": "2026-09-28T09:08:29.872404+00:00"
   }
 ]

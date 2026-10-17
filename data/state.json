@@ -1701,15 +1701,18 @@
       "price": 348.0,
       "discount_pct": 30.0,
       "category_id": "MLM438195"
+    },
+    "mercadolibre:MLM63950508": {
+      "published_at": "2026-10-17T22:47:49.943464+00:00",
+      "scheduled_at": "2026-10-17T22:59:04Z",
+      "source": "mercadolibre",
+      "title": "Control Remoto Para Smart Tv Curvo Samsung 4k (con Voz) JOWVDY BN59",
+      "price": 154.26,
+      "discount_pct": 32.0,
+      "category_id": "MLM38205"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-28T09:08:29.875189+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-28T20:56:59.451123+00:00",
       "publicados": 1,
@@ -2060,6 +2063,12 @@
     },
     {
       "at": "2026-10-17T19:51:29.598274+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-17T22:47:49.943530+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

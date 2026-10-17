@@ -1674,15 +1674,18 @@
       "price": 251.23,
       "discount_pct": 37.0,
       "category_id": "MLM148752"
+    },
+    "mercadolibre:MLM23526584": {
+      "published_at": "2026-10-17T07:20:07.774341+00:00",
+      "scheduled_at": "2026-10-17T07:31:12Z",
+      "source": "mercadolibre",
+      "title": "Corrector Maybelline Instant Age Rewind Eraser Concealer",
+      "price": 558.92,
+      "discount_pct": 30.0,
+      "category_id": "MLM172335"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-27T18:47:19.959978+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-27T23:30:14.554201+00:00",
       "publicados": 1,
@@ -2033,6 +2036,12 @@
     },
     {
       "at": "2026-10-17T02:08:27.410171+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-17T07:20:07.774417+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

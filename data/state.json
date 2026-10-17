@@ -1665,15 +1665,18 @@
       "price": 286.22,
       "discount_pct": 38.0,
       "category_id": "MLM438195"
+    },
+    "mercadolibre:MLM37178455": {
+      "published_at": "2026-10-17T02:08:27.410093+00:00",
+      "scheduled_at": "2026-10-17T02:19:42Z",
+      "source": "mercadolibre",
+      "title": "Set 50 Ganchos Terciopelo Antideslizantes Negro Cuory Gancho Giratorio",
+      "price": 251.23,
+      "discount_pct": 37.0,
+      "category_id": "MLM148752"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-27T08:43:43.837238+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-27T18:47:19.959978+00:00",
       "publicados": 1,
@@ -2024,6 +2027,12 @@
     },
     {
       "at": "2026-10-16T23:08:56.109862+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-17T02:08:27.410171+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

@@ -1710,15 +1710,18 @@
       "price": 154.26,
       "discount_pct": 32.0,
       "category_id": "MLM38205"
+    },
+    "mercadolibre:MLM20595110": {
+      "published_at": "2026-10-18T02:07:27.343751+00:00",
+      "scheduled_at": "2026-10-18T02:18:52Z",
+      "source": "mercadolibre",
+      "title": "Mascara De Pestañas 10 Aceites Naturales Yuya",
+      "price": 159.35,
+      "discount_pct": 27.0,
+      "category_id": "MLM29901"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-28T20:56:59.451123+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-29T00:46:06.576983+00:00",
       "publicados": 1,
@@ -2069,6 +2072,12 @@
     },
     {
       "at": "2026-10-17T22:47:49.943530+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-18T02:07:27.343836+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

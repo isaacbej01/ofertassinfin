@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM20595110",
+    "source": "mercadolibre",
+    "title": "Mascara De Pestañas 10 Aceites Naturales Yuya",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_852791-MLA113215899358_072026-F.jpg",
+    "price": 159.35,
+    "original_price": 219.0,
+    "discount_pct": 27.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM20595110",
+    "added_at": "2026-10-18T02:07:27.340931+00:00"
+  },
+  {
     "key": "mercadolibre:MLM63950508",
     "source": "mercadolibre",
     "title": "Control Remoto Para Smart Tv Curvo Samsung 4k (con Voz) JOWVDY BN59",
@@ -647,16 +658,5 @@
     "discount_pct": 42.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM59117483",
     "added_at": "2026-09-29T00:46:06.574247+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM52897968",
-    "source": "mercadolibre",
-    "title": "Roku Streaming Stick Plus 4K con Control con Comando de Voz",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_668288-MLA99495462854_112025-F.jpg",
-    "price": 771.21,
-    "original_price": 2899.0,
-    "discount_pct": 73.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM52897968",
-    "added_at": "2026-09-28T20:56:59.448066+00:00"
   }
 ]

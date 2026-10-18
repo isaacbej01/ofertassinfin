@@ -1719,15 +1719,18 @@
       "price": 159.35,
       "discount_pct": 27.0,
       "category_id": "MLM29901"
+    },
+    "mercadolibre:MLM67817931": {
+      "published_at": "2026-10-18T07:33:56.670064+00:00",
+      "scheduled_at": "2026-10-18T07:45:11Z",
+      "source": "mercadolibre",
+      "title": "Maybelline Gel de cejas SuperLock, Cejas laminadas hasta 24H, 7ml",
+      "price": 157.09,
+      "discount_pct": 31.0,
+      "category_id": "MLM456936"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-29T00:46:06.576983+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-29T09:17:39.196957+00:00",
       "publicados": 1,
@@ -2078,6 +2081,12 @@
     },
     {
       "at": "2026-10-18T02:07:27.343836+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-18T07:33:56.670149+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

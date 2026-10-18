@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM67817931",
+    "source": "mercadolibre",
+    "title": "Maybelline Gel de cejas SuperLock, Cejas laminadas hasta 24H, 7ml",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_637199-MLA110272689971_042026-F.jpg",
+    "price": 157.09,
+    "original_price": 229.0,
+    "discount_pct": 31.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM67817931",
+    "added_at": "2026-10-18T07:33:56.667237+00:00"
+  },
+  {
     "key": "mercadolibre:MLM20595110",
     "source": "mercadolibre",
     "title": "Mascara De Pestañas 10 Aceites Naturales Yuya",
@@ -647,16 +658,5 @@
     "discount_pct": 31.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM61502777",
     "added_at": "2026-09-29T09:17:39.194601+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM59117483",
-    "source": "mercadolibre",
-    "title": "Recipientes Herméticos De Vidrio Almacenamiento Cocina 5 Pz. Transparente",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_854143-MLA117870991449_092026-F.jpg",
-    "price": 229.0,
-    "original_price": 399.0,
-    "discount_pct": 42.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM59117483",
-    "added_at": "2026-09-29T00:46:06.574247+00:00"
   }
 ]

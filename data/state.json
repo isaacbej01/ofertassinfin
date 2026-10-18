@@ -1737,15 +1737,18 @@
       "price": 179.55,
       "discount_pct": 30.0,
       "category_id": "MLM159228"
+    },
+    "mercadolibre:MLM65197512": {
+      "published_at": "2026-10-18T19:52:48.956002+00:00",
+      "scheduled_at": "2026-10-18T20:04:04Z",
+      "source": "mercadolibre",
+      "title": "Jiditech Power Bank Batería Portátil 10000mah Pd 20w Carga Rápida Celular Cargador Con Linterna Led, 4 Cables Integrados",
+      "price": 189.0,
+      "discount_pct": 29.0,
+      "category_id": "MLM429747"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-29T19:43:45.639151+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-30T00:01:20.601817+00:00",
       "publicados": 1,
@@ -2096,6 +2099,12 @@
     },
     {
       "at": "2026-10-18T17:41:17.788299+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-18T19:52:48.956084+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

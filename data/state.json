@@ -1728,15 +1728,18 @@
       "price": 157.09,
       "discount_pct": 31.0,
       "category_id": "MLM456936"
+    },
+    "mercadolibre:MLM34112942": {
+      "published_at": "2026-10-18T17:41:17.788246+00:00",
+      "scheduled_at": "2026-10-18T17:52:32Z",
+      "source": "mercadolibre",
+      "title": "Cobertor Ligero Matrimonial Hotelero - Color AZUL MARINO - Extra Suave, Calientito y Compacto. Ideal Para Todo el Año, F",
+      "price": 179.55,
+      "discount_pct": 30.0,
+      "category_id": "MLM159228"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-29T09:17:39.196957+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-29T19:43:45.639151+00:00",
       "publicados": 1,
@@ -2087,6 +2090,12 @@
     },
     {
       "at": "2026-10-18T07:33:56.670149+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-18T17:41:17.788299+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

@@ -1755,15 +1755,18 @@
       "price": 250.99,
       "discount_pct": 27.0,
       "category_id": "MLM3553"
+    },
+    "mercadolibre:MLM77541184": {
+      "published_at": "2026-10-19T02:24:20.097637+00:00",
+      "scheduled_at": "2026-10-19T02:35:35Z",
+      "source": "mercadolibre",
+      "title": "Pistache Tostado Con Sal Premier 1kg Pistaches Con Cascara",
+      "price": 338.0,
+      "discount_pct": 26.0,
+      "category_id": "MLM185709"
     }
   },
   "runs": [
-    {
-      "at": "2026-09-30T04:44:25.256727+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-09-30T19:45:22.295451+00:00",
       "publicados": 1,
@@ -2114,6 +2117,12 @@
     },
     {
       "at": "2026-10-18T22:41:54.055921+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-19T02:24:20.097721+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

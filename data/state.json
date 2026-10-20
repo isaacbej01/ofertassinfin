@@ -1773,15 +1773,18 @@
       "price": 2087.4,
       "discount_pct": 28.0,
       "category_id": "MLM59800"
+    },
+    "mercadolibre:MLM67683460": {
+      "published_at": "2026-10-20T23:33:26.693988+00:00",
+      "scheduled_at": "2026-10-20T23:44:41Z",
+      "source": "mercadolibre",
+      "title": "Espejo rectangular con luz LED, luz táctil, tocador de pared, baño, vestidor, 3 luces, 37,5 x 52,5 cm, Einnoe",
+      "price": 189.89,
+      "discount_pct": 48.0,
+      "category_id": "MLM151399"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-02T09:10:49.287125+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-02T19:41:17.357189+00:00",
       "publicados": 1,
@@ -2132,6 +2135,12 @@
     },
     {
       "at": "2026-10-20T18:50:48.103454+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-20T23:33:26.694063+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

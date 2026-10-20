@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM67683460",
+    "source": "mercadolibre",
+    "title": "Espejo rectangular con luz LED, luz táctil, tocador de pared, baño, vestidor, 3 luces, 37,5 x 52,5 cm, Einnoe",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_969169-MLA110531254881_042026-F.jpg",
+    "price": 189.89,
+    "original_price": 369.8,
+    "discount_pct": 48.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM67683460",
+    "added_at": "2026-10-20T23:33:26.691698+00:00"
+  },
+  {
     "key": "mercadolibre:MLM50444272",
     "source": "mercadolibre",
     "title": "Altavoz Bluetooth Jbl Charge 6 negro",
@@ -647,16 +658,5 @@
     "discount_pct": 42.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM34341029",
     "added_at": "2026-10-02T00:20:40.550414+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM18726606",
-    "source": "mercadolibre",
-    "title": "Proteína Birdman Falcon Protein en polvo sabor Chocolate x 1.8kg",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_913549-MLA113261195160_072026-F.jpg",
-    "price": 1147.0,
-    "original_price": 1699.0,
-    "discount_pct": 32.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM18726606",
-    "added_at": "2026-10-01T20:00:06.686116+00:00"
   }
 ]

@@ -1764,15 +1764,18 @@
       "price": 338.0,
       "discount_pct": 26.0,
       "category_id": "MLM185709"
+    },
+    "mercadolibre:MLM50444272": {
+      "published_at": "2026-10-20T18:50:48.103391+00:00",
+      "scheduled_at": "2026-10-20T19:02:03Z",
+      "source": "mercadolibre",
+      "title": "Altavoz Bluetooth Jbl Charge 6 negro",
+      "price": 2087.4,
+      "discount_pct": 28.0,
+      "category_id": "MLM59800"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-02T00:20:40.553274+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-02T09:10:49.287125+00:00",
       "publicados": 1,
@@ -2123,6 +2126,12 @@
     },
     {
       "at": "2026-10-20T08:03:10.623913+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-20T18:50:48.103454+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

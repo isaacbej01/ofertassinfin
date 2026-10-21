@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM48956210",
+    "source": "mercadolibre",
+    "title": "Mini Soldadoras Maquina Soldar Inverter Portatil Inversores Soldadoras Inversor Para Soldar WANSE Potencia de 3 kW",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_604695-MLA99954571349_112025-F.jpg",
+    "price": 498.09,
+    "original_price": 889.44,
+    "discount_pct": 43.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM48956210",
+    "added_at": "2026-10-21T19:04:12.543542+00:00"
+  },
+  {
     "key": "mercadolibre:MLM63643054",
     "source": "mercadolibre",
     "title": "Soporte Articulado Gechunrong X-400 para TV de 14-55\" y 30 Kg, Inclinable y Giratorio Negro",
@@ -647,16 +658,5 @@
     "discount_pct": 49.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM24454767",
     "added_at": "2026-10-03T00:04:36.588992+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM67689331",
-    "source": "mercadolibre",
-    "title": "Mini soldadora inverter Maquina Soldar Inverter amarillo MMA y TIG 2 en 1 con Pantalla Digital PINCHAN",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_713600-MLA111939981918_062026-F.jpg",
-    "price": 497.01,
-    "original_price": 1834.0,
-    "discount_pct": 72.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM67689331",
-    "added_at": "2026-10-02T19:41:17.354468+00:00"
   }
 ]

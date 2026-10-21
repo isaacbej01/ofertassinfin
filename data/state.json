@@ -1791,15 +1791,18 @@
       "price": 155.32,
       "discount_pct": 71.0,
       "category_id": "MLM194128"
+    },
+    "mercadolibre:MLM48956210": {
+      "published_at": "2026-10-21T19:04:12.545851+00:00",
+      "scheduled_at": "2026-10-21T19:14:34Z",
+      "source": "mercadolibre",
+      "title": "Mini Soldadoras Maquina Soldar Inverter Portatil Inversores Soldadoras Inversor Para Soldar WANSE Potencia de 3 kW",
+      "price": 498.09,
+      "discount_pct": 43.0,
+      "category_id": "MLM442419"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-03T08:43:46.584425+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-03T18:26:24.989376+00:00",
       "publicados": 1,
@@ -2150,6 +2153,12 @@
     },
     {
       "at": "2026-10-21T08:08:09.364215+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-21T19:04:12.545926+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

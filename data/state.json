@@ -1800,15 +1800,18 @@
       "price": 498.09,
       "discount_pct": 43.0,
       "category_id": "MLM442419"
+    },
+    "mercadolibre:MLM36952800": {
+      "published_at": "2026-10-21T23:49:23.770398+00:00",
+      "scheduled_at": "2026-10-22T00:00:38Z",
+      "source": "mercadolibre",
+      "title": "MOYAC Mouse Vertical Inalámbrico Moyac Ergonómico Recargable 1600DPI Negro",
+      "price": 149.17,
+      "discount_pct": 43.0,
+      "category_id": "MLM1714"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-03T18:26:24.989376+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-03T23:26:53.604283+00:00",
       "publicados": 1,
@@ -2159,6 +2162,12 @@
     },
     {
       "at": "2026-10-21T19:04:12.545926+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-21T23:49:23.770491+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

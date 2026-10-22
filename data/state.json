@@ -1818,15 +1818,18 @@
       "price": 179.56,
       "discount_pct": 25.0,
       "category_id": "MLM6777"
+    },
+    "mercadolibre:MLM26094795": {
+      "published_at": "2026-10-22T08:08:10.360685+00:00",
+      "scheduled_at": "2026-10-22T08:19:23Z",
+      "source": "mercadolibre",
+      "title": "Omega 3 Aceite De Salmón Vitamina E 180 Cápsulas | Life360+",
+      "price": 284.4,
+      "discount_pct": 49.0,
+      "category_id": "MLM438195"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-04T03:24:41.853422+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-04T18:28:59.078482+00:00",
       "publicados": 1,
@@ -2177,6 +2180,12 @@
     },
     {
       "at": "2026-10-22T02:28:12.389305+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-22T08:08:10.360741+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

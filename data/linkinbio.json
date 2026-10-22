@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM26094795",
+    "source": "mercadolibre",
+    "title": "Omega 3 Aceite De Salmón Vitamina E 180 Cápsulas | Life360+",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_633006-MLA116671670247_082026-F.jpg",
+    "price": 284.4,
+    "original_price": 559.0,
+    "discount_pct": 49.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM26094795",
+    "added_at": "2026-10-22T08:08:10.358849+00:00"
+  },
+  {
     "key": "mercadolibre:MLM26853472",
     "source": "mercadolibre",
     "title": "Auriculares In‑Ear Gamer Popcorn Bass X8 Pro Violeta con Micrófono cable",
@@ -647,16 +658,5 @@
     "discount_pct": 50.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM20922199",
     "added_at": "2026-10-03T23:26:53.601549+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM21334121",
-    "source": "mercadolibre",
-    "title": "Cargador Portátil Power Bank 1Hora de 10000mAh con 4 Cables Integrados y Pantalla Digital",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_783763-MLA99966880491_112025-F.jpg",
-    "price": 185.0,
-    "original_price": 498.99,
-    "discount_pct": 62.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM21334121",
-    "added_at": "2026-10-03T18:26:24.986486+00:00"
   }
 ]

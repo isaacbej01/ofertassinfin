@@ -1827,15 +1827,18 @@
       "price": 284.4,
       "discount_pct": 49.0,
       "category_id": "MLM438195"
+    },
+    "mercadolibre:MLM63811921": {
+      "published_at": "2026-10-22T18:59:19.600184+00:00",
+      "scheduled_at": "2026-10-22T19:10:32Z",
+      "source": "mercadolibre",
+      "title": "2pzs Tarjeta De Memoria Sd 128gb Tf Card Para Cámara/celular",
+      "price": 199.51,
+      "discount_pct": 35.0,
+      "category_id": "MLM3553"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-04T18:28:59.078482+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-04T23:43:40.038854+00:00",
       "publicados": 1,
@@ -2186,6 +2189,12 @@
     },
     {
       "at": "2026-10-22T08:08:10.360741+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-22T18:59:19.600274+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

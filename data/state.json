@@ -1809,15 +1809,18 @@
       "price": 149.17,
       "discount_pct": 43.0,
       "category_id": "MLM1714"
+    },
+    "mercadolibre:MLM26853472": {
+      "published_at": "2026-10-22T02:28:12.389193+00:00",
+      "scheduled_at": "2026-10-22T02:39:27Z",
+      "source": "mercadolibre",
+      "title": "Auriculares In‑Ear Gamer Popcorn Bass X8 Pro Violeta con Micrófono cable",
+      "price": 179.56,
+      "discount_pct": 25.0,
+      "category_id": "MLM6777"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-03T23:26:53.604283+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-04T03:24:41.853422+00:00",
       "publicados": 1,
@@ -2168,6 +2171,12 @@
     },
     {
       "at": "2026-10-21T23:49:23.770491+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-22T02:28:12.389305+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

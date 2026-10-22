@@ -398,12 +398,12 @@
       "category_id": "MLM1042"
     },
     "mercadolibre:MLM74981499": {
-      "published_at": "2026-09-07T23:12:40.532191+00:00",
-      "scheduled_at": "2026-09-07T23:22:05Z",
+      "published_at": "2026-10-22T23:47:50.323309+00:00",
+      "scheduled_at": "2026-10-22T23:59:02Z",
       "source": "mercadolibre",
       "title": "Tarjeta De Memoria Micro SD Vanance 256GB Con Adaptador 120 MB/s Tarjeta TF Vídeo Full HD Memory Sd Card Impermeable Cla",
-      "price": 185.6,
-      "discount_pct": 68.0,
+      "price": 179.8,
+      "discount_pct": 69.0,
       "category_id": "MLM3553"
     },
     "mercadolibre:MLM42865017": {
@@ -1840,12 +1840,6 @@
   },
   "runs": [
     {
-      "at": "2026-10-04T23:43:40.038854+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
-    {
       "at": "2026-10-05T03:01:45.344042+00:00",
       "publicados": 1,
       "fase": "publicar",
@@ -2195,6 +2189,12 @@
     },
     {
       "at": "2026-10-22T18:59:19.600274+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-22T23:47:50.323368+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

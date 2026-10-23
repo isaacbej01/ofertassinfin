@@ -1845,15 +1845,18 @@
       "price": 246.1,
       "discount_pct": 26.0,
       "category_id": "MLM182239"
+    },
+    "mercadolibre:MLM45612254": {
+      "published_at": "2026-10-23T23:41:06.922237+00:00",
+      "scheduled_at": "2026-10-23T23:52:21Z",
+      "source": "mercadolibre",
+      "title": "Power Bank Batería Portátil 10000mAh Incluye Luz de Iluminación, 4 Cables Integrados Micro USB, iP, Tipo-C y USB MVPSMAR",
+      "price": 184.29,
+      "discount_pct": 25.0,
+      "category_id": "MLM429747"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-07T00:15:18.575612+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-07T09:32:13.504447+00:00",
       "publicados": 1,
@@ -2204,6 +2207,12 @@
     },
     {
       "at": "2026-10-23T18:49:41.771548+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-23T23:41:06.922324+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

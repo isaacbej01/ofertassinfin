@@ -425,12 +425,12 @@
       "category_id": "MLM438195"
     },
     "mercadolibre:MLM77608695": {
-      "published_at": "2026-09-08T18:12:19.691670+00:00",
-      "scheduled_at": "2026-09-08T18:23:44Z",
+      "published_at": "2026-10-23T18:49:41.771462+00:00",
+      "scheduled_at": "2026-10-23T19:00:36Z",
       "source": "mercadolibre",
       "title": "DJI Osmo Pocket 4P Vlog Combo, cámara dos objetivos, tomas de cine 4K, Zoom óptico de 3×, 4K/240 fps, rango dinámico de ",
-      "price": 14585.6,
-      "discount_pct": 28.0,
+      "price": 13899.0,
+      "discount_pct": 29.0,
       "category_id": "MLM174554"
     },
     "mercadolibre:MLM34962481": {
@@ -1849,12 +1849,6 @@
   },
   "runs": [
     {
-      "at": "2026-10-06T03:51:18.332743+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
-    {
       "at": "2026-10-07T00:15:18.575612+00:00",
       "publicados": 1,
       "fase": "publicar",
@@ -2207,6 +2201,12 @@
       "encontrados": 149,
       "publicados": 0,
       "nota": "sin candidatos que pasen los filtros"
+    },
+    {
+      "at": "2026-10-23T18:49:41.771548+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
     }
   ]
 }

@@ -1854,15 +1854,18 @@
       "price": 184.29,
       "discount_pct": 25.0,
       "category_id": "MLM429747"
+    },
+    "mercadolibre:MLM47841305": {
+      "published_at": "2026-10-24T22:48:14.228252+00:00",
+      "scheduled_at": "2026-10-24T22:59:29Z",
+      "source": "mercadolibre",
+      "title": "Power Bank 1Hora de 10000mAh con Carga Rápida 22.5W y Pantalla LED para iPhone y Samsung",
+      "price": 179.4,
+      "discount_pct": 58.0,
+      "category_id": "MLM429747"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-08T20:22:43.694410+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-09T00:51:11.910830+00:00",
       "publicados": 1,
@@ -2216,6 +2219,12 @@
       "encontrados": 150,
       "publicados": 0,
       "nota": "sin candidatos que pasen los filtros"
+    },
+    {
+      "at": "2026-10-24T22:48:14.228336+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
     }
   ]
 }

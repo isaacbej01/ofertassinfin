@@ -1872,15 +1872,18 @@
       "price": 246.52,
       "discount_pct": 40.0,
       "category_id": "MLM182239"
+    },
+    "mercadolibre:MLM69599040": {
+      "published_at": "2026-10-25T22:56:48.002394+00:00",
+      "scheduled_at": "2026-10-25T23:08:01Z",
+      "source": "mercadolibre",
+      "title": "Aro De Luz Lincky Led 10 Pulgadas Con Tripie 2 Metros Profesional Para Celular Maquillaje Tiktok Video Streaming Youtube",
+      "price": 208.81,
+      "discount_pct": 25.0,
+      "category_id": "MLM128037"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-10T09:13:34.434034+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-10T19:04:32.529512+00:00",
       "publicados": 1,
@@ -2231,6 +2234,12 @@
     },
     {
       "at": "2026-10-25T20:25:27.454374+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-25T22:56:48.002482+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

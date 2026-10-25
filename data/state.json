@@ -1863,15 +1863,18 @@
       "price": 179.4,
       "discount_pct": 58.0,
       "category_id": "MLM429747"
+    },
+    "mercadolibre:MLM63347126": {
+      "published_at": "2026-10-25T20:25:27.454292+00:00",
+      "scheduled_at": "2026-10-25T20:36:42Z",
+      "source": "mercadolibre",
+      "title": "Filamento Petg+ De 1.75 Mm De Precisión Dimensional +/- 0.02 Color Amarillo",
+      "price": 246.52,
+      "discount_pct": 40.0,
+      "category_id": "MLM182239"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-10T00:24:49.617732+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-10T09:13:34.434034+00:00",
       "publicados": 1,
@@ -2222,6 +2225,12 @@
     },
     {
       "at": "2026-10-25T18:00:32.941317+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-25T20:25:27.454374+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

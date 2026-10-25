@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM63347126",
+    "source": "mercadolibre",
+    "title": "Filamento Petg+ De 1.75 Mm De Precisión Dimensional +/- 0.02 Color Amarillo",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_802466-MLA101415693102_122025-F.jpg",
+    "price": 246.52,
+    "original_price": 415.63,
+    "discount_pct": 40.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM63347126",
+    "added_at": "2026-10-25T20:25:27.451562+00:00"
+  },
+  {
     "key": "mercadolibre:MLM54939997",
     "source": "mercadolibre",
     "title": "Arrancador de Batería EnergyArk con Compresor de Aire y Power Bank para Carro y Moto",
@@ -647,16 +658,5 @@
     "discount_pct": 43.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM36317452",
     "added_at": "2026-10-07T09:32:13.501552+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM47710915",
-    "source": "mercadolibre",
-    "title": "Ratón Inalámbrico Gamer Bluetooth Recargable Negro Conexión USB-C 3 DPI Inphic A1",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_748002-MLA100082621409_122025-F.jpg",
-    "price": 179.99,
-    "original_price": 542.83,
-    "discount_pct": 66.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM47710915",
-    "added_at": "2026-10-07T00:15:18.573208+00:00"
   }
 ]

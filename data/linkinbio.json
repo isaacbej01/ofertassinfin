@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM54939997",
+    "source": "mercadolibre",
+    "title": "Arrancador de Batería EnergyArk con Compresor de Aire y Power Bank para Carro y Moto",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_963756-MLA115666642610_092026-F.jpg",
+    "price": 644.28,
+    "original_price": 1834.0,
+    "discount_pct": 64.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM54939997",
+    "added_at": "2026-10-25T18:00:32.938928+00:00"
+  },
+  {
     "key": "mercadolibre:MLM47841305",
     "source": "mercadolibre",
     "title": "Power Bank 1Hora de 10000mAh con Carga Rápida 22.5W y Pantalla LED para iPhone y Samsung",
@@ -647,16 +658,5 @@
     "discount_pct": 66.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM47710915",
     "added_at": "2026-10-07T00:15:18.573208+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM62731493",
-    "source": "mercadolibre",
-    "title": "Báscula Comercial Digital de 40 kg Recargable batería 3 Lcd Tecla Tara Color Blanco con Pesaje Inicial Desde 5 gramos 30.5 cm x 22 cm ARTROLIN",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_903074-MLA118763291447_102026-F.jpg",
-    "price": 394.7,
-    "original_price": 817.2,
-    "discount_pct": 51.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM62731493",
-    "added_at": "2026-10-06T03:51:18.329834+00:00"
   }
 ]

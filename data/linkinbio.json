@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM22843182",
+    "source": "mercadolibre",
+    "title": "Sérum Anti Imperfecciones Garnier Express Aclara, con Concentrado de Vitamina C, Ácido Salicílico y Niacinamida que Reduce Manchas en Piel Grasa 30 ml",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_927139-MLA87916772383_072025-F.jpg",
+    "price": 156.56,
+    "original_price": 300.0,
+    "discount_pct": 47.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM22843182",
+    "added_at": "2026-10-26T20:15:46.422017+00:00"
+  },
+  {
     "key": "mercadolibre:MLM69599040",
     "source": "mercadolibre",
     "title": "Aro De Luz Lincky Led 10 Pulgadas Con Tripie 2 Metros Profesional Para Celular Maquillaje Tiktok Video Streaming Youtube Foto",
@@ -647,16 +658,5 @@
     "discount_pct": 37.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM76454494",
     "added_at": "2026-10-08T00:35:52.752712+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM18956615",
-    "source": "mercadolibre",
-    "title": "L'Oréal Paris Revitalift Sérum Ácido Hialurónico, Hidratante, 30 ml",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_908303-MLA97211655092_112025-F.jpg",
-    "price": 199.0,
-    "original_price": 365.0,
-    "discount_pct": 45.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM18956615",
-    "added_at": "2026-10-07T20:20:52.388945+00:00"
   }
 ]

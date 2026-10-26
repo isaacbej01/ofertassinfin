@@ -1881,15 +1881,18 @@
       "price": 208.81,
       "discount_pct": 25.0,
       "category_id": "MLM128037"
+    },
+    "mercadolibre:MLM22843182": {
+      "published_at": "2026-10-26T20:15:46.424972+00:00",
+      "scheduled_at": "2026-10-26T20:26:23Z",
+      "source": "mercadolibre",
+      "title": "Sérum Anti Imperfecciones Garnier Express Aclara, con Concentrado de Vitamina C, Ácido Salicílico y Niacinamida que Redu",
+      "price": 156.56,
+      "discount_pct": 47.0,
+      "category_id": "MLM178705"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-11T04:00:01.047950+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-11T19:17:17.340361+00:00",
       "publicados": 1,
@@ -2243,6 +2246,12 @@
       "encontrados": 150,
       "publicados": 0,
       "nota": "sin candidatos que pasen los filtros"
+    },
+    {
+      "at": "2026-10-26T20:15:46.425062+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
     }
   ]
 }

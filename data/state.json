@@ -1890,15 +1890,18 @@
       "price": 156.56,
       "discount_pct": 47.0,
       "category_id": "MLM178705"
+    },
+    "mercadolibre:MLM52108452": {
+      "published_at": "2026-10-27T00:09:50.488336+00:00",
+      "scheduled_at": "2026-10-27T00:21:05Z",
+      "source": "mercadolibre",
+      "title": "Kodak Tarjeta De Memoria Tf Card V30 32gb Con Adaptador Sd",
+      "price": 197.57,
+      "discount_pct": 31.0,
+      "category_id": "MLM3553"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-11T19:17:17.340361+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-12T00:07:32.238524+00:00",
       "publicados": 1,
@@ -2249,6 +2252,12 @@
     },
     {
       "at": "2026-10-26T20:15:46.425062+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-27T00:09:50.488406+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

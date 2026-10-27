@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM52108452",
+    "source": "mercadolibre",
+    "title": "Kodak Tarjeta De Memoria Tf Card V30 32gb Con Adaptador Sd",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_832381-MLA100080510023_122025-F.jpg",
+    "price": 197.57,
+    "original_price": 286.4,
+    "discount_pct": 31.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM52108452",
+    "added_at": "2026-10-27T00:09:50.486035+00:00"
+  },
+  {
     "key": "mercadolibre:MLM22843182",
     "source": "mercadolibre",
     "title": "Sérum Anti Imperfecciones Garnier Express Aclara, con Concentrado de Vitamina C, Ácido Salicílico y Niacinamida que Reduce Manchas en Piel Grasa 30 ml",
@@ -647,16 +658,5 @@
     "discount_pct": 50.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM45810075",
     "added_at": "2026-10-08T09:43:18.531426+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM76454494",
-    "source": "mercadolibre",
-    "title": "Soldadora inverter portatil inversores soldadoras inversor para soldar wanse",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_915171-MLA114342672820_082026-F.jpg",
-    "price": 565.08,
-    "original_price": 897.04,
-    "discount_pct": 37.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM76454494",
-    "added_at": "2026-10-08T00:35:52.752712+00:00"
   }
 ]

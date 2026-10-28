@@ -1908,15 +1908,18 @@
       "price": 749.01,
       "discount_pct": 50.0,
       "category_id": "MLM5072"
+    },
+    "mercadolibre:MLM77671630": {
+      "published_at": "2026-10-28T09:08:48.754456+00:00",
+      "scheduled_at": "2026-10-28T09:19:53Z",
+      "source": "mercadolibre",
+      "title": "Tarjeta Micro SD ZOOSIXX 128 GB U3 with Adapter, Class 10 for Cameras and Drones",
+      "price": 168.0,
+      "discount_pct": 41.0,
+      "category_id": "MLM3553"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-13T04:32:55.943080+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-13T20:27:59.611398+00:00",
       "publicados": 1,
@@ -2267,6 +2270,12 @@
     },
     {
       "at": "2026-10-28T00:10:36.963452+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-28T09:08:48.754540+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

@@ -1917,15 +1917,18 @@
       "price": 168.0,
       "discount_pct": 41.0,
       "category_id": "MLM3553"
+    },
+    "mercadolibre:MLM40870705": {
+      "published_at": "2026-10-28T20:00:42.721517+00:00",
+      "scheduled_at": "2026-10-28T20:11:26Z",
+      "source": "mercadolibre",
+      "title": "Auriculares Inalámbricos Jbl Tune 520bt Color Lila",
+      "price": 593.19,
+      "discount_pct": 35.0,
+      "category_id": "MLM7533"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-13T20:27:59.611398+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-14T00:03:35.108315+00:00",
       "publicados": 1,
@@ -2276,6 +2279,12 @@
     },
     {
       "at": "2026-10-28T09:08:48.754540+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-28T20:00:42.721624+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

@@ -1899,15 +1899,18 @@
       "price": 197.57,
       "discount_pct": 31.0,
       "category_id": "MLM3553"
+    },
+    "mercadolibre:MLM37942070": {
+      "published_at": "2026-10-28T00:10:36.963367+00:00",
+      "scheduled_at": "2026-10-28T00:21:51Z",
+      "source": "mercadolibre",
+      "title": "Audífonos Anker soundcore P40i Inalámbricos, 60 Horas de Reproducción, Cancelación de Ruido Adaptativa -42dB, Bajos Prof",
+      "price": 749.01,
+      "discount_pct": 50.0,
+      "category_id": "MLM5072"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-12T22:20:08.863453+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-13T04:32:55.943080+00:00",
       "publicados": 1,
@@ -2261,6 +2264,12 @@
       "encontrados": 149,
       "publicados": 0,
       "nota": "sin candidatos que pasen los filtros"
+    },
+    {
+      "at": "2026-10-28T00:10:36.963452+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
     }
   ]
 }

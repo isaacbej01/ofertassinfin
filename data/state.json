@@ -1935,15 +1935,18 @@
       "price": 379.0,
       "discount_pct": 32.0,
       "category_id": "MLM189305"
+    },
+    "mercadolibre:MLM63643302": {
+      "published_at": "2026-10-29T19:59:13.265950+00:00",
+      "scheduled_at": "2026-10-29T20:09:57Z",
+      "source": "mercadolibre",
+      "title": "Soporte de Pared Articulado Gechunrong M-400 para TV de 14\" a 60\" Inclinable y Giratorio",
+      "price": 169.64,
+      "discount_pct": 69.0,
+      "category_id": "MLM194128"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-14T19:04:48.406447+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-14T23:33:52.592771+00:00",
       "publicados": 1,
@@ -2297,6 +2300,12 @@
       "encontrados": 150,
       "publicados": 0,
       "nota": "sin candidatos que pasen los filtros"
+    },
+    {
+      "at": "2026-10-29T19:59:13.266029+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
     }
   ]
 }

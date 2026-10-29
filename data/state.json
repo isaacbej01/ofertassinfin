@@ -1926,15 +1926,18 @@
       "price": 593.19,
       "discount_pct": 35.0,
       "category_id": "MLM7533"
+    },
+    "mercadolibre:MLM27952561": {
+      "published_at": "2026-10-29T00:32:56.443395+00:00",
+      "scheduled_at": "2026-10-29T00:43:51Z",
+      "source": "mercadolibre",
+      "title": "Step Banco De Aerobics Ejercicio Con 2 Alturas Ajustables Color Gris",
+      "price": 379.0,
+      "discount_pct": 32.0,
+      "category_id": "MLM189305"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-14T00:03:35.108315+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-14T08:13:25.807044+00:00",
       "publicados": 1,
@@ -2285,6 +2288,12 @@
     },
     {
       "at": "2026-10-28T20:00:42.721624+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-29T00:32:56.443454+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM27952561",
+    "source": "mercadolibre",
+    "title": "Step Banco De Aerobics Ejercicio Con 2 Alturas Ajustables Color Gris",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_962484-MLA117666070025_092026-F.jpg",
+    "price": 379.0,
+    "original_price": 559.0,
+    "discount_pct": 32.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM27952561",
+    "added_at": "2026-10-29T00:32:56.441408+00:00"
+  },
+  {
     "key": "mercadolibre:MLM40870705",
     "source": "mercadolibre",
     "title": "Auriculares Inalámbricos Jbl Tune 520bt Color Lila",
@@ -647,16 +658,5 @@
     "discount_pct": 37.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM24677503",
     "added_at": "2026-10-09T19:55:14.862101+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM18486368",
-    "source": "mercadolibre",
-    "title": "Birdman Falcon Performance Proteína en Polvo Vegana | con Creatina, BCAAs y Enzimas | Sin Lactosa | Golden Vainilla | 1.9kg",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_635410-MLA114502826099_072026-F.jpg",
-    "price": 1099.0,
-    "original_price": 1689.0,
-    "discount_pct": 34.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM18486368",
-    "added_at": "2026-10-09T09:49:32.593120+00:00"
   }
 ]

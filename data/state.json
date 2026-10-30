@@ -533,12 +533,12 @@
       "category_id": "MLM438195"
     },
     "mercadolibre:MLM19795010": {
-      "published_at": "2026-09-11T07:36:07.237606+00:00",
-      "scheduled_at": "2026-09-11T07:47:32Z",
+      "published_at": "2026-10-30T00:32:00.348807+00:00",
+      "scheduled_at": "2026-10-30T00:42:44Z",
       "source": "mercadolibre",
       "title": "Amazon Dot Echo Dot 5th Gen con asistente virtual Alexa color negro 127/220V",
-      "price": 899.0,
-      "discount_pct": 55.0,
+      "price": 953.56,
+      "discount_pct": 39.0,
       "category_id": "MLM187752"
     },
     "mercadolibre:MLM25415858": {
@@ -1948,12 +1948,6 @@
   },
   "runs": [
     {
-      "at": "2026-10-14T23:33:52.592771+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
-    {
       "at": "2026-10-15T02:22:02.355307+00:00",
       "publicados": 1,
       "fase": "publicar",
@@ -2303,6 +2297,12 @@
     },
     {
       "at": "2026-10-29T19:59:13.266029+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-30T00:32:00.348875+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

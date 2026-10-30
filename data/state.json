@@ -1953,15 +1953,18 @@
       "price": 1799.0,
       "discount_pct": 27.0,
       "category_id": "MLM416632"
+    },
+    "mercadolibre:MLM53716102": {
+      "published_at": "2026-10-30T19:48:17.962827+00:00",
+      "scheduled_at": "2026-10-30T19:59:02Z",
+      "source": "mercadolibre",
+      "title": "Motosierra A Gasolina 20 PLG Takashi 58cc 3.4hp Wood58 Color Negro",
+      "price": 889.24,
+      "discount_pct": 35.0,
+      "category_id": "MLM457020"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-15T07:51:32.361417+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-15T18:47:53.858160+00:00",
       "publicados": 1,
@@ -2312,6 +2315,12 @@
     },
     {
       "at": "2026-10-30T09:18:29.393553+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-30T19:48:17.962935+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

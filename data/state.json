@@ -1980,15 +1980,18 @@
       "price": 233.25,
       "discount_pct": 25.0,
       "category_id": "MLM188627"
+    },
+    "mercadolibre:MLM62234964": {
+      "published_at": "2026-10-31T23:53:49.044919+00:00",
+      "scheduled_at": "2026-11-01T00:04:43Z",
+      "source": "mercadolibre",
+      "title": "Amazon Fire Tv Stick 4k Select 8gb Control Con Alexa Negro De Voz Sistema VEGA OS - No Android.",
+      "price": 579.0,
+      "discount_pct": 31.0,
+      "category_id": "MLM126075"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-16T07:41:46.363357+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-16T18:32:57.383519+00:00",
       "publicados": 1,
@@ -2342,6 +2345,12 @@
       "encontrados": 149,
       "publicados": 0,
       "nota": "sin candidatos que pasen los filtros"
+    },
+    {
+      "at": "2026-10-31T23:53:49.045047+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
     }
   ]
 }

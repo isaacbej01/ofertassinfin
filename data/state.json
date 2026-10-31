@@ -1971,15 +1971,18 @@
       "price": 712.0,
       "discount_pct": 26.0,
       "category_id": "MLM457118"
+    },
+    "mercadolibre:MLM74460098": {
+      "published_at": "2026-10-31T09:05:27.310397+00:00",
+      "scheduled_at": "2026-10-31T09:16:30Z",
+      "source": "mercadolibre",
+      "title": "TUCOMS Mini Localizador Rastreador Tracker GPS, 7 Días Registro De Trayectoria Movimiento, Compatible Android Smart Tag ",
+      "price": 233.25,
+      "discount_pct": 25.0,
+      "category_id": "MLM188627"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-15T23:26:47.945530+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-16T02:15:14.272297+00:00",
       "publicados": 1,
@@ -2330,6 +2333,12 @@
     },
     {
       "at": "2026-10-31T00:16:52.533445+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-10-31T09:05:27.310483+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

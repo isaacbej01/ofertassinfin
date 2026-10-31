@@ -1984,12 +1984,6 @@
   },
   "runs": [
     {
-      "at": "2026-10-16T02:15:14.272297+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
-    {
       "at": "2026-10-16T07:41:46.363357+00:00",
       "publicados": 1,
       "fase": "publicar",
@@ -2342,6 +2336,12 @@
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0
+    },
+    {
+      "at": "2026-10-31T18:55:22.479799+00:00",
+      "encontrados": 149,
+      "publicados": 0,
+      "nota": "sin candidatos que pasen los filtros"
     }
   ]
 }

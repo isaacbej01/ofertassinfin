@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM69359338",
+    "source": "mercadolibre",
+    "title": "Cargador Rápido Inteligente 12v Cargador De Batería Con Reparación De Pulso Y Desulfatación Cargador Batería Compatible Con Baterías De Plomo Ácido Para Auto Y Moto Artrolin Cargadores Baterías",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_676934-MLA117899312683_092026-F.jpg",
+    "price": 170.64,
+    "original_price": 560.27,
+    "discount_pct": 69.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM69359338",
+    "added_at": "2026-11-01T19:18:43.158763+00:00"
+  },
+  {
     "key": "mercadolibre:MLM62234964",
     "source": "mercadolibre",
     "title": "Amazon Fire Tv Stick 4k Select 8gb Control Con Alexa Negro De Voz Sistema VEGA OS - No Android.",
@@ -647,16 +658,5 @@
     "discount_pct": 62.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM53123062",
     "added_at": "2026-10-12T10:00:26.718476+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM69616538",
-    "source": "mercadolibre",
-    "title": "Amazon Fire Tv Stick Hd 2026",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_634222-MLA111604135301_052026-F.jpg",
-    "price": 589.0,
-    "original_price": 844.0,
-    "discount_pct": 30.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM69616538",
-    "added_at": "2026-10-12T00:07:32.235734+00:00"
   }
 ]

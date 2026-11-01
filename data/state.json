@@ -1989,15 +1989,18 @@
       "price": 579.0,
       "discount_pct": 31.0,
       "category_id": "MLM126075"
+    },
+    "mercadolibre:MLM69359338": {
+      "published_at": "2026-11-01T19:18:43.161462+00:00",
+      "scheduled_at": "2026-11-01T19:29:16Z",
+      "source": "mercadolibre",
+      "title": "Cargador Rápido Inteligente 12v Cargador De Batería Con Reparación De Pulso Y Desulfatación Cargador Batería Compatible ",
+      "price": 170.64,
+      "discount_pct": 69.0,
+      "category_id": "MLM22596"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-16T23:08:56.109862+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-17T02:08:27.410171+00:00",
       "publicados": 1,
@@ -2351,6 +2354,12 @@
       "encontrados": 149,
       "publicados": 0,
       "nota": "sin candidatos que pasen los filtros"
+    },
+    {
+      "at": "2026-11-01T19:18:43.161548+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
     }
   ]
 }

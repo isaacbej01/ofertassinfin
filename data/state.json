@@ -1998,15 +1998,18 @@
       "price": 170.64,
       "discount_pct": 69.0,
       "category_id": "MLM22596"
+    },
+    "mercadolibre:MLM68190429": {
+      "published_at": "2026-11-03T04:35:39.122721+00:00",
+      "scheduled_at": "2026-11-03T04:46:43Z",
+      "source": "mercadolibre",
+      "title": "Arrancador De Batería 8000a 25000mah Portátil 12v Con Pantalla Digital Cargadores Baterias Linterna Led Y Modo Sos Para ",
+      "price": 398.16,
+      "discount_pct": 57.0,
+      "category_id": "MLM22596"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-17T19:51:29.598274+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-17T22:47:49.943530+00:00",
       "publicados": 1,
@@ -2357,6 +2360,12 @@
     },
     {
       "at": "2026-11-02T22:58:02.338548+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-03T04:35:39.122797+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

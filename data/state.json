@@ -2007,15 +2007,18 @@
       "price": 398.16,
       "discount_pct": 57.0,
       "category_id": "MLM22596"
+    },
+    "mercadolibre:MLM64256884": {
+      "published_at": "2026-11-03T20:47:03.227602+00:00",
+      "scheduled_at": "2026-11-03T20:56:07Z",
+      "source": "mercadolibre",
+      "title": "Álbum De Fotos Y Recuerdos Autoadhesivo Accesorios 40 Pág. Álbum Grande De Recuerdos Familiar Elegante Con 20 Hojas, 40 ",
+      "price": 192.54,
+      "discount_pct": 51.0,
+      "category_id": "MLM189602"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-17T22:47:49.943530+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-18T02:07:27.343836+00:00",
       "publicados": 1,
@@ -2366,6 +2369,12 @@
     },
     {
       "at": "2026-11-03T04:35:39.122797+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-03T20:47:03.227691+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

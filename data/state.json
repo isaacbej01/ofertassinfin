@@ -2016,15 +2016,18 @@
       "price": 192.54,
       "discount_pct": 51.0,
       "category_id": "MLM189602"
+    },
+    "mercadolibre:MLM24608315": {
+      "published_at": "2026-11-04T00:59:37.404373+00:00",
+      "scheduled_at": "2026-11-04T01:10:41Z",
+      "source": "mercadolibre",
+      "title": "Birdman Fitmingo Proteína en Polvo Vegana | con Inositol, Ácido Hialurónico y Vitaminas | Sin Lactosa | Blueberry | 510g",
+      "price": 580.06,
+      "discount_pct": 33.0,
+      "category_id": "MLM167994"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-18T02:07:27.343836+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-18T07:33:56.670149+00:00",
       "publicados": 1,
@@ -2375,6 +2378,12 @@
     },
     {
       "at": "2026-11-03T20:47:03.227691+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-04T00:59:37.404434+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

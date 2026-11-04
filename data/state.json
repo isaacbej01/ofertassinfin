@@ -2025,15 +2025,18 @@
       "price": 580.06,
       "discount_pct": 33.0,
       "category_id": "MLM167994"
+    },
+    "mercadolibre:MLM63002485": {
+      "published_at": "2026-11-04T20:59:43.656497+00:00",
+      "scheduled_at": "2026-11-04T21:11:38Z",
+      "source": "mercadolibre",
+      "title": "Funda Impermeable Protección Solar Para Moto Grueso 210d Negro MEXSOLTEC",
+      "price": 192.06,
+      "discount_pct": 35.0,
+      "category_id": "MLM92152"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-18T07:33:56.670149+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-18T17:41:17.788299+00:00",
       "publicados": 1,
@@ -2384,6 +2387,12 @@
     },
     {
       "at": "2026-11-04T00:59:37.404434+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-04T20:59:43.656599+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

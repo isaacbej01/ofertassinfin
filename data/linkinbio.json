@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM63002485",
+    "source": "mercadolibre",
+    "title": "Funda Impermeable Protección Solar Para Moto Grueso 210d Negro MEXSOLTEC",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_709487-MLA116770415676_092026-F.jpg",
+    "price": 192.06,
+    "original_price": 298.0,
+    "discount_pct": 35.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM63002485",
+    "added_at": "2026-11-04T20:59:43.653743+00:00"
+  },
+  {
     "key": "mercadolibre:MLM24608315",
     "source": "mercadolibre",
     "title": "Birdman Fitmingo Proteína en Polvo Vegana | con Inositol, Ácido Hialurónico y Vitaminas | Sin Lactosa | Blueberry | 510g",
@@ -647,16 +658,5 @@
     "discount_pct": 56.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM70383418",
     "added_at": "2026-10-14T19:04:48.403479+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM45647645",
-    "source": "mercadolibre",
-    "title": "Kit Destornillador Inalambrico Taladro Electrico Con Bateria leds taladro kit de herramienta led luz taladros de velocidad variable destornillador electrico control",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_971612-MLA113169169755_062026-F.jpg",
-    "price": 240.64,
-    "original_price": 710.97,
-    "discount_pct": 66.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM45647645",
-    "added_at": "2026-10-14T08:13:25.803957+00:00"
   }
 ]

@@ -947,8 +947,8 @@
       "category_id": "MLM7533"
     },
     "mercadolibre:MLM53457233": {
-      "published_at": "2026-09-21T19:50:33.808969+00:00",
-      "scheduled_at": "2026-09-21T20:01:45Z",
+      "published_at": "2026-11-05T21:17:30.502168+00:00",
+      "scheduled_at": "2026-11-05T21:29:24Z",
       "source": "mercadolibre",
       "title": "Juego De Sábanas King Size 100% Microfibra Pierre Cardin Gris Zigzag",
       "price": 198.82,
@@ -2047,12 +2047,6 @@
   },
   "runs": [
     {
-      "at": "2026-10-18T22:41:54.055921+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
-    {
       "at": "2026-10-19T02:24:20.097721+00:00",
       "publicados": 1,
       "fase": "publicar",
@@ -2402,6 +2396,12 @@
     },
     {
       "at": "2026-11-05T10:04:34.610582+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-05T21:17:30.502255+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

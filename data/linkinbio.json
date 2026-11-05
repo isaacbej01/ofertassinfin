@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM67979054",
+    "source": "mercadolibre",
+    "title": "Taladro Inalámbrico Pinchan de 10 mm con 2 Baterías y Cargador, Amarillo",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_891884-MLA120225924589_102026-F.jpg",
+    "price": 235.92,
+    "original_price": 317.05,
+    "discount_pct": 25.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM67979054",
+    "added_at": "2026-11-05T10:04:34.607759+00:00"
+  },
+  {
     "key": "mercadolibre:MLM54014512",
     "source": "mercadolibre",
     "title": "Roku Streaming Stick 3840br 2025 para TV HD y modo de auriculares con control de voz completo",
@@ -647,16 +658,5 @@
     "discount_pct": 61.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM62995693",
     "added_at": "2026-10-15T02:22:02.351435+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM46085382",
-    "source": "mercadolibre",
-    "title": "12v Cargador Rápido Inteligente Brpom Cargador Con Reparación De Pulso Para Automóvil, Moto, Camión Cortacésped Calcium Gel Agm Mf Sla Efb Vrla Baterías Ml163 Rojo Y Negro",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_911284-MLA99442042820_112025-F.jpg",
-    "price": 150.91,
-    "original_price": 520.0,
-    "discount_pct": 70.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM46085382",
-    "added_at": "2026-10-14T23:33:52.590959+00:00"
   }
 ]

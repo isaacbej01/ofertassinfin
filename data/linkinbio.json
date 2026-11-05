@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM54014512",
+    "source": "mercadolibre",
+    "title": "Roku Streaming Stick 3840br 2025 para TV HD y modo de auriculares con control de voz completo",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_744904-MLA90445115245_082025-F.jpg",
+    "price": 694.82,
+    "original_price": 938.23,
+    "discount_pct": 25.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM54014512",
+    "added_at": "2026-11-05T01:21:04.957553+00:00"
+  },
+  {
     "key": "mercadolibre:MLM63002485",
     "source": "mercadolibre",
     "title": "Funda Impermeable Protección Solar Para Moto Grueso 210d Negro MEXSOLTEC",
@@ -647,16 +658,5 @@
     "discount_pct": 70.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM46085382",
     "added_at": "2026-10-14T23:33:52.590959+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM70383418",
-    "source": "mercadolibre",
-    "title": "Báscula Comercial Digital ARTROLIN de 40 kg, Recargable y con Pantalla LCD para Cliente",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_959435-MLA119168968259_102026-F.jpg",
-    "price": 384.91,
-    "original_price": 887.48,
-    "discount_pct": 56.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM70383418",
-    "added_at": "2026-10-14T19:04:48.403479+00:00"
   }
 ]

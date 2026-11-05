@@ -2034,15 +2034,18 @@
       "price": 192.06,
       "discount_pct": 35.0,
       "category_id": "MLM92152"
+    },
+    "mercadolibre:MLM54014512": {
+      "published_at": "2026-11-05T01:21:04.959459+00:00",
+      "scheduled_at": "2026-11-05T01:31:39Z",
+      "source": "mercadolibre",
+      "title": "Roku Streaming Stick 3840br 2025 para TV HD y modo de auriculares con control de voz completo",
+      "price": 694.82,
+      "discount_pct": 25.0,
+      "category_id": "MLM126075"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-18T17:41:17.788299+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-18T19:52:48.956084+00:00",
       "publicados": 1,
@@ -2393,6 +2396,12 @@
     },
     {
       "at": "2026-11-04T20:59:43.656599+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-05T01:21:04.959517+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

@@ -2043,15 +2043,18 @@
       "price": 694.82,
       "discount_pct": 25.0,
       "category_id": "MLM126075"
+    },
+    "mercadolibre:MLM45967325": {
+      "published_at": "2026-11-06T04:12:17.306757+00:00",
+      "scheduled_at": "2026-11-06T04:23:32Z",
+      "source": "mercadolibre",
+      "title": "Casa De Campaña 3-4 Personas Impermeable Portátil 2 Entradas",
+      "price": 498.0,
+      "discount_pct": 50.0,
+      "category_id": "MLM8161"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-19T02:24:20.097721+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-19T08:16:54.586982+00:00",
       "publicados": 1,
@@ -2402,6 +2405,12 @@
     },
     {
       "at": "2026-11-05T21:17:30.502255+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-06T04:12:17.306804+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

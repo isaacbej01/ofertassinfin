@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM67329478",
+    "source": "mercadolibre",
+    "title": "Llave de Impacto Eléctrica Pinchan Inalámbrica Sin Escobillas Azul 520 N.m 500 Rpm Incluye una batería y un cargador",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_876208-MLA112227012145_052026-F.jpg",
+    "price": 338.94,
+    "original_price": 1129.8,
+    "discount_pct": 70.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM67329478",
+    "added_at": "2026-11-06T20:40:26.153166+00:00"
+  },
+  {
     "key": "mercadolibre:MLM45967325",
     "source": "mercadolibre",
     "title": "Casa De Campaña 3-4 Personas Impermeable Portátil 2 Entradas",
@@ -647,16 +658,5 @@
     "discount_pct": 37.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM26194700",
     "added_at": "2026-10-15T23:26:47.942771+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM19834660",
-    "source": "mercadolibre",
-    "title": "Protector Solar Loreal Paris Fps50+ Uv Defender Fluido Tono Invisible 40gr",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_677047-MLA111927607747_052026-F.jpg",
-    "price": 174.0,
-    "original_price": 369.0,
-    "discount_pct": 52.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM19834660",
-    "added_at": "2026-10-15T18:47:53.855371+00:00"
   }
 ]

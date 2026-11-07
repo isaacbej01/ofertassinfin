@@ -1019,12 +1019,12 @@
       "category_id": "MLM30059"
     },
     "mercadolibre:MLM38176139": {
-      "published_at": "2026-09-23T18:45:29.256662+00:00",
-      "scheduled_at": "2026-09-23T18:56:43Z",
+      "published_at": "2026-11-07T19:14:04.025235+00:00",
+      "scheduled_at": "2026-11-07T19:24:07Z",
       "source": "mercadolibre",
       "title": "Audífonos Anker Soundcore P30i In-ear Bluetooth Inalámbrico Cancelación De Ruido adaptativa, 45 Horas de Reproducción, S",
-      "price": 537.99,
-      "discount_pct": 46.0,
+      "price": 519.01,
+      "discount_pct": 48.0,
       "category_id": "MLM7533"
     },
     "mercadolibre:MLM48434598": {
@@ -2056,12 +2056,6 @@
   },
   "runs": [
     {
-      "at": "2026-10-20T08:03:10.623913+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
-    {
       "at": "2026-10-20T18:50:48.103454+00:00",
       "publicados": 1,
       "fase": "publicar",
@@ -2411,6 +2405,12 @@
     },
     {
       "at": "2026-11-07T09:25:48.890012+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-07T19:14:04.025344+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

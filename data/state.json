@@ -1037,12 +1037,12 @@
       "category_id": "MLM4840"
     },
     "mercadolibre:MLM73232480": {
-      "published_at": "2026-09-24T02:14:00.932038+00:00",
-      "scheduled_at": "2026-09-24T02:25:22Z",
+      "published_at": "2026-11-08T09:42:52.826547+00:00",
+      "scheduled_at": "2026-11-08T09:54:08Z",
       "source": "mercadolibre",
       "title": "Kit De Taladro Inalámbrico Destornillador Eléctrico Azul Pinchan 2000 RPM Incluye batería y cargador Iluminación LED 50 ",
-      "price": 205.32,
-      "discount_pct": 76.0,
+      "price": 209.01,
+      "discount_pct": 77.0,
       "category_id": "MLM456969"
     },
     "mercadolibre:MLM40732643": {
@@ -2065,12 +2065,6 @@
   },
   "runs": [
     {
-      "at": "2026-10-20T23:33:26.694063+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
-    {
       "at": "2026-10-21T02:31:52.173864+00:00",
       "publicados": 1,
       "fase": "publicar",
@@ -2420,6 +2414,12 @@
     },
     {
       "at": "2026-11-08T00:05:41.917282+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-08T09:42:52.826607+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

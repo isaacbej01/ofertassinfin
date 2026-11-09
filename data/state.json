@@ -2070,15 +2070,18 @@
       "price": 675.25,
       "discount_pct": 38.0,
       "category_id": "MLM438195"
+    },
+    "mercadolibre:MLM53225198": {
+      "published_at": "2026-11-09T10:43:20.200790+00:00",
+      "scheduled_at": "2026-11-09T10:49:13Z",
+      "source": "mercadolibre",
+      "title": "Auriculares Inalámbricos Lenovo Ta410 Bluetooth 5.4 Blanco,Cancelación Ruido,manos libres bluetooth",
+      "price": 261.24,
+      "discount_pct": 53.0,
+      "category_id": "MLM86746"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-21T19:04:12.545926+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-21T23:49:23.770491+00:00",
       "publicados": 1,
@@ -2429,6 +2432,12 @@
     },
     {
       "at": "2026-11-09T00:20:10.283284+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-09T10:43:20.200879+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

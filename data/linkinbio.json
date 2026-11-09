@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM28618279",
+    "source": "mercadolibre",
+    "title": "Vitatú | Myo Inositol & D-Chiro Inositol mezcla ideal 40:1 con Folato + Vitamina D3 + Zinc, Suplemento Alimenticio en polvo para Mujeres (225 g c/u), 45 días de duración",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_614030-MLA99938083897_112025-F.jpg",
+    "price": 675.25,
+    "original_price": 1099.0,
+    "discount_pct": 38.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM28618279",
+    "added_at": "2026-11-09T00:20:10.280893+00:00"
+  },
+  {
     "key": "mercadolibre:MLM50798802",
     "source": "mercadolibre",
     "title": "Tapete de Yoga Mat Foamy Grueso 8mm Muuk Balance, Fitness, Ejercicio en Casa, Pilates Y Relajación, Portátil Color Negro",
@@ -647,16 +658,5 @@
     "discount_pct": 32.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM64295415",
     "added_at": "2026-10-17T17:38:46.858900+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM23526584",
-    "source": "mercadolibre",
-    "title": "Corrector Maybelline Instant Age Rewind Eraser Concealer",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_933825-MLU75164163013_032024-F.jpg",
-    "price": 558.92,
-    "original_price": 798.46,
-    "discount_pct": 30.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM23526584",
-    "added_at": "2026-10-17T07:20:07.771757+00:00"
   }
 ]

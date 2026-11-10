@@ -2088,15 +2088,18 @@
       "price": 495.0,
       "discount_pct": 61.0,
       "category_id": "MLM116391"
+    },
+    "mercadolibre:MLM39850775": {
+      "published_at": "2026-11-10T05:13:48.329792+00:00",
+      "scheduled_at": "2026-11-10T05:25:03Z",
+      "source": "mercadolibre",
+      "title": "Álbum de Fotos Our Adventure Book de 80 Páginas con Kit DIY, Plumones de Colores, Stickers y Accesorios Decorativos, Lib",
+      "price": 173.73,
+      "discount_pct": 56.0,
+      "category_id": "MLM189602"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-22T02:28:12.389305+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-22T08:08:10.360741+00:00",
       "publicados": 1,
@@ -2447,6 +2450,12 @@
     },
     {
       "at": "2026-11-09T23:40:11.366428+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-10T05:13:48.329848+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

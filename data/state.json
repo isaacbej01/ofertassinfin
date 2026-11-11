@@ -2097,15 +2097,18 @@
       "price": 173.73,
       "discount_pct": 56.0,
       "category_id": "MLM189602"
+    },
+    "mercadolibre:MLM80452580": {
+      "published_at": "2026-11-11T03:46:41.568448+00:00",
+      "scheduled_at": "2026-11-11T03:57:55Z",
+      "source": "mercadolibre",
+      "title": "Luces de Navidad VKFGTY, 50 m cadena de luz con 500 LED, 8 Modos, Impermeable (IP44), conectable, con enchufe, luz blanc",
+      "price": 223.1,
+      "discount_pct": 56.0,
+      "category_id": "MLM116384"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-22T18:59:19.600274+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-22T23:47:50.323368+00:00",
       "publicados": 1,
@@ -2456,6 +2459,12 @@
     },
     {
       "at": "2026-11-10T21:07:37.546254+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-11T03:46:41.568515+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

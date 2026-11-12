@@ -1154,12 +1154,12 @@
       "category_id": "MLM456969"
     },
     "mercadolibre:MLM24028629": {
-      "published_at": "2026-09-27T08:43:43.837172+00:00",
-      "scheduled_at": "2026-09-27T08:54:58Z",
+      "published_at": "2026-11-12T21:40:17.294988+00:00",
+      "scheduled_at": "2026-11-12T21:51:31Z",
       "source": "mercadolibre",
       "title": "Audífonos Inalámbrico In-ear Bluetooth gamer Anker Soundcore P20i con Manos Libres 10mm Diafragmas Bluetooth 5.3 Bass Po",
-      "price": 371.01,
-      "discount_pct": 42.0,
+      "price": 329.01,
+      "discount_pct": 49.0,
       "category_id": "MLM7533"
     },
     "mercadolibre:MLM67443844": {
@@ -2119,12 +2119,6 @@
   },
   "runs": [
     {
-      "at": "2026-10-23T08:04:57.925890+00:00",
-      "encontrados": 149,
-      "publicados": 0,
-      "nota": "sin candidatos que pasen los filtros"
-    },
-    {
       "at": "2026-10-23T18:49:41.771548+00:00",
       "publicados": 1,
       "fase": "publicar",
@@ -2474,6 +2468,12 @@
     },
     {
       "at": "2026-11-12T04:54:40.921206+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-12T21:40:17.295070+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

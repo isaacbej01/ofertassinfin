@@ -128,12 +128,12 @@
       "category_id": "MLM7533"
     },
     "mercadolibre:MLM40656539": {
-      "published_at": "2026-09-01T00:12:40.374089+00:00",
-      "scheduled_at": "2026-09-01T00:24:06Z",
+      "published_at": "2026-11-13T04:05:50.319176+00:00",
+      "scheduled_at": "2026-11-13T04:17:05Z",
       "source": "mercadolibre",
       "title": "Kit De Internet Via Satélite Starlink Mini Blanco",
-      "price": 2999.0,
-      "discount_pct": 40.0,
+      "price": 2099.0,
+      "discount_pct": 30.0,
       "category_id": "MLM7642"
     },
     "mercadolibre:MLM42430892": {
@@ -2119,12 +2119,6 @@
   },
   "runs": [
     {
-      "at": "2026-10-23T18:49:41.771548+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
-    {
       "at": "2026-10-23T23:41:06.922324+00:00",
       "publicados": 1,
       "fase": "publicar",
@@ -2474,6 +2468,12 @@
     },
     {
       "at": "2026-11-12T21:40:17.295070+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-13T04:05:50.319268+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

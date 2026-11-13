@@ -2115,15 +2115,18 @@
       "price": 4718.0,
       "discount_pct": 37.0,
       "category_id": "MLM1676"
+    },
+    "mercadolibre:MLM32109460": {
+      "published_at": "2026-11-13T21:06:39.939842+00:00",
+      "scheduled_at": "2026-11-13T21:17:51Z",
+      "source": "mercadolibre",
+      "title": "Audífonos Skullcandy Inalámbricos Dime 3 Auriculares In-ear",
+      "price": 297.0,
+      "discount_pct": 62.0,
+      "category_id": "MLM7533"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-23T23:41:06.922324+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-24T02:31:01.066073+00:00",
       "encontrados": 150,
@@ -2474,6 +2477,12 @@
     },
     {
       "at": "2026-11-13T04:05:50.319268+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-13T21:06:39.939937+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

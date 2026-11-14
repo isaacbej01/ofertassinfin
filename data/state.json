@@ -1118,8 +1118,8 @@
       "category_id": "MLM30059"
     },
     "mercadolibre:MLM66345549": {
-      "published_at": "2026-09-26T08:07:50.342823+00:00",
-      "scheduled_at": "2026-09-26T08:19:04Z",
+      "published_at": "2026-11-14T04:02:28.635464+00:00",
+      "scheduled_at": "2026-11-14T04:14:23Z",
       "source": "mercadolibre",
       "title": "Compresor De Aire Eléctrica Inalámbrico 150psi, Bupmova Bomba Inflador De Llantas, Power Bank Recargable Portátil, Infla",
       "price": 298.5,
@@ -2128,12 +2128,6 @@
   },
   "runs": [
     {
-      "at": "2026-10-24T02:31:01.066073+00:00",
-      "encontrados": 150,
-      "publicados": 0,
-      "nota": "sin candidatos que pasen los filtros"
-    },
-    {
       "at": "2026-10-24T07:44:56.657907+00:00",
       "encontrados": 150,
       "publicados": 0,
@@ -2483,6 +2477,12 @@
     },
     {
       "at": "2026-11-13T21:06:39.939937+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-14T04:02:28.635556+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

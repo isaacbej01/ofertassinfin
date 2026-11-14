@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM65503965",
+    "source": "mercadolibre",
+    "title": "Celular Samsung Galaxy S26 Ultra Violeta 512GB",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_754118-MLA111088500309_042026-F.jpg",
+    "price": 20599.0,
+    "original_price": 37999.0,
+    "discount_pct": 45.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM65503965",
+    "added_at": "2026-11-14T19:36:27.632050+00:00"
+  },
+  {
     "key": "mercadolibre:MLM66345549",
     "source": "mercadolibre",
     "title": "Compresor De Aire Eléctrica Inalámbrico 150psi, Bupmova Bomba Inflador De Llantas, Power Bank Recargable Portátil, Inflar Auto 5 Modos Con Led Luz Y Pantalla Para Auto, Motocicleta, Neumaticos",
@@ -647,16 +658,5 @@
     "discount_pct": 48.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM67683460",
     "added_at": "2026-10-20T23:33:26.691698+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM50444272",
-    "source": "mercadolibre",
-    "title": "Altavoz Bluetooth Jbl Charge 6 negro",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_728121-MLA85184158659_052025-F.jpg",
-    "price": 2087.4,
-    "original_price": 2940.0,
-    "discount_pct": 28.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM50444272",
-    "added_at": "2026-10-20T18:50:48.101103+00:00"
   }
 ]

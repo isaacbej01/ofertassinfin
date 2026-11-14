@@ -2124,15 +2124,18 @@
       "price": 297.0,
       "discount_pct": 62.0,
       "category_id": "MLM7533"
+    },
+    "mercadolibre:MLM65503965": {
+      "published_at": "2026-11-14T19:36:27.634463+00:00",
+      "scheduled_at": "2026-11-14T19:47:41Z",
+      "source": "mercadolibre",
+      "title": "Celular Samsung Galaxy S26 Ultra Violeta 512GB",
+      "price": 20599.0,
+      "discount_pct": 45.0,
+      "category_id": "MLM1055"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-24T07:44:56.657907+00:00",
-      "encontrados": 150,
-      "publicados": 0,
-      "nota": "sin candidatos que pasen los filtros"
-    },
     {
       "at": "2026-10-24T17:43:36.325527+00:00",
       "encontrados": 150,
@@ -2483,6 +2486,12 @@
     },
     {
       "at": "2026-11-14T04:02:28.635556+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-14T19:36:27.634536+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

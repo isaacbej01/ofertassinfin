@@ -2142,15 +2142,18 @@
       "price": 3666.0,
       "discount_pct": 30.0,
       "category_id": "MLM1676"
+    },
+    "mercadolibre:MLM37234823": {
+      "published_at": "2026-11-15T20:03:19.289403+00:00",
+      "scheduled_at": "2026-11-15T20:14:31Z",
+      "source": "mercadolibre",
+      "title": "Selectshop Signature Silla Gamer Gm003 Ergonómica Verde",
+      "price": 1289.0,
+      "discount_pct": 67.0,
+      "category_id": "MLM447782"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-24T22:48:14.228336+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-25T02:18:08.859263+00:00",
       "encontrados": 150,
@@ -2501,6 +2504,12 @@
     },
     {
       "at": "2026-11-15T10:10:36.463460+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-15T20:03:19.289479+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

@@ -767,12 +767,12 @@
       "category_id": "MLM2868"
     },
     "mercadolibre:MLM53792007": {
-      "published_at": "2026-09-17T08:10:23.893323+00:00",
-      "scheduled_at": "2026-09-17T08:21:49Z",
+      "published_at": "2026-11-16T23:36:28.710250+00:00",
+      "scheduled_at": "2026-11-16T23:47:33Z",
       "source": "mercadolibre",
-      "title": "Celular Xiaomi Poco M7 8 GB Ram 256 GB Rom Dual Sim Black- 6.9 FHD+ 144 Hz, Snapdragon 685, 50 MP Camera, Battery 7000 m",
-      "price": 3592.46,
-      "discount_pct": 30.0,
+      "title": "Xiaomi Pocophone Poco M7 8 Gb+256 Gb Dual Sim Negro",
+      "price": 3699.0,
+      "discount_pct": 45.0,
       "category_id": "MLM1055"
     },
     "mercadolibre:MLM74847364": {
@@ -2164,12 +2164,6 @@
   },
   "runs": [
     {
-      "at": "2026-10-25T18:00:32.941317+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
-    {
       "at": "2026-10-25T20:25:27.454374+00:00",
       "publicados": 1,
       "fase": "publicar",
@@ -2519,6 +2513,12 @@
     },
     {
       "at": "2026-11-16T10:22:57.529920+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-16T23:36:28.710324+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

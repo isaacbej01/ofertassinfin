@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM79464790",
+    "source": "mercadolibre",
+    "title": "Árbol de Navidad Artificial Fivina de 2.1 m con Efecto Nevado Blanco y Pino Frondoso",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_963001-MLA118711666090_102026-F.jpg",
+    "price": 915.32,
+    "original_price": 1868.0,
+    "discount_pct": 51.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM79464790",
+    "added_at": "2026-11-16T00:32:54.723605+00:00"
+  },
+  {
     "key": "mercadolibre:MLM37234823",
     "source": "mercadolibre",
     "title": "Selectshop Signature Silla Gamer Gm003 Ergonómica Verde",
@@ -647,16 +658,5 @@
     "discount_pct": 43.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM36952800",
     "added_at": "2026-10-21T23:49:23.767734+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM48956210",
-    "source": "mercadolibre",
-    "title": "Mini Soldadoras Maquina Soldar Inverter Portatil Inversores Soldadoras Inversor Para Soldar WANSE Potencia de 3 kW",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_604695-MLA99954571349_112025-F.jpg",
-    "price": 498.09,
-    "original_price": 889.44,
-    "discount_pct": 43.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM48956210",
-    "added_at": "2026-10-21T19:04:12.543542+00:00"
   }
 ]

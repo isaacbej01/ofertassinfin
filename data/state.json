@@ -2160,15 +2160,18 @@
       "price": 915.32,
       "discount_pct": 51.0,
       "category_id": "MLM116391"
+    },
+    "mercadolibre:MLM38788438": {
+      "published_at": "2026-11-17T05:43:35.116269+00:00",
+      "scheduled_at": "2026-11-17T05:54:38Z",
+      "source": "mercadolibre",
+      "title": "Batería de Cocina T-Fal de 26 piezas, con antiadherente Titanium, base de difusión y termo señal, Supercook Roja, B464SZ",
+      "price": 1427.58,
+      "discount_pct": 56.0,
+      "category_id": "MLM31568"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-25T20:25:27.454374+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-25T22:56:48.002482+00:00",
       "publicados": 1,
@@ -2519,6 +2522,12 @@
     },
     {
       "at": "2026-11-16T23:36:28.710324+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-17T05:43:35.116348+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

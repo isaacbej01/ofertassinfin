@@ -1,5 +1,16 @@
 [
   {
+    "key": "mercadolibre:MLM38788438",
+    "source": "mercadolibre",
+    "title": "Batería de Cocina T-Fal de 26 piezas, con antiadherente Titanium, base de difusión y termo señal, Supercook Roja, B464SZ84",
+    "image": "https://http2.mlstatic.com/D_NQ_NP_739313-MLA110058771269_042026-F.jpg",
+    "price": 1427.58,
+    "original_price": 3299.0,
+    "discount_pct": 56.0,
+    "url": "https://www.mercadolibre.com.mx/p/MLM38788438",
+    "added_at": "2026-11-17T05:43:35.114369+00:00"
+  },
+  {
     "key": "mercadolibre:MLM53792007",
     "source": "mercadolibre",
     "title": "Xiaomi Pocophone Poco M7 8 Gb+256 Gb Dual Sim Negro",
@@ -647,16 +658,5 @@
     "discount_pct": 35.0,
     "url": "https://www.mercadolibre.com.mx/p/MLM63811921",
     "added_at": "2026-10-22T18:59:19.597447+00:00"
-  },
-  {
-    "key": "mercadolibre:MLM26094795",
-    "source": "mercadolibre",
-    "title": "Omega 3 Aceite De Salmón Vitamina E 180 Cápsulas | Life360+",
-    "image": "https://http2.mlstatic.com/D_NQ_NP_633006-MLA116671670247_082026-F.jpg",
-    "price": 284.4,
-    "original_price": 559.0,
-    "discount_pct": 49.0,
-    "url": "https://www.mercadolibre.com.mx/p/MLM26094795",
-    "added_at": "2026-10-22T08:08:10.358849+00:00"
   }
 ]

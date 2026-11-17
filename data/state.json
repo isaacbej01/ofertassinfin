@@ -1307,12 +1307,12 @@
       "category_id": "MLM438195"
     },
     "mercadolibre:MLM67689331": {
-      "published_at": "2026-10-02T19:41:17.357122+00:00",
-      "scheduled_at": "2026-10-02T19:52:31Z",
+      "published_at": "2026-11-17T22:44:45.309841+00:00",
+      "scheduled_at": "2026-11-17T22:55:49Z",
       "source": "mercadolibre",
       "title": "Mini soldadora inverter Maquina Soldar Inverter amarillo MMA y TIG 2 en 1 con Pantalla Digital PINCHAN",
-      "price": 497.01,
-      "discount_pct": 72.0,
+      "price": 544.84,
+      "discount_pct": 70.0,
       "category_id": "MLM442419"
     },
     "mercadolibre:MLM24454767": {
@@ -2173,12 +2173,6 @@
   },
   "runs": [
     {
-      "at": "2026-10-25T22:56:48.002482+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
-    {
       "at": "2026-10-26T02:18:19.513145+00:00",
       "encontrados": 149,
       "publicados": 0,
@@ -2528,6 +2522,12 @@
     },
     {
       "at": "2026-11-17T05:43:35.116348+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-17T22:44:45.309901+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

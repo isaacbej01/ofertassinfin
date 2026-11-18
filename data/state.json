@@ -2178,15 +2178,18 @@
       "price": 6999.0,
       "discount_pct": 36.0,
       "category_id": "MLM430383"
+    },
+    "mercadolibre:MLM28297181": {
+      "published_at": "2026-11-18T22:26:40.525677+00:00",
+      "scheduled_at": "2026-11-18T22:37:44Z",
+      "source": "mercadolibre",
+      "title": "Smart TV Motorola MOT43FLE11 43\" Full HD LED",
+      "price": 3499.0,
+      "discount_pct": 30.0,
+      "category_id": "MLM1002"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-26T08:17:11.256083+00:00",
-      "encontrados": 150,
-      "publicados": 0,
-      "nota": "sin candidatos que pasen los filtros"
-    },
     {
       "at": "2026-10-26T20:15:46.425062+00:00",
       "publicados": 1,
@@ -2537,6 +2540,12 @@
     },
     {
       "at": "2026-11-18T05:08:36.706466+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-18T22:26:40.525736+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

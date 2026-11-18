@@ -2169,15 +2169,18 @@
       "price": 1427.58,
       "discount_pct": 56.0,
       "category_id": "MLM31568"
+    },
+    "mercadolibre:MLM55733695": {
+      "published_at": "2026-11-18T05:08:36.706384+00:00",
+      "scheduled_at": "2026-11-18T05:19:51Z",
+      "source": "mercadolibre",
+      "title": "Epson Ecotank Impresora Multifuncional a Color L6370",
+      "price": 6999.0,
+      "discount_pct": 36.0,
+      "category_id": "MLM430383"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-26T02:18:19.513145+00:00",
-      "encontrados": 149,
-      "publicados": 0,
-      "nota": "sin candidatos que pasen los filtros"
-    },
     {
       "at": "2026-10-26T08:17:11.256083+00:00",
       "encontrados": 150,
@@ -2528,6 +2531,12 @@
     },
     {
       "at": "2026-11-17T22:44:45.309901+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-18T05:08:36.706466+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

@@ -2187,15 +2187,18 @@
       "price": 3499.0,
       "discount_pct": 30.0,
       "category_id": "MLM1002"
+    },
+    "mercadolibre:MLM16211422": {
+      "published_at": "2026-11-19T05:01:44.189491+00:00",
+      "scheduled_at": "2026-11-19T05:12:58Z",
+      "source": "mercadolibre",
+      "title": "Mouse Gaming Logitech G203",
+      "price": 335.3,
+      "discount_pct": 58.0,
+      "category_id": "MLM1714"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-26T20:15:46.425062+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-27T00:09:50.488406+00:00",
       "publicados": 1,
@@ -2546,6 +2549,12 @@
     },
     {
       "at": "2026-11-18T22:26:40.525736+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-19T05:01:44.189550+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

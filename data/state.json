@@ -1442,8 +1442,8 @@
       "category_id": "MLM442419"
     },
     "mercadolibre:MLM45810075": {
-      "published_at": "2026-10-08T09:43:18.534121+00:00",
-      "scheduled_at": "2026-10-08T09:54:42Z",
+      "published_at": "2026-11-22T10:30:56.624350+00:00",
+      "scheduled_at": "2026-11-22T10:42:51Z",
       "source": "mercadolibre",
       "title": "Mesa Plegable Verona Blanca HDPE Loomber",
       "price": 669.0,
@@ -2227,12 +2227,6 @@
   },
   "runs": [
     {
-      "at": "2026-10-29T00:32:56.443454+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
-    {
       "at": "2026-10-29T09:06:59.253946+00:00",
       "encontrados": 150,
       "publicados": 0,
@@ -2582,6 +2576,12 @@
     },
     {
       "at": "2026-11-22T00:48:52.208148+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-22T10:30:56.624427+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

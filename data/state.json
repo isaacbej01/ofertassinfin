@@ -2223,15 +2223,18 @@
       "price": 1539.45,
       "discount_pct": 44.0,
       "category_id": "MLM6585"
+    },
+    "mercadolibre:MLM53225642": {
+      "published_at": "2026-11-23T11:31:06.541452+00:00",
+      "scheduled_at": "2026-11-23T11:42:20Z",
+      "source": "mercadolibre",
+      "title": "Control Alámbrico GameSir G7 Pro para Xbox Series X|S y Xbox One, Gamepad Inalámbrico para PC y Android con Palancas TMR",
+      "price": 1439.0,
+      "discount_pct": 60.0,
+      "category_id": "MLM188689"
     }
   },
   "runs": [
-    {
-      "at": "2026-10-30T00:32:00.348875+00:00",
-      "publicados": 1,
-      "fase": "publicar",
-      "fallidos": 0
-    },
     {
       "at": "2026-10-30T09:18:29.393553+00:00",
       "publicados": 1,
@@ -2582,6 +2585,12 @@
     },
     {
       "at": "2026-11-23T01:15:22.882504+00:00",
+      "publicados": 1,
+      "fase": "publicar",
+      "fallidos": 0
+    },
+    {
+      "at": "2026-11-23T11:31:06.541505+00:00",
       "publicados": 1,
       "fase": "publicar",
       "fallidos": 0

@@ -2236,12 +2236,6 @@
   },
   "runs": [
     {
-      "at": "2026-11-02T00:02:50.705035+00:00",
-      "encontrados": 150,
-      "publicados": 0,
-      "nota": "sin candidatos que pasen los filtros"
-    },
-    {
       "at": "2026-11-02T10:17:04.115912+00:00",
       "publicados": 1,
       "fase": "publicar",
@@ -2591,6 +2585,12 @@
     },
     {
       "at": "2026-11-27T05:51:18.525734+00:00",
+      "encontrados": 0,
+      "publicados": 0,
+      "nota": "sin candidatos que pasen los filtros"
+    },
+    {
+      "at": "2026-11-27T23:05:00.505112+00:00",
       "encontrados": 0,
       "publicados": 0,
       "nota": "sin candidatos que pasen los filtros"
